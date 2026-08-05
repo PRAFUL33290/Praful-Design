@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Création de site WordPress pour indépendants et TPE | Praful Design</title>
+<meta name="description" content="Un site vitrine WordPress sur mesure, structuré pour transformer vos visiteurs en demandes de devis. À partir de 1 500 € HT, livré en 3 à 5 semaines.">
+<link rel="canonical" href="https://praful-design.fr/creation-site-wordpress.html">
+<meta property="og:title" content="Création de site WordPress pour indépendants et TPE | Praful Design">
+<meta property="og:description" content="Un site vitrine WordPress sur mesure, structuré pour transformer vos visiteurs en demandes de devis. À partir de 1 500 € HT, livré en 3 à 5 semaines.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://praful-design.fr/creation-site-wordpress.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+/* Applique le thème mémorisé avant le premier rendu, pour éviter que la
+   page clignote en clair avant de basculer en sombre. Le site est en
+   clair par défaut ; seul un choix explicite de l'utilisateur est retenu. */
+(function () {
+  try {
+    var choix = localStorage.getItem("praful-theme");
+    if (choix === "dark" || choix === "light") {
+      document.documentElement.setAttribute("data-theme", choix);
+    }
+  } catch (e) { /* navigation privée : on reste en clair */ }
+})();
+</script>
+
+</head>
+<body>
+
+<!-- ====================== EN-TÊTE (pleine largeur) ====================== -->
+<header class="entete">
+  <div class="conteneur conteneur--pleine entete__inner">
+    <a href="index.html" class="logo">
+      <span class="logo__glyphe">PD</span>
+      <span>
+        <span class="logo__marque">PRAFUL <span>DESIGN</span></span>
+        <span class="logo__baseline">Webdesign &amp; WordPress</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav__lien">Accueil</a>
+
+      <div class="nav__item">
+        <button type="button" class="nav__lien nav__lien--parent est-actif" aria-expanded="false" aria-controls="sous-menu-services">
+          Services <span class="nav__chevron" aria-hidden="true"></span>
+        </button>
+        <div class="sous-menu" id="sous-menu-services">
+          <a href="services.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">☰</span>
+            <span>
+              <strong class="sous-menu__titre">Tous les services</strong>
+              <span class="sous-menu__desc">La vue d'ensemble de ce que je propose.</span>
+            </span>
+          </a>
+          <a href="creation-site-wordpress.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">✦</span>
+            <span>
+              <strong class="sous-menu__titre">Création de site WordPress</strong>
+              <span class="sous-menu__desc">Un site vitrine sur mesure, pensé pour convertir.</span>
+            </span>
+          </a>
+          <a href="refonte-site.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">↻</span>
+            <span>
+              <strong class="sous-menu__titre">Refonte de site</strong>
+              <span class="sous-menu__desc">On repart de votre existant, en mieux.</span>
+            </span>
+          </a>
+          <a href="maintenance-wordpress.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">⛨</span>
+            <span>
+              <strong class="sous-menu__titre">Maintenance WordPress</strong>
+              <span class="sous-menu__desc">Mises à jour, sauvegardes, sécurité.</span>
+            </span>
+          </a>
+          <a href="seo-local.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">◎</span>
+            <span>
+              <strong class="sous-menu__titre">SEO local</strong>
+              <span class="sous-menu__desc">Être trouvé par les clients près de chez vous.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="realisations.html" class="nav__lien">Réalisations</a>
+      <a href="tarifs.html" class="nav__lien">Tarifs</a>
+      <a href="a-propos.html" class="nav__lien">À propos</a>
+      <a href="contact.html" class="btn btn--primaire entete__cta">Demander un devis</a>
+    </nav>
+
+    <div class="entete__actions">
+      <button type="button" class="bascule-theme" id="bascule-theme"
+              aria-label="Passer en mode sombre" title="Changer de thème">
+        <svg class="icone-lune" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+        <svg class="icone-soleil" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"/>
+        </svg>
+      </button>
+
+      <button type="button" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="entete-page">
+    <div class="conteneur">
+      <p class="fil"><a href="index.html">Accueil</a> — <a href="services.html">Services</a> — Création de site WordPress</p>
+      <span class="surtitre">Service</span>
+      <h1>Création de site <span class="accent">WordPress</span></h1>
+      <p>
+        Un site vitrine sur mesure, structuré pour transformer vos visiteurs
+        en demandes de devis — pas une brochure en ligne que personne ne lit.
+      </p>
+      <div class="groupe-btn" style="justify-content:center;margin-top:30px">
+        <a href="contact.html" class="btn btn--primaire">Demander un devis</a>
+        <a href="realisations.html" class="btn btn--secondaire">Voir des exemples</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="grille grille--2">
+        <div>
+          <h2>Pour qui ?</h2>
+          <p>
+            Pour les indépendants, artisans, professions libérales et petites structures
+            qui n'ont pas de site, ou qui se contentent aujourd'hui d'une page Facebook
+            et d'un bouche-à-oreille qui plafonne.
+          </p>
+          <p>
+            L'objectif n'est pas « d'être sur internet ». Il est d'avoir une adresse
+            qui rassure quand un prospect vous cherche, et qui déclenche un appel
+            ou un message plutôt qu'un retour en arrière vers vos concurrents.
+          </p>
+          <h2 style="margin-top:40px">Ce que vous obtenez</h2>
+          <p>
+            Un site WordPress complet, à votre nom, que vous pouvez faire évoluer
+            vous-même. Vous restez propriétaire de l'hébergement, du nom de domaine
+            et de tous les accès : rien ne dépend de moi une fois le projet livré.
+          </p>
+        </div>
+
+        <div class="carte anim">
+          <div class="carte__icone" aria-hidden="true">✦</div>
+          <h3>Inclus dans la prestation</h3>
+          <ul class="carte__liste">
+            <li>Atelier de cadrage : cible, offre, message</li>
+            <li>Arborescence et parcours de conversion</li>
+            <li>Maquette de la page d'accueil avant production</li>
+            <li>1 à 5 pages entièrement intégrées</li>
+            <li>Design responsive mobile, tablette, ordinateur</li>
+            <li>Formulaire de contact et anti-spam</li>
+            <li>Réglages SEO de base et données structurées</li>
+            <li>Installation, mise en ligne et tests</li>
+            <li>Formation à la prise en main (1 h)</li>
+            <li>30 jours de garantie après livraison</li>
+          </ul>
+          <p style="margin-top:24px;font-size:0.85rem;color:var(--texte-faible)">
+            À partir de <strong style="color:var(--texte-fort)">1 500 € HT</strong> — délai moyen de 3 à 5 semaines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="conteneur">
+      <div class="entete-section entete-section--centre">
+        <span class="surtitre">Déroulé</span>
+        <h2>De l'idée à la mise en ligne</h2>
+      </div>
+
+      <div class="processus">
+        <div class="etape anim">
+          <h3>Cadrage</h3>
+          <p>On définit à qui vous parlez, ce que vous vendez et ce que le visiteur doit faire. C'est cette étape qui décide de la structure du site — pas les goûts de couleur.</p>
+        </div>
+        <div class="etape anim">
+          <h3>Maquette</h3>
+          <p>Je vous présente la page d'accueil maquettée, avec deux séries d'ajustements incluses. On ne produit la suite qu'une fois la direction validée.</p>
+        </div>
+        <div class="etape anim">
+          <h3>Intégration</h3>
+          <p>Je construis les pages sous WordPress, j'optimise les images, je règle les performances et le SEO de base, puis je teste sur mobile et sur ordinateur.</p>
+        </div>
+        <div class="etape anim">
+          <h3>Mise en ligne</h3>
+          <p>Configuration de l'hébergement, du nom de domaine et du certificat SSL. Je vous forme à la prise en main et vous repartez avec tous vos accès.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="entete-section entete-section--centre">
+        <span class="surtitre">Questions fréquentes</span>
+        <h2>Avant de vous lancer</h2>
+      </div>
+
+      <div class="faq">
+        <div class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="c-faq-1">
+            Dois-je fournir les textes et les photos ?
+            <span class="faq__signe" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__reponse" id="c-faq-1"><p>Idéalement oui, c'est vous qui connaissez votre métier. Je vous fournis une trame page par page pour vous guider. Si vous préférez déléguer, le copywriting peut être ajouté au devis — c'est inclus d'office dans l'offre « refonte complète + SEO local ».</p></div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="c-faq-2">
+            Pourquoi WordPress plutôt qu'un autre outil ?
+            <span class="faq__signe" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__reponse" id="c-faq-2"><p>Parce que vous restez libre. Vous pouvez changer de prestataire, exporter votre contenu, faire évoluer le site sans repartir de zéro. Avec un constructeur propriétaire, votre site vous échappe le jour où vous voulez partir.</p></div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="c-faq-3">
+            Combien coûte le site une fois livré ?
+            <span class="faq__signe" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__reponse" id="c-faq-3"><p>L'hébergement et le nom de domaine, soit une centaine d'euros par an selon l'hébergeur choisi. C'est tout. La maintenance mensuelle reste optionnelle, même si je la recommande vivement.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="bandeau-cta anim">
+        <h2>Prêt à donner une vraie adresse à votre activité ?</h2>
+        <p>Décrivez-moi votre projet, je vous réponds sous 24 h ouvrées avec un budget réaliste.</p>
+        <div class="groupe-btn">
+          <a href="contact.html" class="btn btn--primaire">Demander un devis gratuit</a>
+          <a href="tarifs.html" class="btn btn--secondaire">Voir les tarifs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ====================== PIED DE PAGE (pleine largeur, minimaliste) ====================== -->
+<footer class="pied">
+  <div class="conteneur conteneur--pleine">
+    <div class="pied__haut">
+      <a href="index.html" class="logo">
+        <span class="logo__glyphe">PD</span>
+        <span>
+          <span class="logo__marque">PRAFUL <span>DESIGN</span></span>
+          <span class="logo__baseline">Webdesign &amp; WordPress</span>
+        </span>
+      </a>
+
+      <nav class="pied__nav" aria-label="Navigation de pied de page">
+        <a href="services.html">Services</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="pied__bas">
+      <p style="margin:0">© <span data-annee>2026</span> Praful Design — Parempuyre (33), Gironde</p>
+      <div class="pied__legal">
+        <a href="mailto:contact@praful-design.fr">contact@praful-design.fr</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

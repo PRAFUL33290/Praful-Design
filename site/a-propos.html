@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>À propos — Julien, webdesigner WordPress à Parempuyre (33) | Praful Design</title>
+<meta name="description" content="Webdesigner et webmaster WordPress installé à Parempuyre en Gironde. Un interlocuteur unique pour le site, la technique et la visibilité locale.">
+<link rel="canonical" href="https://praful-design.fr/a-propos.html">
+<meta property="og:title" content="À propos — Julien, webdesigner WordPress à Parempuyre (33) | Praful Design">
+<meta property="og:description" content="Webdesigner et webmaster WordPress installé à Parempuyre en Gironde. Un interlocuteur unique pour le site, la technique et la visibilité locale.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://praful-design.fr/a-propos.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+/* Applique le thème mémorisé avant le premier rendu, pour éviter que la
+   page clignote en clair avant de basculer en sombre. Le site est en
+   clair par défaut ; seul un choix explicite de l'utilisateur est retenu. */
+(function () {
+  try {
+    var choix = localStorage.getItem("praful-theme");
+    if (choix === "dark" || choix === "light") {
+      document.documentElement.setAttribute("data-theme", choix);
+    }
+  } catch (e) { /* navigation privée : on reste en clair */ }
+})();
+</script>
+
+</head>
+<body>
+
+<!-- ====================== EN-TÊTE (pleine largeur) ====================== -->
+<header class="entete">
+  <div class="conteneur conteneur--pleine entete__inner">
+    <a href="index.html" class="logo">
+      <span class="logo__glyphe">PD</span>
+      <span>
+        <span class="logo__marque">PRAFUL <span>DESIGN</span></span>
+        <span class="logo__baseline">Webdesign &amp; WordPress</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav__lien">Accueil</a>
+
+      <div class="nav__item">
+        <button type="button" class="nav__lien nav__lien--parent" aria-expanded="false" aria-controls="sous-menu-services">
+          Services <span class="nav__chevron" aria-hidden="true"></span>
+        </button>
+        <div class="sous-menu" id="sous-menu-services">
+          <a href="services.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">☰</span>
+            <span>
+              <strong class="sous-menu__titre">Tous les services</strong>
+              <span class="sous-menu__desc">La vue d'ensemble de ce que je propose.</span>
+            </span>
+          </a>
+          <a href="creation-site-wordpress.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">✦</span>
+            <span>
+              <strong class="sous-menu__titre">Création de site WordPress</strong>
+              <span class="sous-menu__desc">Un site vitrine sur mesure, pensé pour convertir.</span>
+            </span>
+          </a>
+          <a href="refonte-site.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">↻</span>
+            <span>
+              <strong class="sous-menu__titre">Refonte de site</strong>
+              <span class="sous-menu__desc">On repart de votre existant, en mieux.</span>
+            </span>
+          </a>
+          <a href="maintenance-wordpress.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">⛨</span>
+            <span>
+              <strong class="sous-menu__titre">Maintenance WordPress</strong>
+              <span class="sous-menu__desc">Mises à jour, sauvegardes, sécurité.</span>
+            </span>
+          </a>
+          <a href="seo-local.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">◎</span>
+            <span>
+              <strong class="sous-menu__titre">SEO local</strong>
+              <span class="sous-menu__desc">Être trouvé par les clients près de chez vous.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="realisations.html" class="nav__lien">Réalisations</a>
+      <a href="tarifs.html" class="nav__lien">Tarifs</a>
+      <a href="a-propos.html" class="nav__lien est-actif">À propos</a>
+      <a href="contact.html" class="btn btn--primaire entete__cta">Demander un devis</a>
+    </nav>
+
+    <div class="entete__actions">
+      <button type="button" class="bascule-theme" id="bascule-theme"
+              aria-label="Passer en mode sombre" title="Changer de thème">
+        <svg class="icone-lune" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+        <svg class="icone-soleil" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"/>
+        </svg>
+      </button>
+
+      <button type="button" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="entete-page">
+    <div class="conteneur">
+      <p class="fil"><a href="index.html">Accueil</a> — À propos</p>
+      <span class="surtitre">À propos</span>
+      <h1>Un seul interlocuteur, <span class="accent">du début à la fin</span></h1>
+      <p>
+        Webdesigner et webmaster WordPress installé à Parempuyre, en Gironde.
+        Je travaille avec des indépendants, des artisans et des petites structures
+        qui veulent un site crédible, rapide et rentable.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="grille grille--2">
+        <div>
+          <h2>Ce que je fais, vraiment</h2>
+          <p>
+            Beaucoup de prestataires savent faire une belle page. Beaucoup d'autres
+            savent configurer un serveur. Peu font les deux, et encore moins se
+            préoccupent de savoir si le site ramène des clients.
+          </p>
+          <p>
+            Ma force, c'est le trio <strong>site + technique + visibilité locale</strong>.
+            Concrètement : je conçois le site, je m'occupe de l'hébergement, des
+            performances et de la sécurité, et je travaille votre référencement
+            sur votre zone. Vous n'avez qu'un numéro à appeler quand quelque chose cloche.
+          </p>
+
+          <h2 style="margin-top:44px">Comment je travaille</h2>
+          <p>
+            Je dis les choses simplement, sans jargon inutile, et je vous donne
+            un avis honnête même quand il ne m'arrange pas. Il m'est déjà arrivé
+            de conseiller à un client de ne pas refaire son site : il fonctionnait,
+            le problème était ailleurs.
+          </p>
+          <p>
+            Je travaille en forfait, avec un périmètre écrit noir sur blanc.
+            Vous savez ce que vous achetez, ce qui n'est pas compris, et
+            à quelle date c'est livré.
+          </p>
+          <p>
+            Et je rends tous les accès. Votre site, votre nom de domaine, votre
+            hébergement : tout est à votre nom. Si un jour vous voulez partir,
+            vous partez avec l'ensemble, sans négociation.
+          </p>
+        </div>
+
+        <div>
+          <div class="carte anim" style="margin-bottom:24px">
+            <div class="carte__icone" aria-hidden="true">◈</div>
+            <h3>En quelques repères</h3>
+            <ul class="carte__liste">
+              <li>Basé à Parempuyre (33), à 15 minutes de Bordeaux</li>
+              <li>Interventions sur place ou entièrement à distance</li>
+              <li>42 avis clients Google, moyenne de 5 / 5</li>
+              <li>Spécialisé WordPress, du design à la mise en ligne</li>
+              <li>Formation et coaching digital sur demande</li>
+              <li>Réponse sous 24 h ouvrées</li>
+            </ul>
+          </div>
+
+          <div class="carte anim">
+            <div class="carte__icone" aria-hidden="true">✎</div>
+            <h3>Mes convictions</h3>
+            <ul class="carte__liste">
+              <li>Un site doit avoir un objectif chiffrable, sinon c'est une dépense</li>
+              <li>Le design sert le message, jamais l'inverse</li>
+              <li>Un client doit pouvoir reprendre la main sur son site</li>
+              <li>Un devis flou annonce un projet flou</li>
+              <li>La visibilité locale est le meilleur levier d'une TPE</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="conteneur">
+      <div class="entete-section entete-section--centre">
+        <span class="surtitre">Zone d'intervention</span>
+        <h2>Parempuyre, Bordeaux Métropole et à distance</h2>
+        <p class="chapo">
+          Je me déplace volontiers pour les rendez-vous en Gironde. La majorité
+          des projets se déroule ensuite très bien à distance, par visio et par email.
+        </p>
+      </div>
+
+      <div class="chiffres anim">
+        <div class="chiffre">
+          <span class="chiffre__val">33</span>
+          <span class="chiffre__lib">Gironde</span>
+        </div>
+        <div class="chiffre">
+          <span class="chiffre__val">15 min</span>
+          <span class="chiffre__lib">De Bordeaux centre</span>
+        </div>
+        <div class="chiffre">
+          <span class="chiffre__val">24 h</span>
+          <span class="chiffre__lib">Délai de réponse</span>
+        </div>
+        <div class="chiffre">
+          <span class="chiffre__val">France</span>
+          <span class="chiffre__lib">Projets à distance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="bandeau-cta anim">
+        <h2>On en discute ?</h2>
+        <p>Trente minutes suffisent pour savoir si on peut travailler ensemble. Sans engagement et sans discours commercial.</p>
+        <div class="groupe-btn">
+          <a href="contact.html" class="btn btn--primaire">Me contacter</a>
+          <a href="realisations.html" class="btn btn--secondaire">Voir mes réalisations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ====================== PIED DE PAGE (pleine largeur, minimaliste) ====================== -->
+<footer class="pied">
+  <div class="conteneur conteneur--pleine">
+    <div class="pied__haut">
+      <a href="index.html" class="logo">
+        <span class="logo__glyphe">PD</span>
+        <span>
+          <span class="logo__marque">PRAFUL <span>DESIGN</span></span>
+          <span class="logo__baseline">Webdesign &amp; WordPress</span>
+        </span>
+      </a>
+
+      <nav class="pied__nav" aria-label="Navigation de pied de page">
+        <a href="services.html">Services</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="pied__bas">
+      <p style="margin:0">© <span data-annee>2026</span> Praful Design — Parempuyre (33), Gironde</p>
+      <div class="pied__legal">
+        <a href="mailto:contact@praful-design.fr">contact@praful-design.fr</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

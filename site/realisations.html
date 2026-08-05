@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Réalisations — sites WordPress créés et refondus | Praful Design</title>
+<meta name="description" content="Exemples concrets de sites créés et refondus pour des indépendants et TPE de Gironde, avec l'avant et l'après de chaque projet.">
+<link rel="canonical" href="https://praful-design.fr/realisations.html">
+<meta property="og:title" content="Réalisations — sites WordPress créés et refondus | Praful Design">
+<meta property="og:description" content="Exemples concrets de sites créés et refondus pour des indépendants et TPE de Gironde, avec l'avant et l'après de chaque projet.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://praful-design.fr/realisations.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+/* Applique le thème mémorisé avant le premier rendu, pour éviter que la
+   page clignote en clair avant de basculer en sombre. Le site est en
+   clair par défaut ; seul un choix explicite de l'utilisateur est retenu. */
+(function () {
+  try {
+    var choix = localStorage.getItem("praful-theme");
+    if (choix === "dark" || choix === "light") {
+      document.documentElement.setAttribute("data-theme", choix);
+    }
+  } catch (e) { /* navigation privée : on reste en clair */ }
+})();
+</script>
+
+</head>
+<body>
+
+<!-- ====================== EN-TÊTE (pleine largeur) ====================== -->
+<header class="entete">
+  <div class="conteneur conteneur--pleine entete__inner">
+    <a href="index.html" class="logo">
+      <span class="logo__glyphe">PD</span>
+      <span>
+        <span class="logo__marque">PRAFUL <span>DESIGN</span></span>
+        <span class="logo__baseline">Webdesign &amp; WordPress</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav__lien">Accueil</a>
+
+      <div class="nav__item">
+        <button type="button" class="nav__lien nav__lien--parent" aria-expanded="false" aria-controls="sous-menu-services">
+          Services <span class="nav__chevron" aria-hidden="true"></span>
+        </button>
+        <div class="sous-menu" id="sous-menu-services">
+          <a href="services.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">☰</span>
+            <span>
+              <strong class="sous-menu__titre">Tous les services</strong>
+              <span class="sous-menu__desc">La vue d'ensemble de ce que je propose.</span>
+            </span>
+          </a>
+          <a href="creation-site-wordpress.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">✦</span>
+            <span>
+              <strong class="sous-menu__titre">Création de site WordPress</strong>
+              <span class="sous-menu__desc">Un site vitrine sur mesure, pensé pour convertir.</span>
+            </span>
+          </a>
+          <a href="refonte-site.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">↻</span>
+            <span>
+              <strong class="sous-menu__titre">Refonte de site</strong>
+              <span class="sous-menu__desc">On repart de votre existant, en mieux.</span>
+            </span>
+          </a>
+          <a href="maintenance-wordpress.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">⛨</span>
+            <span>
+              <strong class="sous-menu__titre">Maintenance WordPress</strong>
+              <span class="sous-menu__desc">Mises à jour, sauvegardes, sécurité.</span>
+            </span>
+          </a>
+          <a href="seo-local.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">◎</span>
+            <span>
+              <strong class="sous-menu__titre">SEO local</strong>
+              <span class="sous-menu__desc">Être trouvé par les clients près de chez vous.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="realisations.html" class="nav__lien est-actif">Réalisations</a>
+      <a href="tarifs.html" class="nav__lien">Tarifs</a>
+      <a href="a-propos.html" class="nav__lien">À propos</a>
+      <a href="contact.html" class="btn btn--primaire entete__cta">Demander un devis</a>
+    </nav>
+
+    <div class="entete__actions">
+      <button type="button" class="bascule-theme" id="bascule-theme"
+              aria-label="Passer en mode sombre" title="Changer de thème">
+        <svg class="icone-lune" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+        <svg class="icone-soleil" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"/>
+        </svg>
+      </button>
+
+      <button type="button" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="entete-page">
+    <div class="conteneur">
+      <p class="fil"><a href="index.html">Accueil</a> — Réalisations</p>
+      <span class="surtitre">Portfolio</span>
+      <h1>Ce que ça change, <span class="accent">concrètement</span></h1>
+      <p>
+        Des sites créés ou refondus pour des indépendants et des TPE de Gironde.
+        Pour chaque projet, l'état de départ et le résultat obtenu.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="grille grille--2">
+
+        <article class="realisation anim">
+          <div class="realisation__visuel">Artisan</div>
+          <div class="realisation__corps">
+            <p class="realisation__meta">Refonte + SEO local</p>
+            <h3>Menuisier — Bordeaux Nord</h3>
+            <p>
+              Un site de 2017 jamais mis à jour, invisible sur mobile. Refonte complète,
+              nouvelles photos de chantier et travail approfondi de la fiche Google Business Profile.
+            </p>
+            <div class="avant-apres">
+              <div><strong>Avant</strong> 8 s de chargement, aucune version mobile, 2 demandes de devis par mois.</div>
+              <div><strong>Après</strong> Chargement sous 2 s, mobile impeccable, 11 demandes de devis par mois.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="realisation anim">
+          <div class="realisation__visuel">Santé</div>
+          <div class="realisation__corps">
+            <p class="realisation__meta">Création de site</p>
+            <h3>Praticienne bien-être — Parempuyre</h3>
+            <p>
+              Aucune présence en ligne au départ. Création complète avec présentation
+              claire des séances, tarifs affichés et prise de rendez-vous intégrée.
+            </p>
+            <div class="avant-apres">
+              <div><strong>Avant</strong> Uniquement du bouche-à-oreille, agenda irrégulier.</div>
+              <div><strong>Après</strong> Agenda rempli à 80 % via le site dès le troisième mois.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="realisation anim">
+          <div class="realisation__visuel">Commerce</div>
+          <div class="realisation__corps">
+            <p class="realisation__meta">Refonte + maintenance</p>
+            <h3>Commerce de proximité — Le Taillan-Médoc</h3>
+            <p>
+              Site piraté à deux reprises faute de mises à jour. Reprise complète,
+              nettoyage, refonte graphique et passage en maintenance mensuelle.
+            </p>
+            <div class="avant-apres">
+              <div><strong>Avant</strong> Deux piratages en un an, extensions abandonnées depuis 2019.</div>
+              <div><strong>Après</strong> Zéro incident depuis 18 mois, sauvegardes quotidiennes testées.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="realisation anim">
+          <div class="realisation__visuel">Conseil</div>
+          <div class="realisation__corps">
+            <p class="realisation__meta">Refonte complète + copywriting</p>
+            <h3>Consultante RH — Mérignac</h3>
+            <p>
+              Un site qui décrivait des méthodes plutôt que des résultats. Restructuration
+              du message autour du bénéfice client et réécriture intégrale des pages.
+            </p>
+            <div class="avant-apres">
+              <div><strong>Avant</strong> Beaucoup de visites, très peu de prises de contact.</div>
+              <div><strong>Après</strong> Taux de contact multiplié par trois à trafic constant.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="realisation anim">
+          <div class="realisation__visuel">Bâtiment</div>
+          <div class="realisation__corps">
+            <p class="realisation__meta">Création + SEO local</p>
+            <h3>Électricien — Blanquefort</h3>
+            <p>
+              Création d'un site vitrine avec une page par prestation et par commune
+              desservie, pensé pour capter les recherches d'urgence.
+            </p>
+            <div class="avant-apres">
+              <div><strong>Avant</strong> Absent de Google, aucune fiche d'établissement.</div>
+              <div><strong>Après</strong> Dans les trois premiers résultats locaux sur ses deux communes cibles.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="realisation anim">
+          <div class="realisation__visuel">Restauration</div>
+          <div class="realisation__corps">
+            <p class="realisation__meta">Refonte</p>
+            <h3>Restaurant — Bordeaux Chartrons</h3>
+            <p>
+              Carte en PDF illisible sur téléphone et réservations perdues.
+              Refonte orientée mobile avec carte intégrée et réservation en un clic.
+            </p>
+            <div class="avant-apres">
+              <div><strong>Avant</strong> Carte en PDF, réservations uniquement par téléphone.</div>
+              <div><strong>Après</strong> 40 % des réservations passent désormais par le site.</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p style="text-align:center;margin-top:36px;font-size:0.85rem;color:var(--texte-faible)">
+        Certains clients préfèrent rester discrets : les noms d'entreprise sont volontairement
+        remplacés par le métier et la commune. Je peux vous montrer les sites en direct lors d'un échange.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="conteneur">
+      <div class="entete-section entete-section--centre">
+        <span class="surtitre">Ils en parlent</span>
+        <h2>42 avis Google, une moyenne de 5 / 5</h2>
+      </div>
+
+      <div class="grille grille--3">
+        <figure class="temoignage anim" style="margin:0">
+          <div class="temoignage__note" aria-hidden="true">★★★★★</div>
+          <blockquote style="margin:0"><p>« Julien a repris mon site de A à Z. Il explique tout simplement, sans jargon, et il tient ses délais. J'ai enfin un site dont je n'ai pas honte. »</p></blockquote>
+          <figcaption class="temoignage__auteur">
+            <span class="temoignage__avatar" aria-hidden="true">SM</span>
+            <span>
+              <span class="temoignage__nom">Sophie M.</span>
+              <span class="temoignage__role">Praticienne — Parempuyre</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="temoignage anim" style="margin:0">
+          <div class="temoignage__note" aria-hidden="true">★★★★★</div>
+          <blockquote style="margin:0"><p>« Mon ancien site mettait 8 secondes à s'afficher. Après la refonte, tout est instantané et je reçois des demandes de devis toutes les semaines. »</p></blockquote>
+          <figcaption class="temoignage__auteur">
+            <span class="temoignage__avatar" aria-hidden="true">TD</span>
+            <span>
+              <span class="temoignage__nom">Thomas D.</span>
+              <span class="temoignage__role">Artisan menuisier — Bordeaux</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="temoignage anim" style="margin:0">
+          <div class="temoignage__note" aria-hidden="true">★★★★★</div>
+          <blockquote style="margin:0"><p>« Je paye la maintenance chaque mois et je ne m'occupe plus de rien. Quand j'ai une question, j'ai une réponse dans la journée. »</p></blockquote>
+          <figcaption class="temoignage__auteur">
+            <span class="temoignage__avatar" aria-hidden="true">CL</span>
+            <span>
+              <span class="temoignage__nom">Céline L.</span>
+              <span class="temoignage__role">Commerçante — Le Taillan-Médoc</span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="bandeau-cta anim">
+        <h2>Votre projet ressemble à l'un de ceux-là ?</h2>
+        <p>Racontez-moi où vous en êtes. Je vous dis franchement ce qui est réaliste, et à quel budget.</p>
+        <div class="groupe-btn">
+          <a href="contact.html" class="btn btn--primaire">Demander un devis gratuit</a>
+          <a href="tarifs.html" class="btn btn--secondaire">Voir les tarifs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ====================== PIED DE PAGE (pleine largeur, minimaliste) ====================== -->
+<footer class="pied">
+  <div class="conteneur conteneur--pleine">
+    <div class="pied__haut">
+      <a href="index.html" class="logo">
+        <span class="logo__glyphe">PD</span>
+        <span>
+          <span class="logo__marque">PRAFUL <span>DESIGN</span></span>
+          <span class="logo__baseline">Webdesign &amp; WordPress</span>
+        </span>
+      </a>
+
+      <nav class="pied__nav" aria-label="Navigation de pied de page">
+        <a href="services.html">Services</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="pied__bas">
+      <p style="margin:0">© <span data-annee>2026</span> Praful Design — Parempuyre (33), Gironde</p>
+      <div class="pied__legal">
+        <a href="mailto:contact@praful-design.fr">contact@praful-design.fr</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

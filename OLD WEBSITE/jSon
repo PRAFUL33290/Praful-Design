@@ -1,0 +1,225 @@
+{
+  "screenshot": "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-3d181beb-114c-491b-ab08-4fa7d5c94268.png?GoogleAccessId=scrape-bucket-accessor%40firecrawl.iam.gserviceaccount.com&Expires=1786543705&Signature=ReXkq67gx2HA1m7lJA6yv7FxU1068D1%2FMcIEk8v%2BajGMjYFMPTP9IiiRL4aMDESG%2BnGjda5kdIkFtZXVR0WqGTF1TMI%2Ba6vm9rlre6%2BLjImYLwSc%2FYlzeJAN7MfWbpCLiLtF5v%2FBvFARK3fU%2FR8fzLsA36oegqoYbwjcQ05epaduC%2FK5OlTt5tfSF2RVGQADa6PdfJMXPxwXXW8fbVD5eZJY4Ml24YVRv7bWIMFnEVM6NLw3iKlsSEXw%2BNl2o2Yto1Dc%2Bw80aNiHG9nEZtd7Qvrb4006JI%2BqxSYJdJ0fh28MWe8nPs9WyGz45rc0znrh3WGMnjBXV50peHvpkXuDGQ%3D%3D",
+  "branding": {
+    "colorScheme": "dark",
+    "fonts": [
+      {
+        "family": "Montserrat",
+        "role": "body"
+      },
+      {
+        "family": "Trustindex Open Sans",
+        "role": "unknown"
+      }
+    ],
+    "colors": {
+      "primary": "#C00086",
+      "secondary": "#1C0030",
+      "accent": "#38005F",
+      "background": "#000000",
+      "textPrimary": "#000000",
+      "link": "#38005F"
+    },
+    "typography": {
+      "fontFamilies": {
+        "primary": "Montserrat",
+        "heading": "Montserrat"
+      },
+      "fontStacks": {
+        "heading": [
+          "Montserrat",
+          "sans-serif"
+        ],
+        "body": [
+          "Montserrat",
+          "sans-serif"
+        ],
+        "paragraph": [
+          "Montserrat",
+          "sans-serif"
+        ]
+      },
+      "fontSizes": {
+        "h1": "20px",
+        "h2": "35px",
+        "body": "12px"
+      }
+    },
+    "spacing": {
+      "baseUnit": 4,
+      "borderRadius": "4px"
+    },
+    "components": {
+      "input": {
+        "background": "#000000",
+        "textColor": "#FFFFFF",
+        "borderColor": null,
+        "borderRadius": "2px",
+        "borderRadiusCorners": {
+          "topLeft": "2px",
+          "topRight": "2px",
+          "bottomRight": "2px",
+          "bottomLeft": "2px"
+        },
+        "shadow": "none"
+      },
+      "buttonPrimary": {
+        "background": "#38005F",
+        "textColor": "#FFFFFF",
+        "borderColor": "#FFFFFF",
+        "borderRadius": "3px",
+        "borderRadiusCorners": {
+          "topLeft": "3px",
+          "topRight": "3px",
+          "bottomRight": "3px",
+          "bottomLeft": "3px"
+        },
+        "shadow": "none"
+      }
+    },
+    "images": {
+      "logo": "https://praful-design.fr/wp-content/uploads/2025/01/LOGO-5000px-BLANC.png",
+      "favicon": "https://praful-design.fr/wp-content/uploads/2024/08/3.-LOGO-DIGICOACHING.png",
+      "ogImage": null,
+      "logoHref": "https://praful-design.fr/",
+      "logoAlt": "Praful Design – Coaching Digital"
+    },
+    "__llm_logo_reasoning": {
+      "selectedIndex": 0,
+      "reasoning": "Selected #0 because it is located in the header, matches the brand name 'Praful Design', and links to the homepage.",
+      "confidence": 0.95,
+      "source": "llm"
+    },
+    "__llm_button_reasoning": {
+      "primary": {
+        "index": 1,
+        "text": "EN SAVOIR +",
+        "reasoning": "Button #1 has a vibrant background color (#38005F) and a clear call-to-action text 'EN SAVOIR +', making it the primary CTA."
+      },
+      "secondary": {
+        "index": -1,
+        "text": "N/A",
+        "reasoning": "Both buttons share the same background color, so no valid secondary button exists with a different color."
+      },
+      "confidence": 0.9
+    },
+    "personality": {
+      "tone": "modern",
+      "energy": "high",
+      "targetAudience": "digital coaching clients"
+    },
+    "designSystem": {
+      "framework": "custom",
+      "componentLibrary": ""
+    },
+    "confidence": {
+      "buttons": 0.9,
+      "colors": 0.9,
+      "overall": 0.9
+    },
+    "__llm_metadata": {
+      "logoSelection": {
+        "llmCalled": true,
+        "llmSucceeded": true,
+        "finalSource": "llm",
+        "rawLogoSelection": {
+          "selectedLogoIndex": 0,
+          "selectedLogoReasoning": "Selected #0 because it is located in the header, matches the brand name 'Praful Design', and links to the homepage.",
+          "confidence": 0.95
+        }
+      },
+      "buttonClassification": {
+        "llmCalled": true,
+        "llmSucceeded": true
+      }
+    }
+  },
+  "metadata": {
+    "language": "fr-FR",
+    "msapplication-TileImage": "https://praful-design.fr/wp-content/uploads/2024/08/3.-LOGO-DIGICOACHING.png",
+    "robots": "max-image-preview:large",
+    "viewport": [
+      "width=device-width,initial-scale=1",
+      "width=device-width, initial-scale=1",
+      "width=device-width, initial-scale=1.0"
+    ],
+    "theme-color": "#000000",
+    "title": "Praful Design – Coaching Digital – Coaching Digital  Sur Parempuye",
+    "generator": [
+      "WordPress 6.7.5",
+      "WooCommerce 9.1.6",
+      "Site Kit by Google 1.132.0",
+      "Elementor 3.23.1; features: e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, e_optimized_control_loading, e_lazyload, e_element_cache; settings: css_print_method-external, google_font-enabled, font_display-swap"
+    ],
+    "favicon": "https://praful-design.fr/wp-content/uploads/2024/08/3.-LOGO-DIGICOACHING.png",
+    "scrapeId": "019fd240-e626-71ca-a748-99bef59eb1bb",
+    "sourceURL": "https://praful-design.fr/",
+    "url": "https://praful-design.fr/",
+    "statusCode": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "timezone": "America/New_York",
+    "proxyUsed": "basic",
+    "indexId": "d5a17132-16ab-4af2-898e-e39c62babd25",
+    "creditsUsed": 1,
+    "concurrencyLimited": false
+  },
+  "links": [
+    "https://www.youtube.com/watch?v=NOy5J8z5THM",
+    "https://www.youtube.com/channel/UCNz65m3ouziBWGAOUniUj0A",
+    "https://www.google.com/maps/place/Praful+Design+-+Graphiste+Webdesigner+Freelance/@44.9578415,-0.604731,17z/data=!4m14!1m7!3m6!1s0xd54d5923e916dc3:0x337bfa0dcf5e3c07!2sPraful+Design+-+Graphiste+Webdesigner+Freelance!8m2!3d44.9578377!4d-0.6021561!16s%2Fg%2F11mhcp3l4f!3m5!1s0xd54d5923e916dc3:0x337bfa0dcf5e3c07!8m2!3d44.9578377!4d-0.6021561!16s%2Fg%2F11mhcp3l4f?entry=ttu",
+    "https://praful-design.fr/mes-services/",
+    "https://praful-design.fr/mes-services/#aid",
+    "https://praful-design.fr/mes-services/#for",
+    "https://praful-design.fr/mes-services/#services",
+    "https://praful-design.fr/contacts/",
+    "https://praful-design.fr/#top"
+  ],
+  "images": [
+    "https://lh3.googleusercontent.com/a/ACg8ocJyBHv0AVl4Z05UIa-bAKm6oIps9sLbuLBBJCnZsfVfCt7hfA=s120-c-rp-mo-br100",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Layer-2-2@2x-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Livre.png",
+    "https://lh3.googleusercontent.com/a/ACg8ocLWHakmZuzXR35yYHq4TLGoyaT1uEGgTQb_CfdALs5KgCN8DA=s120-c-rp-mo-br100",
+    "https://praful-design.fr/wp-content/uploads/2025/01/IMG_0350.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/midsection-people-working-office.jpg",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-27@2x-1-150x150.png",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVnZAqyzSS8Q2bpKGoZuDWb95uD79GdNm3VRbsD7VJtt2uOeu33=s120-c-rp-mo-br100",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-29@2x-150x150.png",
+    "https://lh3.googleusercontent.com/a-/ALV-UjXd0tjbtVIIITjvuR8j4EO5v7cTmkGSPwy8Lk56GTSQNLr1G-A=s120-c-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocKDHX9fM0dWSIsVDvOI1Vg6EPp9BHUoJyvJ5-uw4v-FSaNh3Q=s120-c-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjWgXgF5KFEyZMfmkRCTTCmE4o8YspD4FQVQwqVphfqmy0rjt5Ia=s120-c-rp-mo-br100",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Premiere-Pro.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-18@2x-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-2@2x-150x150.png",
+    "https://i.ytimg.com/vi/NOy5J8z5THM/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGIgMSh_MA8=&rs=AOn4CLDy9frypkaeeQOHQo410MVk1UU6ZQ",
+    "https://praful-design.fr/wp-content/uploads/2024/08/business-people-shaking-hands-together.jpg",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-17@2x-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Layer-2@2x-150x150.png",
+    "https://lh3.googleusercontent.com/a-/ALV-UjUJT7SF9ELmBcIsknNnlDXJs640kXlEdorFr3ISEdnbeyXBTUaE=s120-c-rp-mo-br100",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-21@2x-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Microsoft_365_2022.svg-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/website-design-software-provide-modish-template-online-retail-business-1024x683.jpg",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Illustrator.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Microsoft_365_2022.svg.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-28@2x-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/FINAL-CUT-PRO-2.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-10@2x-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-24@2x.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/FINAL-CUT-PRO-2-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Figma-logo-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/photoshop.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-13@2x-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Layer-2-3@2x-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-25@2x-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/2.-PROJET-COACHING-1024x501.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-30@2x-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-20@2x-150x150.png",
+    "https://lh3.googleusercontent.com/a/ACg8ocKBC0E87XsztndzHlzC-ox6YDDCKMGogzbEavVI9h-balg-vw=s120-c-rp-mo-br100",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-24@2x-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Fichier-23@2x-150x150.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Logic-pro.png",
+    "https://praful-design.fr/wp-content/uploads/2024/08/Layer-2-4@2x-150x150.png",
+    "https://lh3.googleusercontent.com/a/ACg8ocII4KfQlh5OVTi1PD4Xqx-MktweejYYYuo-WWEgIEDCE8Xl9jc=s120-c-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocI6StTwf5v39AzTFDasRCkt-8QPYZoRfkr4St2etisaAUNXeA=s120-c-rp-mo-br100",
+    "https://praful-design.fr/wp-content/uploads/2024/08/vaBXS6.tif@2x.png"
+  ]
+}

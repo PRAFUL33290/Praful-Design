@@ -1,0 +1,141 @@
+  <section class="entete-page">
+    <div class="conteneur">
+      <p class="fil"><a href="index.html">Accueil</a> — Contact</p>
+      <span class="surtitre">Contact</span>
+      <h1>Parlons de <span class="accent">votre projet</span></h1>
+      <p>
+        Décrivez votre situation en quelques lignes. Je vous réponds personnellement
+        sous 24 h ouvrées, avec un avis honnête et un budget réaliste.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="hero__grille">
+
+        <div>
+          <h2>Ce qui se passe ensuite</h2>
+          <p>
+            Je lis votre message et je vous réponds par email sous 24 h ouvrées.
+            Si le projet semble cohérent, on cale un échange de 30 minutes —
+            par téléphone, en visio ou chez vous si vous êtes en Gironde.
+          </p>
+          <p>
+            À l'issue de cet échange, vous recevez un devis détaillé sous 48 h.
+            Aucun engagement à ce stade, et aucune relance commerciale insistante :
+            ce n'est pas ma façon de travailler.
+          </p>
+
+          <div class="carte anim" style="margin-top:36px">
+            <div class="carte__icone" aria-hidden="true">✉</div>
+            <h3>Me joindre directement</h3>
+            <ul class="carte__liste">
+              <li>Email : <a href="mailto:contact@praful-design.fr">contact@praful-design.fr</a></li>
+              <li>Basé à Parempuyre (33290), Gironde</li>
+              <li>Du lundi au vendredi, 9 h – 18 h</li>
+              <li>Déplacements sur Bordeaux Métropole</li>
+            </ul>
+          </div>
+
+          <div class="carte anim" style="margin-top:24px">
+            <div class="carte__icone" aria-hidden="true">◷</div>
+            <h3>Pour aller plus vite</h3>
+            <p>
+              Plus votre message est précis, plus ma réponse le sera. Si vous le pouvez,
+              indiquez l'adresse de votre site actuel, ce qui ne vous convient pas,
+              votre échéance et l'ordre de budget envisagé.
+            </p>
+          </div>
+        </div>
+
+        <div class="carte-form">
+          <h2>Votre demande</h2>
+          <p class="carte-form__sous">Les champs marqués sont nécessaires pour que je puisse vous répondre.</p>
+
+          <form data-valider novalidate>
+            <div class="duo">
+              <div class="champ">
+                <label for="c-prenom">Prénom</label>
+                <input type="text" id="c-prenom" name="prenom" placeholder="Julien" required>
+                <span class="form__erreur">Merci d'indiquer votre prénom.</span>
+              </div>
+              <div class="champ">
+                <label for="c-nom">Nom</label>
+                <input type="text" id="c-nom" name="nom" placeholder="Dupont">
+              </div>
+            </div>
+
+            <div class="duo">
+              <div class="champ">
+                <label for="c-email">Email</label>
+                <input type="email" id="c-email" name="email" placeholder="vous@exemple.fr" required>
+                <span class="form__erreur">Merci d'indiquer un email valide.</span>
+              </div>
+              <div class="champ">
+                <label for="c-tel">Téléphone</label>
+                <input type="tel" id="c-tel" name="telephone" placeholder="06 12 34 56 78">
+              </div>
+            </div>
+
+            <div class="champ">
+              <label for="c-entreprise">Entreprise / activité</label>
+              <input type="text" id="c-entreprise" name="entreprise" placeholder="Menuiserie Dupont">
+            </div>
+
+            <div class="champ">
+              <label for="c-site">Site actuel (si vous en avez un)</label>
+              <input type="text" id="c-site" name="site" placeholder="www.mon-site.fr">
+            </div>
+
+            <div class="champ">
+              <label for="c-besoin">Votre besoin</label>
+              <select id="c-besoin" name="besoin" required>
+                <option value="">Sélectionnez…</option>
+                <option>Audit &amp; plan d'action</option>
+                <option>Création de site WordPress</option>
+                <option>Refonte de site</option>
+                <option>Maintenance mensuelle</option>
+                <option>SEO local</option>
+                <option>Autre / je ne sais pas encore</option>
+              </select>
+              <span class="form__erreur">Merci de choisir un besoin.</span>
+            </div>
+
+            <div class="champ">
+              <label for="c-budget">Budget envisagé</label>
+              <select id="c-budget" name="budget">
+                <option value="">Je préfère en discuter</option>
+                <option>Moins de 1 500 €</option>
+                <option>1 500 – 3 500 €</option>
+                <option>3 500 – 6 000 €</option>
+                <option>Plus de 6 000 €</option>
+              </select>
+            </div>
+
+            <div class="champ">
+              <label for="c-message">Votre projet</label>
+              <textarea id="c-message" name="message" placeholder="Mon site actuel date de 2018 et ne me ramène aucun client. J'aimerais quelque chose de plus moderne, avec un formulaire de devis…" required></textarea>
+              <span class="form__erreur">Merci de décrire brièvement votre projet.</span>
+            </div>
+
+            <div class="champ champ--case">
+              <input type="checkbox" id="c-rgpd" name="rgpd" required>
+              <label for="c-rgpd">
+                J'accepte que mes informations soient utilisées par Praful Design dans le seul but
+                de me recontacter. Aucune donnée n'est cédée à un tiers.
+                Voir les <a href="mentions-legales.html">mentions légales</a>.
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn--primaire btn--large">Envoyer ma demande</button>
+
+            <p class="form__statut form__statut--succes" role="status" tabindex="-1">
+              Merci, votre message est bien parti. Je vous réponds sous 24 h ouvrées.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>

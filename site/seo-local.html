@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO local — être trouvé par les clients près de chez vous | Praful Design</title>
+<meta name="description" content="Référencement local pour artisans, commerçants et indépendants en Gironde : Google Business Profile, pages locales, données structurées et suivi des positions.">
+<link rel="canonical" href="https://praful-design.fr/seo-local.html">
+<meta property="og:title" content="SEO local — être trouvé par les clients près de chez vous | Praful Design">
+<meta property="og:description" content="Référencement local pour artisans, commerçants et indépendants en Gironde : Google Business Profile, pages locales, données structurées et suivi des positions.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://praful-design.fr/seo-local.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+/* Applique le thème mémorisé avant le premier rendu, pour éviter que la
+   page clignote en clair avant de basculer en sombre. Le site est en
+   clair par défaut ; seul un choix explicite de l'utilisateur est retenu. */
+(function () {
+  try {
+    var choix = localStorage.getItem("praful-theme");
+    if (choix === "dark" || choix === "light") {
+      document.documentElement.setAttribute("data-theme", choix);
+    }
+  } catch (e) { /* navigation privée : on reste en clair */ }
+})();
+</script>
+
+</head>
+<body>
+
+<!-- ====================== EN-TÊTE (pleine largeur) ====================== -->
+<header class="entete">
+  <div class="conteneur conteneur--pleine entete__inner">
+    <a href="index.html" class="logo">
+      <span class="logo__glyphe">PD</span>
+      <span>
+        <span class="logo__marque">PRAFUL <span>DESIGN</span></span>
+        <span class="logo__baseline">Webdesign &amp; WordPress</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav__lien">Accueil</a>
+
+      <div class="nav__item">
+        <button type="button" class="nav__lien nav__lien--parent est-actif" aria-expanded="false" aria-controls="sous-menu-services">
+          Services <span class="nav__chevron" aria-hidden="true"></span>
+        </button>
+        <div class="sous-menu" id="sous-menu-services">
+          <a href="services.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">☰</span>
+            <span>
+              <strong class="sous-menu__titre">Tous les services</strong>
+              <span class="sous-menu__desc">La vue d'ensemble de ce que je propose.</span>
+            </span>
+          </a>
+          <a href="creation-site-wordpress.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">✦</span>
+            <span>
+              <strong class="sous-menu__titre">Création de site WordPress</strong>
+              <span class="sous-menu__desc">Un site vitrine sur mesure, pensé pour convertir.</span>
+            </span>
+          </a>
+          <a href="refonte-site.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">↻</span>
+            <span>
+              <strong class="sous-menu__titre">Refonte de site</strong>
+              <span class="sous-menu__desc">On repart de votre existant, en mieux.</span>
+            </span>
+          </a>
+          <a href="maintenance-wordpress.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">⛨</span>
+            <span>
+              <strong class="sous-menu__titre">Maintenance WordPress</strong>
+              <span class="sous-menu__desc">Mises à jour, sauvegardes, sécurité.</span>
+            </span>
+          </a>
+          <a href="seo-local.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">◎</span>
+            <span>
+              <strong class="sous-menu__titre">SEO local</strong>
+              <span class="sous-menu__desc">Être trouvé par les clients près de chez vous.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="realisations.html" class="nav__lien">Réalisations</a>
+      <a href="tarifs.html" class="nav__lien">Tarifs</a>
+      <a href="a-propos.html" class="nav__lien">À propos</a>
+      <a href="contact.html" class="btn btn--primaire entete__cta">Demander un devis</a>
+    </nav>
+
+    <div class="entete__actions">
+      <button type="button" class="bascule-theme" id="bascule-theme"
+              aria-label="Passer en mode sombre" title="Changer de thème">
+        <svg class="icone-lune" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+        <svg class="icone-soleil" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"/>
+        </svg>
+      </button>
+
+      <button type="button" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="entete-page">
+    <div class="conteneur">
+      <p class="fil"><a href="index.html">Accueil</a> — <a href="services.html">Services</a> — SEO local</p>
+      <span class="surtitre">Service</span>
+      <h1>SEO <span class="accent">local</span></h1>
+      <p>
+        Être bien placé sur « votre métier + votre ville », c'est souvent ce qui
+        rapporte le plus vite quand on travaille sur un secteur géographique.
+        Et c'est un terrain où une TPE peut réellement gagner.
+      </p>
+      <div class="groupe-btn" style="justify-content:center;margin-top:30px">
+        <a href="contact.html" class="btn btn--primaire">Demander un audit SEO</a>
+        <a href="tarifs.html" class="btn btn--secondaire">Voir les tarifs</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="grille grille--2">
+        <div>
+          <h2>Le raisonnement</h2>
+          <p>
+            Vous n'avez aucune chance de battre les gros sites nationaux sur une
+            requête générique comme « plombier ». En revanche, sur « plombier
+            Parempuyre » ou « plombier urgence Bordeaux nord », le terrain est
+            beaucoup plus accessible — et ce sont ces recherches-là qui aboutissent
+            à un appel dans l'heure.
+          </p>
+          <p>
+            Le référencement local repose sur trois piliers : une fiche Google
+            Business Profile complète et vivante, des pages de votre site qui
+            parlent explicitement de votre zone d'intervention, et une cohérence
+            parfaite de vos coordonnées partout où elles apparaissent.
+          </p>
+          <p>
+            Rien de magique là-dedans. C'est méthodique, et la plupart de vos
+            concurrents ne le font pas correctement.
+          </p>
+        </div>
+
+        <div class="carte anim">
+          <div class="carte__icone" aria-hidden="true">◎</div>
+          <h3>Ce que je mets en place</h3>
+          <ul class="carte__liste">
+            <li>Audit des positions actuelles et de la concurrence locale</li>
+            <li>Recherche des requêtes réellement tapées par vos clients</li>
+            <li>Optimisation complète de Google Business Profile</li>
+            <li>Création ou refonte des pages par zone et par prestation</li>
+            <li>Balises titres et méta-descriptions réécrites</li>
+            <li>Données structurées LocalBusiness et Open Graph</li>
+            <li>Cohérence des coordonnées (nom, adresse, téléphone)</li>
+            <li>Stratégie de collecte d'avis clients</li>
+            <li>Suivi mensuel des positions et des appels</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="conteneur">
+      <div class="entete-section entete-section--centre">
+        <span class="surtitre">Résultats</span>
+        <h2>Ce qu'on peut viser, honnêtement</h2>
+        <p class="chapo">
+          Personne ne peut vous garantir la première place sur Google. Voici en revanche
+          ce qu'on observe généralement sur un secteur local peu travaillé.
+        </p>
+      </div>
+
+      <div class="chiffres anim">
+        <div class="chiffre">
+          <span class="chiffre__val">1 – 3</span>
+          <span class="chiffre__lib">Mois avant les premiers effets</span>
+        </div>
+        <div class="chiffre">
+          <span class="chiffre__val">×2 – ×4</span>
+          <span class="chiffre__lib">Vues sur la fiche Google</span>
+        </div>
+        <div class="chiffre">
+          <span class="chiffre__val">6 mois</span>
+          <span class="chiffre__lib">Pour un positionnement stable</span>
+        </div>
+        <div class="chiffre">
+          <span class="chiffre__val">0</span>
+          <span class="chiffre__lib">Promesse de résultat garanti</span>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:28px;font-size:0.88rem;color:var(--texte-doux);max-width:640px;margin-inline:auto">
+        Méfiez-vous de quiconque vous promet la première position en trois semaines.
+        Le SEO local est un travail de fond, mesurable, mais qui demande de la patience.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="entete-section entete-section--centre">
+        <span class="surtitre">Questions fréquentes</span>
+        <h2>Ce qu'on me demande</h2>
+      </div>
+
+      <div class="faq">
+        <div class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="s-faq-1">
+            Le SEO local est-il inclus dans une refonte ?
+            <span class="faq__signe" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__reponse" id="s-faq-1"><p>Les réglages de base le sont dans toutes mes refontes. Le travail de fond — recherche de requêtes, pages locales, Google Business Profile, suivi — fait partie de l'offre « refonte complète + SEO local », de 3 500 à 6 000 € HT.</p></div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="s-faq-2">
+            Faut-il un abonnement mensuel ?
+            <span class="faq__signe" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__reponse" id="s-faq-2"><p>Pas obligatoirement. La mise en place initiale produit déjà l'essentiel des effets. Le suivi mensuel a du sens si votre secteur est concurrentiel ou si vous voulez publier du contenu régulièrement.</p></div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="s-faq-3">
+            Comment mesure-t-on que ça marche ?
+            <span class="faq__signe" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__reponse" id="s-faq-3"><p>Sur trois indicateurs concrets : vos positions sur les requêtes ciblées, le nombre de vues et d'appels depuis votre fiche Google, et le nombre de formulaires reçus. Pas sur des courbes de trafic sans rapport avec votre chiffre d'affaires.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="bandeau-cta anim">
+        <h2>Où en êtes-vous sur votre zone ?</h2>
+        <p>Je regarde vos positions actuelles et celles de vos concurrents, et je vous dis s'il y a une place à prendre.</p>
+        <div class="groupe-btn">
+          <a href="contact.html" class="btn btn--primaire">Demander l'analyse</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ====================== PIED DE PAGE (pleine largeur, minimaliste) ====================== -->
+<footer class="pied">
+  <div class="conteneur conteneur--pleine">
+    <div class="pied__haut">
+      <a href="index.html" class="logo">
+        <span class="logo__glyphe">PD</span>
+        <span>
+          <span class="logo__marque">PRAFUL <span>DESIGN</span></span>
+          <span class="logo__baseline">Webdesign &amp; WordPress</span>
+        </span>
+      </a>
+
+      <nav class="pied__nav" aria-label="Navigation de pied de page">
+        <a href="services.html">Services</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="pied__bas">
+      <p style="margin:0">© <span data-annee>2026</span> Praful Design — Parempuyre (33), Gironde</p>
+      <div class="pied__legal">
+        <a href="mailto:contact@praful-design.fr">contact@praful-design.fr</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

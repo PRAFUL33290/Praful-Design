@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maintenance WordPress — mises à jour, sauvegardes, sécurité | Praful Design</title>
+<meta name="description" content="Abonnement de maintenance WordPress de 49 à 149 € par mois : mises à jour, sauvegardes automatiques, surveillance sécurité et petites corrections incluses.">
+<link rel="canonical" href="https://praful-design.fr/maintenance-wordpress.html">
+<meta property="og:title" content="Maintenance WordPress — mises à jour, sauvegardes, sécurité | Praful Design">
+<meta property="og:description" content="Abonnement de maintenance WordPress de 49 à 149 € par mois : mises à jour, sauvegardes automatiques, surveillance sécurité et petites corrections incluses.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://praful-design.fr/maintenance-wordpress.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+/* Applique le thème mémorisé avant le premier rendu, pour éviter que la
+   page clignote en clair avant de basculer en sombre. Le site est en
+   clair par défaut ; seul un choix explicite de l'utilisateur est retenu. */
+(function () {
+  try {
+    var choix = localStorage.getItem("praful-theme");
+    if (choix === "dark" || choix === "light") {
+      document.documentElement.setAttribute("data-theme", choix);
+    }
+  } catch (e) { /* navigation privée : on reste en clair */ }
+})();
+</script>
+
+</head>
+<body>
+
+<!-- ====================== EN-TÊTE (pleine largeur) ====================== -->
+<header class="entete">
+  <div class="conteneur conteneur--pleine entete__inner">
+    <a href="index.html" class="logo">
+      <span class="logo__glyphe">PD</span>
+      <span>
+        <span class="logo__marque">PRAFUL <span>DESIGN</span></span>
+        <span class="logo__baseline">Webdesign &amp; WordPress</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav__lien">Accueil</a>
+
+      <div class="nav__item">
+        <button type="button" class="nav__lien nav__lien--parent est-actif" aria-expanded="false" aria-controls="sous-menu-services">
+          Services <span class="nav__chevron" aria-hidden="true"></span>
+        </button>
+        <div class="sous-menu" id="sous-menu-services">
+          <a href="services.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">☰</span>
+            <span>
+              <strong class="sous-menu__titre">Tous les services</strong>
+              <span class="sous-menu__desc">La vue d'ensemble de ce que je propose.</span>
+            </span>
+          </a>
+          <a href="creation-site-wordpress.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">✦</span>
+            <span>
+              <strong class="sous-menu__titre">Création de site WordPress</strong>
+              <span class="sous-menu__desc">Un site vitrine sur mesure, pensé pour convertir.</span>
+            </span>
+          </a>
+          <a href="refonte-site.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">↻</span>
+            <span>
+              <strong class="sous-menu__titre">Refonte de site</strong>
+              <span class="sous-menu__desc">On repart de votre existant, en mieux.</span>
+            </span>
+          </a>
+          <a href="maintenance-wordpress.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">⛨</span>
+            <span>
+              <strong class="sous-menu__titre">Maintenance WordPress</strong>
+              <span class="sous-menu__desc">Mises à jour, sauvegardes, sécurité.</span>
+            </span>
+          </a>
+          <a href="seo-local.html" class="sous-menu__lien">
+            <span class="sous-menu__icone" aria-hidden="true">◎</span>
+            <span>
+              <strong class="sous-menu__titre">SEO local</strong>
+              <span class="sous-menu__desc">Être trouvé par les clients près de chez vous.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="realisations.html" class="nav__lien">Réalisations</a>
+      <a href="tarifs.html" class="nav__lien">Tarifs</a>
+      <a href="a-propos.html" class="nav__lien">À propos</a>
+      <a href="contact.html" class="btn btn--primaire entete__cta">Demander un devis</a>
+    </nav>
+
+    <div class="entete__actions">
+      <button type="button" class="bascule-theme" id="bascule-theme"
+              aria-label="Passer en mode sombre" title="Changer de thème">
+        <svg class="icone-lune" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+        <svg class="icone-soleil" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"/>
+        </svg>
+      </button>
+
+      <button type="button" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="entete-page">
+    <div class="conteneur">
+      <p class="fil"><a href="index.html">Accueil</a> — <a href="services.html">Services</a> — Maintenance WordPress</p>
+      <span class="surtitre">Service</span>
+      <h1>Maintenance <span class="accent">WordPress</span></h1>
+      <p>
+        Un site laissé sans suivi finit par casser ou par se faire pirater.
+        L'abonnement mensuel évite ça — et vous n'y pensez plus jamais.
+      </p>
+      <div class="groupe-btn" style="justify-content:center;margin-top:30px">
+        <a href="contact.html" class="btn btn--primaire">Souscrire</a>
+        <a href="#formules" class="btn btn--secondaire">Voir les formules</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="grille grille--2">
+        <div>
+          <h2>Pourquoi c'est nécessaire</h2>
+          <p>
+            WordPress publie des mises à jour de sécurité en continu, et vos extensions
+            aussi. Un site qui n'est pas suivi accumule les versions obsolètes, et
+            c'est très exactement ce que cherchent les robots qui scannent le web.
+          </p>
+          <p>
+            L'autre risque est plus banal : une mise à jour mal passée qui casse
+            l'affichage un vendredi soir. Sans sauvegarde récente et testée,
+            la remise en état coûte plus cher qu'une année d'abonnement.
+          </p>
+          <p>
+            La maintenance, ce n'est pas une ligne de facture en plus. C'est ce
+            qui protège l'investissement que vous avez fait dans votre site.
+          </p>
+        </div>
+
+        <div class="carte anim">
+          <div class="carte__icone" aria-hidden="true">⛨</div>
+          <h3>Ce que je fais chaque mois</h3>
+          <ul class="carte__liste">
+            <li>Mise à jour du cœur WordPress, du thème et des extensions</li>
+            <li>Vérification visuelle du site après chaque mise à jour</li>
+            <li>Sauvegarde automatique, stockée hors du serveur</li>
+            <li>Test de restauration régulier</li>
+            <li>Surveillance des tentatives d'intrusion</li>
+            <li>Contrôle des performances et du temps de chargement</li>
+            <li>Vérification des formulaires et des liens cassés</li>
+            <li>Petites corrections de contenu incluses</li>
+            <li>Rapport mensuel clair, sans jargon</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="formules">
+    <div class="conteneur">
+      <div class="entete-section entete-section--centre">
+        <span class="surtitre">Formules</span>
+        <h2>Sans engagement, résiliable à tout moment</h2>
+        <p class="chapo">Choisissez selon la taille de votre site et le niveau de réactivité dont vous avez besoin.</p>
+      </div>
+
+      <div class="tarifs">
+        <article class="offre anim">
+          <p class="offre__nom">Essentiel</p>
+          <h3 class="offre__titre">Le socle</h3>
+          <p class="offre__prix">49 <small>€ / mois</small></p>
+          <p class="offre__mention">Pour un site vitrine simple.</p>
+          <ul class="offre__inclus">
+            <li>Mises à jour mensuelles</li>
+            <li>Sauvegarde hebdomadaire</li>
+            <li>Surveillance sécurité</li>
+            <li>Support par email sous 72 h</li>
+          </ul>
+          <a href="contact.html" class="btn btn--secondaire btn--large">Souscrire</a>
+        </article>
+
+        <article class="offre offre--phare anim">
+          <span class="offre__badge">Le plus choisi</span>
+          <p class="offre__nom">Confort</p>
+          <h3 class="offre__titre">Le tranquille</h3>
+          <p class="offre__prix">89 <small>€ / mois</small></p>
+          <p class="offre__mention">Pour un site qui génère des demandes.</p>
+          <ul class="offre__inclus">
+            <li>Tout l'Essentiel</li>
+            <li>Sauvegarde quotidienne</li>
+            <li>30 minutes de modifications par mois</li>
+            <li>Suivi des performances</li>
+            <li>Support par email sous 24 h</li>
+          </ul>
+          <a href="contact.html" class="btn btn--primaire btn--large">Souscrire</a>
+        </article>
+
+        <article class="offre anim">
+          <p class="offre__nom">Sérénité</p>
+          <h3 class="offre__titre">Le complet</h3>
+          <p class="offre__prix">149 <small>€ / mois</small></p>
+          <p class="offre__mention">Pour les sites à enjeu commercial fort.</p>
+          <ul class="offre__inclus">
+            <li>Tout le Confort</li>
+            <li>2 heures de modifications par mois</li>
+            <li>Rapport de positionnement SEO</li>
+            <li>Intervention prioritaire en cas d'incident</li>
+            <li>Support par téléphone</li>
+          </ul>
+          <a href="contact.html" class="btn btn--secondaire btn--large">Souscrire</a>
+        </article>
+      </div>
+
+      <p style="text-align:center;margin-top:32px;font-size:0.85rem;color:var(--texte-faible)">
+        Tarifs hors taxes. La reprise d'un site que je n'ai pas réalisé démarre par un
+        état des lieux offert : si le site est trop dégradé pour être maintenu en l'état, je vous le dis.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="faq">
+        <div class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="m-faq-1">
+            Reprenez-vous un site fait par quelqu'un d'autre ?
+            <span class="faq__signe" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__reponse" id="m-faq-1"><p>Oui, dans la grande majorité des cas. Je commence par un état des lieux gratuit pour vérifier que le site est sain. S'il est trop dégradé, je vous le dis franchement plutôt que de facturer une maintenance qui ne tiendra pas.</p></div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="m-faq-2">
+            Que se passe-t-il si mon site tombe ?
+            <span class="faq__signe" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__reponse" id="m-faq-2"><p>Vous m'écrivez, j'interviens selon le délai de votre formule. Grâce aux sauvegardes récentes et testées, la remise en ligne prend généralement moins d'une heure.</p></div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="m-faq-3">
+            Puis-je arrêter quand je veux ?
+            <span class="faq__signe" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__reponse" id="m-faq-3"><p>Oui, aucun engagement de durée. Vous prévenez un mois à l'avance et je vous remets l'ensemble des accès et des sauvegardes. Votre site vous appartient, du premier au dernier jour.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--serre">
+    <div class="conteneur">
+      <div class="bandeau-cta anim">
+        <h2>Arrêtez de croiser les doigts</h2>
+        <p>Un état des lieux gratuit de votre site actuel, puis vous décidez.</p>
+        <div class="groupe-btn">
+          <a href="contact.html" class="btn btn--primaire">Demander l'état des lieux</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ====================== PIED DE PAGE (pleine largeur, minimaliste) ====================== -->
+<footer class="pied">
+  <div class="conteneur conteneur--pleine">
+    <div class="pied__haut">
+      <a href="index.html" class="logo">
+        <span class="logo__glyphe">PD</span>
+        <span>
+          <span class="logo__marque">PRAFUL <span>DESIGN</span></span>
+          <span class="logo__baseline">Webdesign &amp; WordPress</span>
+        </span>
+      </a>
+
+      <nav class="pied__nav" aria-label="Navigation de pied de page">
+        <a href="services.html">Services</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="pied__bas">
+      <p style="margin:0">© <span data-annee>2026</span> Praful Design — Parempuyre (33), Gironde</p>
+      <div class="pied__legal">
+        <a href="mailto:contact@praful-design.fr">contact@praful-design.fr</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
