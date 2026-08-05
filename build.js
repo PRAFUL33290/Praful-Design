@@ -85,6 +85,12 @@ const pages = {
     canonical: "realisations.html",
     nav: "realisations"
   },
+  "collectivites": {
+    title: "Collectivités & mairies — sites communaux clairs et sécurisés | Praful Design",
+    description: "Création, refonte et maintenance de sites pour mairies, communautés de communes et petites collectivités : simplicité d'administration, accessibilité et sécurité.",
+    canonical: "collectivites.html",
+    nav: "collectivites"
+  },
   "tarifs": {
     title: "Tarifs — forfaits site WordPress, refonte, SEO et maintenance | Praful Design",
     description: "Audit à partir de 150 €, refonte vitrine de 1 500 à 3 500 € HT, refonte complète avec SEO local de 3 500 à 6 000 € HT, maintenance de 49 à 149 € par mois.",
