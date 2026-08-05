@@ -89,13 +89,13 @@ Une couleur changée dans un bloc se propage à tout le site.
 
 > **Attention** : `--sur-couleur` (blanc fixe) sert au texte posé sur un aplat
 > de marque — boutons primaires, badges, bandeaux CTA, vignettes. Ne le liez
-> pas au thème, sinon ces textes deviennent noirs sur magenta en mode clair.
+> pas au thème, sinon ces textes deviennent noirs sur indigo en mode clair.
 
 | Rôle | Clair | Sombre |
 | ---- | ----- | ------ |
-| Magenta (marque) | `#C00086` | `#C00086` |
+| Indigo (marque)  | `#4F46E5` | `#4F46E5` |
 | Violet (marque)  | `#38005F` | `#38005F` |
-| Accent / liens   | `#A3006F` | `#FF2FB4` |
+| Accent / liens   | `#4338CA` | `#818CF8` |
 | Fond             | `#FFFFFF` | `#06000B` |
 | Texte            | `#241031` | `#F3EEF7` |
 | Typographie      | Montserrat | Montserrat |
