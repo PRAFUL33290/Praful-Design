@@ -28,6 +28,7 @@
   } catch (e) { /* navigation privée : on reste en clair */ }
 })();
 </script>
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -139,93 +140,61 @@
 <main>
 <!-- ====================== HERO ====================== -->
   <section class="hero">
-    <!-- Emplacement réservé pour l'élément 3D : y insérer le <canvas>
-         ou le <model-viewer>, il se place en fond sans capter les clics. -->
-    <div class="hero__decor" aria-hidden="true"></div>
+    <!-- Modèle 3D en plein fond du hero, derrière le texte, sans capter les clics. -->
+    <model-viewer
+      class="hero__modele3d"
+      src="3D/wordpress-dashboard-optimized.glb"
+      alt="Modèle 3D d'un tableau de bord WordPress"
+      disable-zoom
+      disable-pan
+      disable-tap
+      auto-rotate
+      auto-rotate-delay="0"
+      rotation-per-second="18deg"
+      interaction-prompt="none"
+      shadow-intensity="1"
+      exposure="1.1"
+      camera-orbit="0deg 75deg 78%"
+      field-of-view="25deg"
+      aria-hidden="true"
+    ></model-viewer>
+
+    <div class="hero__voile" aria-hidden="true"></div>
 
     <div class="conteneur">
-      <div class="hero__grille">
-        <div>
-          <p class="hero__note">
-            <span class="hero__etoiles" aria-hidden="true">★★★★★</span>
-            <span>42 avis clients Google — Parempuyre (33)</span>
-          </p>
+      <div class="hero__contenu">
+        <span class="surtitre anim">Web &amp; communication · Gironde</span>
 
-          <h1>Votre site WordPress doit <span class="accent">rapporter</span>, pas juste exister.</h1>
+        <h1 class="anim">
+          Je fais
+          <span class="hero__rotation">
+            <span class="hero__mot">des sites WordPress sur mesure</span>
+            <span class="hero__mot">de la sécurité WordPress</span>
+            <span class="hero__mot">de la maintenance au quotidien</span>
+            <span class="hero__mot">des refontes qui durent</span>
+            <span class="hero__mot">du SEO qui fait venir</span>
+          </span>
+        </h1>
 
-          <p class="hero__soustitre">
-            J'aide les indépendants et petites entreprises à transformer leur site WordPress
-            en outil crédible, rapide et visible localement.
-          </p>
+        <p class="hero__soustitre anim">
+          Dix ans à animer des groupes, quatre ans au service communication d'une mairie :
+          je conçois des sites et des contenus qui parlent vraiment aux gens à qui ils s'adressent.
+        </p>
 
-          <ul class="hero__points">
-            <li>Un site qui rassure vos prospects dès les 5 premières secondes.</li>
-            <li>Une base technique saine : rapide, sécurisée, à jour.</li>
-            <li>Une visibilité locale travaillée, pas laissée au hasard.</li>
-            <li>Un interlocuteur unique, joignable, qui parle français et pas jargon.</li>
-          </ul>
-
-          <div class="groupe-btn">
-            <a href="contact.html" class="btn btn--primaire">Demander un devis gratuit</a>
-            <a href="tarifs.html" class="btn btn--secondaire">Voir les tarifs</a>
-          </div>
-
-          <p class="hero__reassurance">
-            Réponse sous 24 h ouvrées · Devis gratuit et sans engagement · Interventions à Parempuyre, Bordeaux et à distance
-          </p>
+        <div class="groupe-btn anim">
+          <a href="contact.html" class="btn btn--primaire">Demander un devis</a>
+          <a href="#competences" class="btn btn--secondaire">Voir mes compétences</a>
         </div>
 
-        <!-- Formulaire de contact rapide -->
-        <div class="carte-form">
-          <h2>Parlons de votre projet</h2>
-          <p class="carte-form__sous">Décrivez-moi votre besoin en deux lignes, je vous réponds personnellement.</p>
-
-          <form data-valider novalidate>
-            <div class="duo">
-              <div class="champ">
-                <label for="h-prenom">Prénom</label>
-                <input type="text" id="h-prenom" name="prenom" placeholder="Julien" required>
-                <span class="form__erreur">Merci d'indiquer votre prénom.</span>
-              </div>
-              <div class="champ">
-                <label for="h-email">Email</label>
-                <input type="email" id="h-email" name="email" placeholder="vous@exemple.fr" required>
-                <span class="form__erreur">Merci d'indiquer un email valide.</span>
-              </div>
-            </div>
-
-            <div class="champ">
-              <label for="h-besoin">Votre besoin</label>
-              <select id="h-besoin" name="besoin" required>
-                <option value="">Sélectionnez…</option>
-                <option>Audit &amp; plan d'action</option>
-                <option>Création de site WordPress</option>
-                <option>Refonte de site</option>
-                <option>Maintenance mensuelle</option>
-                <option>SEO local</option>
-                <option>Autre / je ne sais pas encore</option>
-              </select>
-              <span class="form__erreur">Merci de choisir un besoin.</span>
-            </div>
-
-            <div class="champ">
-              <label for="h-message">Votre projet</label>
-              <textarea id="h-message" name="message" placeholder="Mon site actuel date de 2018 et ne me ramène aucun client…" required></textarea>
-              <span class="form__erreur">Merci de décrire brièvement votre projet.</span>
-            </div>
-
-            <div class="champ champ--case">
-              <input type="checkbox" id="h-rgpd" name="rgpd" required>
-              <label for="h-rgpd">J'accepte que mes informations soient utilisées par Praful Design pour me recontacter par email. Aucune donnée n'est cédée à un tiers.</label>
-            </div>
-
-            <button type="submit" class="btn btn--primaire btn--large">Envoyer ma demande</button>
-
-            <p class="form__statut form__statut--succes" role="status" tabindex="-1">
-              Merci, votre message est bien parti. Je vous réponds sous 24 h ouvrées.
-            </p>
-          </form>
+        <div class="hero__pastilles anim">
+          <span class="pastille">WordPress</span>
+          <span class="pastille">Design graphique</span>
+          <span class="pastille">Montage vidéo</span>
+          <span class="pastille">No-code &amp; IA</span>
+          <span class="pastille">SEO local</span>
         </div>
+
+        <p class="maquette__dispo anim"><span aria-hidden="true"></span>Disponible pour vos projets</p>
       </div>
     </div>
 
@@ -233,6 +202,55 @@
       Découvrir
       <span></span>
     </p>
+  </section>
+
+  <!-- ====================== COMPÉTENCES ====================== -->
+  <section class="section section--serre" id="competences">
+    <div class="conteneur">
+      <div class="entete-section anim">
+        <span class="surtitre">Compétences</span>
+        <h2>Ce que je sais faire, concrètement.</h2>
+        <p class="chapo">Trois blocs de compétences qui se répondent : créer, mettre en ligne, et savoir parler aux gens.</p>
+      </div>
+
+      <div class="grille grille--3">
+        <div class="carte anim">
+          <span class="carte__eyebrow">01</span>
+          <h3>Communication &amp; création</h3>
+          <ul class="carte__liste">
+            <li>Photoshop, Illustrator, Canva</li>
+            <li>Affiches, logos, chartes graphiques</li>
+            <li>Montage vidéo — Premiere Pro, Final Cut</li>
+            <li>Notions After Effects, apprentissage 3D</li>
+            <li>Contenu réseaux sociaux</li>
+          </ul>
+        </div>
+
+        <div class="carte anim">
+          <span class="carte__eyebrow">02</span>
+          <h3>Web &amp; numérique</h3>
+          <ul class="carte__liste">
+            <li>WordPress — Elementor, Gutenberg</li>
+            <li>Maintenance, sauvegardes, hébergement</li>
+            <li>SEO local, bases HTML/CSS</li>
+            <li>IA et no-code — n8n, Make</li>
+            <li>GitHub, ligne de commande, Notion</li>
+          </ul>
+        </div>
+
+        <div class="carte anim">
+          <span class="carte__eyebrow">03</span>
+          <h3>Le reste de mon parcours</h3>
+          <ul class="carte__liste">
+            <li>10+ ans d'animation</li>
+            <li>4 ans à la mairie de Bruges</li>
+            <li>Gestion de groupes et d'événements</li>
+            <li>Familles, écoles, ALSH, collectivités</li>
+            <li>Prise de parole et structuration de projet</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ====================== BÉNÉFICES ====================== -->

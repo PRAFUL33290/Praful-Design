@@ -26,7 +26,8 @@ const pages = {
     description: "J'aide les indépendants et petites entreprises à transformer leur site WordPress en outil crédible, rapide et visible localement. Création, refonte, maintenance et SEO local en Gironde.",
     canonical: "",
     nav: "index",
-    head: `<script type="application/ld+json">
+    head: `<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
