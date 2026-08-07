@@ -1,0 +1,7 @@
+:root{
+--u:8px;--rayon:14px;--rayon-s:8px;--rayon-pill:999px;
+--largeur:1180px;
+--gouttiere:clamp(20px,5vw,40px); /* @kind spacing */
+--transition:0.25s cubic-bezier(.4,0,.2,1); /* @kind other */
+--section-pad:clamp(72px,10vw,128px); /* @kind spacing */
+}

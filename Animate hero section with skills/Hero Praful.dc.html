@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/praful-design-system-83043cd8-401c-4407-80ba-1ebd211c9beb/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/praful-design-system-83043cd8-401c-4407-80ba-1ebd211c9beb/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/praful-design-system-83043cd8-401c-4407-80ba-1ebd211c9beb/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/praful-design-system-83043cd8-401c-4407-80ba-1ebd211c9beb/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/praful-design-system-83043cd8-401c-4407-80ba-1ebd211c9beb/tokens/base.css">
+  <link rel="stylesheet" href="_ds/praful-design-system-83043cd8-401c-4407-80ba-1ebd211c9beb/styles.css">
+  <script src="_ds/praful-design-system-83043cd8-401c-4407-80ba-1ebd211c9beb/_ds_bundle.js"></script>
+  <style>
+    html, body { margin: 0; padding: 0; background: var(--fond); }
+    body { font-family: var(--police); color: var(--texte); -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent-clair); text-decoration: none; }
+    a:hover { color: var(--violet-clair); }
+    @keyframes pd-rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+    @keyframes pd-rot {
+      0%   { opacity: 0; transform: translateY(30px); filter: blur(7px); }
+      3.5% { opacity: 1; transform: translateY(0);    filter: blur(0); }
+      17%  { opacity: 1; transform: translateY(0);    filter: blur(0); }
+      20.5%{ opacity: 0; transform: translateY(-30px); filter: blur(7px); }
+      100% { opacity: 0; transform: translateY(-30px); filter: blur(7px); }
+    }
+    @keyframes pd-pill {
+      0%, 17%    { background: var(--survol); border-color: var(--accent-clair); color: var(--accent-clair); transform: translateY(-3px); }
+      20.5%,100% { background: var(--voile);  border-color: var(--bordure);      color: var(--texte-doux);   transform: none; }
+    }
+    @keyframes pd-drift { 0%, 100% { transform: translate3d(0,0,0) scale(1); } 50% { transform: translate3d(4%, -5%, 0) scale(1.12); } }
+    @keyframes pd-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes pd-shine { 0% { background-position: -140% 0; } 60%, 100% { background-position: 240% 0; } }
+    @keyframes pd-caret { 0%, 45% { opacity: 1; } 55%, 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      [data-rot] { animation: none !important; opacity: 0; }
+      [data-rot="0"] { opacity: 1; transform: none; filter: none; }
+      [data-pill] { animation: none !important; }
+    }
+  </style>
+</helmet>
+<div style="position:relative;min-height:100vh;overflow-x:hidden;background:var(--fond)">
+  <div aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0">
+    <div style="position:absolute;top:-14vh;left:-6vw;width:46vw;height:46vw;border-radius:50%;background:var(--halo-1);filter:blur(90px);animation:pd-drift 19s ease-in-out infinite"></div>
+    <div style="position:absolute;top:8vh;right:-10vw;width:38vw;height:38vw;border-radius:50%;background:var(--halo-2);filter:blur(100px);animation:pd-drift 24s ease-in-out infinite reverse"></div>
+    <div style="position:absolute;top:52vh;left:34vw;width:26vw;height:26vw;border-radius:50%;background:var(--halo-3);filter:blur(90px);animation:pd-drift 28s ease-in-out infinite"></div>
+  </div>
+  <div style="position:relative;z-index:1">
+    <x-import component-from-global-scope="PrafulDesignSystem_83043c.Header" brand="Praful Design" theme="{{ theme }}" scrolled="{{ scrolled }}" on-toggle-theme="{{ toggleTheme }}" hint-size="100%,76px"></x-import>
+    <main style="max-width:1180px;margin:0 auto;padding:0 var(--gouttiere)">
+      <div style="display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:64px;align-items:center;min-height:calc(100vh - 76px);padding:56px 0 88px">
+        <div>
+          <span style="display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:var(--tracking-label);color:var(--accent-clair);margin-bottom:22px;animation:pd-rise .7s cubic-bezier(.4,0,.2,1) .05s both">Web &amp; communication · Bordeaux</span>
+          <h1 style="font-size:var(--h1);font-weight:var(--poids-titre);letter-spacing:var(--tracking-titre);line-height:1.04;color:var(--texte-fort);margin:0 0 26px;text-wrap:pretty">
+            <span style="display:block;animation:pd-rise .7s cubic-bezier(.4,0,.2,1) .14s both">Je fais</span>
+            <span style="display:block;position:relative;height:2.2em;max-width:15ch;animation:pd-rise .7s cubic-bezier(.4,0,.2,1) .22s both">
+              <span data-rot="0" style="position:absolute;left:0;top:0;max-width:100%;background:var(--degrade-texte);-webkit-background-clip:text;background-clip:text;color:transparent;animation:pd-rot 13s linear infinite">des sites WordPress</span>
+              <span data-rot="1" style="position:absolute;left:0;top:0;max-width:100%;background:var(--degrade-texte);-webkit-background-clip:text;background-clip:text;color:transparent;animation:pd-rot 13s linear -10.4s infinite">des visuels qui parlent</span>
+              <span data-rot="2" style="position:absolute;left:0;top:0;max-width:100%;background:var(--degrade-texte);-webkit-background-clip:text;background-clip:text;color:transparent;animation:pd-rot 13s linear -7.8s infinite">des vidéos qui retiennent</span>
+              <span data-rot="3" style="position:absolute;left:0;top:0;max-width:100%;background:var(--degrade-texte);-webkit-background-clip:text;background-clip:text;color:transparent;animation:pd-rot 13s linear -5.2s infinite">du no-code &amp; de l'IA</span>
+              <span data-rot="4" style="position:absolute;left:0;top:0;max-width:100%;background:var(--degrade-texte);-webkit-background-clip:text;background-clip:text;color:transparent;animation:pd-rot 13s linear -2.6s infinite">du SEO qui fait venir</span>
+              <span aria-hidden="true" style="position:absolute;right:-2px;top:.1em;display:none;width:3px;height:.85em;background:var(--accent);animation:pd-caret 1.1s steps(1) infinite"></span>
+            </span>
+          </h1>
+          <p style="font-size:17px;line-height:var(--interligne-corps);color:var(--texte-doux);max-width:46ch;margin:0 0 34px;animation:pd-rise .7s cubic-bezier(.4,0,.2,1) .3s both">Dix ans à animer des groupes, quatre ans au service communication d'une mairie&nbsp;: je conçois des sites et des contenus qui parlent vraiment aux gens à qui ils s'adressent.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px;animation:pd-rise .7s cubic-bezier(.4,0,.2,1) .38s both">
+            <x-import component-from-global-scope="PrafulDesignSystem_83043c.Button" variant="primaire" as="a" href="#contact" hint-size="auto,48px">Demander un devis</x-import>
+            <x-import component-from-global-scope="PrafulDesignSystem_83043c.Button" variant="secondaire" as="a" href="#competences" hint-size="auto,48px">Voir mes compétences</x-import>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;animation:pd-rise .7s cubic-bezier(.4,0,.2,1) .46s both">
+            <span data-pill="0" style="font-size:12.5px;font-weight:600;padding:8px 16px;border-radius:var(--rayon-pill);border:1px solid var(--bordure);background:var(--voile);color:var(--texte-doux);transition:var(--transition);animation:pd-pill 13s linear infinite" style-hover="background:var(--survol);border-color:var(--accent-clair);color:var(--accent-clair)">WordPress</span>
+            <span data-pill="1" style="font-size:12.5px;font-weight:600;padding:8px 16px;border-radius:var(--rayon-pill);border:1px solid var(--bordure);background:var(--voile);color:var(--texte-doux);transition:var(--transition);animation:pd-pill 13s linear -10.4s infinite" style-hover="background:var(--survol);border-color:var(--accent-clair);color:var(--accent-clair)">Design graphique</span>
+            <span data-pill="2" style="font-size:12.5px;font-weight:600;padding:8px 16px;border-radius:var(--rayon-pill);border:1px solid var(--bordure);background:var(--voile);color:var(--texte-doux);transition:var(--transition);animation:pd-pill 13s linear -7.8s infinite" style-hover="background:var(--survol);border-color:var(--accent-clair);color:var(--accent-clair)">Montage vidéo</span>
+            <span data-pill="3" style="font-size:12.5px;font-weight:600;padding:8px 16px;border-radius:var(--rayon-pill);border:1px solid var(--bordure);background:var(--voile);color:var(--texte-doux);transition:var(--transition);animation:pd-pill 13s linear -5.2s infinite" style-hover="background:var(--survol);border-color:var(--accent-clair);color:var(--accent-clair)">No-code &amp; IA</span>
+            <span data-pill="4" style="font-size:12.5px;font-weight:600;padding:8px 16px;border-radius:var(--rayon-pill);border:1px solid var(--bordure);background:var(--voile);color:var(--texte-doux);transition:var(--transition);animation:pd-pill 13s linear -2.6s infinite" style-hover="background:var(--survol);border-color:var(--accent-clair);color:var(--accent-clair)">SEO local</span>
+          </div>
+        </div>
+        <sc-if value="{{ showMockup }}" hint-placeholder-val="{{ true }}">
+          <div style="position:relative;animation:pd-rise .9s cubic-bezier(.4,0,.2,1) .34s both">
+            <div style="animation:pd-float 9s ease-in-out infinite">
+              <div style="border:1px solid var(--bordure);border-radius:var(--rayon);background:var(--surface);box-shadow:var(--ombre-carte);overflow:hidden">
+                <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--bordure);background:var(--surface-2)">
+                  <span style="width:9px;height:9px;border-radius:50%;background:var(--bordure-forte)"></span>
+                  <span style="width:9px;height:9px;border-radius:50%;background:var(--bordure-forte)"></span>
+                  <span style="width:9px;height:9px;border-radius:50%;background:var(--bordure-forte)"></span>
+                  <span style="margin-left:8px;flex:1;font-size:11px;color:var(--texte-faible);background:var(--champ-fond);border-radius:var(--rayon-pill);padding:5px 12px">praful-design.fr</span>
+                </div>
+                <div style="padding:22px">
+                  <div style="border-radius:10px;background:var(--degrade);padding:26px 22px;margin-bottom:18px;position:relative;overflow:hidden">
+                    <div style="height:12px;width:62%;border-radius:6px;background:rgba(255,255,255,.85);margin-bottom:10px"></div>
+                    <div style="height:8px;width:40%;border-radius:6px;background:rgba(255,255,255,.5);margin-bottom:18px"></div>
+                    <div style="height:24px;width:104px;border-radius:var(--rayon-pill);background:rgba(255,255,255,.92)"></div>
+                    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.32) 50%,transparent 70%);background-size:220% 100%;animation:pd-shine 5.5s ease-in-out infinite"></div>
+                  </div>
+                  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+                    <div style="border:1px solid var(--bordure);border-radius:10px;padding:14px;background:var(--surface-2);animation:pd-float 7s ease-in-out infinite">
+                      <div style="height:7px;width:70%;border-radius:4px;background:var(--bordure-forte);margin-bottom:8px"></div>
+                      <div style="height:6px;width:100%;border-radius:4px;background:var(--bordure);margin-bottom:5px"></div>
+                      <div style="height:6px;width:78%;border-radius:4px;background:var(--bordure)"></div>
+                    </div>
+                    <div style="border:1px solid var(--bordure);border-radius:10px;padding:14px;background:var(--surface-2);animation:pd-float 7s ease-in-out -2.3s infinite">
+                      <div style="height:7px;width:56%;border-radius:4px;background:var(--bordure-forte);margin-bottom:8px"></div>
+                      <div style="height:6px;width:100%;border-radius:4px;background:var(--bordure);margin-bottom:5px"></div>
+                      <div style="height:6px;width:64%;border-radius:4px;background:var(--bordure)"></div>
+                    </div>
+                    <div style="border:1px solid var(--bordure);border-radius:10px;padding:14px;background:var(--surface-2);animation:pd-float 7s ease-in-out -4.6s infinite">
+                      <div style="height:7px;width:64%;border-radius:4px;background:var(--bordure-forte);margin-bottom:8px"></div>
+                      <div style="height:6px;width:100%;border-radius:4px;background:var(--bordure);margin-bottom:5px"></div>
+                      <div style="height:6px;width:82%;border-radius:4px;background:var(--bordure)"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="position:absolute;bottom:-18px;left:-24px;display:flex;align-items:center;gap:9px;padding:11px 18px;border-radius:var(--rayon-pill);background:var(--voile-menu);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--bordure);box-shadow:var(--ombre-carte);font-size:13px;font-weight:600;color:var(--texte-fort);animation:pd-float 11s ease-in-out -3s infinite">
+              <span style="width:8px;height:8px;border-radius:50%;background:var(--succes);box-shadow:0 0 0 4px rgba(74,222,128,.18)"></span>Disponible pour vos projets
+            </div>
+          </div>
+        </sc-if>
+      </div>
+      <sc-if value="{{ showSkillsPreview }}" hint-placeholder-val="{{ true }}">
+        <section id="competences" style="padding:16px 0 128px">
+          <span style="display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:var(--tracking-label);color:var(--accent-clair);margin-bottom:14px">Compétences</span>
+          <h2 style="font-size:var(--h2);font-weight:var(--poids-titre);letter-spacing:var(--tracking-titre);color:var(--texte-fort);margin:0 0 14px;max-width:22ch;text-wrap:pretty">Ce que je sais faire, concrètement.</h2>
+          <p style="font-size:16px;line-height:var(--interligne-corps);color:var(--texte-doux);max-width:52ch;margin:0 0 44px">Trois blocs de compétences qui se répondent&nbsp;: créer, mettre en ligne, et savoir parler aux gens.</p>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+            <x-import component-from-global-scope="PrafulDesignSystem_83043c.Card" eyebrow="01" title="Communication &amp; création" hint-size="100%,300px">
+              <ul style="list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px;font-size:14.5px;color:var(--texte-doux);line-height:1.5">
+                <li>Photoshop, Illustrator, Canva</li>
+                <li>Affiches, logos, chartes graphiques</li>
+                <li>Montage vidéo — Premiere Pro, Final Cut</li>
+                <li>Notions After Effects, apprentissage 3D</li>
+                <li>Contenu réseaux sociaux</li>
+              </ul>
+            </x-import>
+            <x-import component-from-global-scope="PrafulDesignSystem_83043c.Card" eyebrow="02" title="Web &amp; numérique" hint-size="100%,300px">
+              <ul style="list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px;font-size:14.5px;color:var(--texte-doux);line-height:1.5">
+                <li>WordPress — Elementor, Gutenberg</li>
+                <li>Maintenance, sauvegardes, hébergement</li>
+                <li>SEO local, bases HTML/CSS</li>
+                <li>IA et no-code — n8n, Make</li>
+                <li>GitHub, ligne de commande, Notion</li>
+              </ul>
+            </x-import>
+            <x-import component-from-global-scope="PrafulDesignSystem_83043c.Card" eyebrow="03" title="Le reste de mon parcours" hint-size="100%,300px">
+              <ul style="list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px;font-size:14.5px;color:var(--texte-doux);line-height:1.5">
+                <li>10+ ans d'animation</li>
+                <li>4 ans à la mairie de Bruges</li>
+                <li>Gestion de groupes et d'événements</li>
+                <li>Familles, écoles, ALSH, collectivités</li>
+                <li>Prise de parole et structuration de projet</li>
+              </ul>
+            </x-import>
+          </div>
+        </section>
+      </sc-if>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;initialTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;clair&quot;,&quot;sombre&quot;],&quot;default&quot;:&quot;clair&quot;,&quot;tsType&quot;:&quot;'clair' | 'sombre'&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;showMockup&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;showSkillsPreview&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { theme: props.initialTheme === 'sombre' ? 'sombre' : 'clair', scrolled: false };
+    this.onScroll = () => {
+      const y = window.scrollY || document.documentElement.scrollTop || 0;
+      const s = y > 12;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+  }
+  componentDidMount() {
+    this.applyTheme();
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+  }
+  componentDidUpdate(prev) {
+    if (prev.initialTheme !== this.props.initialTheme) {
+      this.setState({ theme: this.props.initialTheme === 'sombre' ? 'sombre' : 'clair' });
+    }
+    this.applyTheme();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); }
+  applyTheme() {
+    document.documentElement.setAttribute('data-theme', this.state.theme === 'sombre' ? 'dark' : 'light');
+  }
+  renderVals() {
+    return {
+      theme: this.state.theme,
+      scrolled: this.state.scrolled,
+      toggleTheme: () => this.setState(s => ({ theme: s.theme === 'sombre' ? 'clair' : 'sombre' })),
+      showMockup: this.props.showMockup ?? true,
+      showSkillsPreview: this.props.showSkillsPreview ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>

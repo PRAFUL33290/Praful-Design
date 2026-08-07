@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Salon de coiffure et esthétique capillaire. Coupes, colorations, soins, brushing. Réservation en ligne. Un espace de confiance pour sublimer vos cheveux." />
+  <meta name="theme-color" content="#8B4557" />
+  <title>Maison Éclat — Salon de Coiffure &amp; Esthétique Capillaire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Maison Éclat — Accueil">
+        <span class="logo-mark" aria-hidden="true">
+          <!-- Ciseaux + feuille (soin) -->
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="20" fill="currentColor"/>
+            <circle cx="13.5" cy="26" r="3.2" stroke="#FAF6F3" stroke-width="1.6" fill="none"/>
+            <circle cx="13.5" cy="14" r="3.2" stroke="#FAF6F3" stroke-width="1.6" fill="none"/>
+            <path d="M16 15.5L28 26M16 24.5L28 14" stroke="#FAF6F3" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M29 12c0 2.2-1.8 3.5-2.5 5-.5 1.1.4 2 1.5 2 .8 0 1.5-.7 1.5-1.8 0-1.5-1.2-2.8-1.5-5.2z" fill="#D4A574"/>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <strong>Maison Éclat</strong>
+          <span>Coiffure · Esthétique capillaire</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#soins">Soins</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#reservation" class="btn btn-nav">Réserver</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary btn-call" href="tel:+33100000000">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="call-label">
+            <small>Prendre RDV</small>
+            <strong>01 00 00 00 00</strong>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ========== HERO ========== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80"
+          srcset="
+            https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=75 800w,
+            https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1280&q=80 1280w,
+            https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80 1920w
+          "
+          sizes="100vw"
+          alt=""
+          width="1920"
+          height="1080"
+          fetchpriority="high"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <p class="eyebrow">Salon de coiffure · Esthétique capillaire</p>
+        <h1 id="hero-title">La beauté de vos cheveux,<br />révélée avec douceur.</h1>
+        <p class="hero-lead">
+          Coupes signature, colorations sur-mesure et soins d'exception.
+          Un cocon élégant où chaque détail sublime votre style.
+        </p>
+        <div class="hero-actions">
+          <a href="#reservation" class="btn btn-primary btn-lg">Réserver mon créneau</a>
+          <a href="#services" class="btn btn-ghost btn-lg">Découvrir nos services</a>
+        </div>
+        <ul class="hero-trust" aria-label="Engagements">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Produits professionnels
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Conseils personnalisés
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            RDV en ligne ou téléphone
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== TRUST ========== -->
+    <section class="trust-strip" aria-label="Chiffres clés">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <strong>12+</strong>
+          <span>années d'expertise</span>
+        </div>
+        <div class="trust-item">
+          <strong>3&nbsp;200+</strong>
+          <span>clientes &amp; clients</span>
+        </div>
+        <div class="trust-item">
+          <strong>4,9/5</strong>
+          <span>avis satisfaction</span>
+        </div>
+        <div class="trust-item">
+          <strong>100&nbsp;%</strong>
+          <span>écoute &amp; sur-mesure</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Savoir-faire</p>
+          <h2 id="services-title">Nos prestations signature</h2>
+          <p class="section-lead">
+            Du brushing express à la transformation complète, chaque geste
+            est pensé pour la santé et la beauté de votre fibre capillaire.
+          </p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="52" height="52" rx="16" fill="#8B4557" fill-opacity="0.1"/>
+                <circle cx="18" cy="32" r="4" stroke="#8B4557" stroke-width="2" fill="none"/>
+                <circle cx="18" cy="20" r="4" stroke="#8B4557" stroke-width="2" fill="none"/>
+                <path d="M21.2 22.2L34 34M21.2 29.8L34 18" stroke="#8B4557" stroke-width="2" stroke-linecap="round"/>
+                <path d="M34 16c1.5 0 3 1.2 3 3s-1 2.5-1.5 3.5" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Coupe &amp; coiffage</h3>
+            <p>
+              Coupe femme, homme ou enfant, brushing, mise en plis et coiffures
+              de cérémonie. Un style qui vous ressemble, durable au quotidien.
+            </p>
+            <ul class="service-list">
+              <li>Coupe signature</li>
+              <li>Brushing &amp; lissage</li>
+              <li>Coiffures événement</li>
+            </ul>
+            <a href="#reservation" class="text-link">Réserver une coupe →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="52" height="52" rx="16" fill="#8B4557" fill-opacity="0.1"/>
+                <path d="M20 34c0-6 4-10 6-14 2 4 6 8 6 14a6 6 0 11-12 0z" stroke="#8B4557" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M26 16v4M22 18l2 2M30 18l-2 2" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="34" cy="20" r="3" fill="#D4A574"/>
+              </svg>
+            </div>
+            <h3>Coloration &amp; balayage</h3>
+            <p>
+              Couleur naturelle, balayage, mèches, gloss ou transformation radicale.
+              Diagnostic fibre inclus pour un résultat lumineux et respectueux.
+            </p>
+            <ul class="service-list">
+              <li>Coloration permanente</li>
+              <li>Balayage &amp; ombré</li>
+              <li>Gloss &amp; glossage</li>
+            </ul>
+            <a href="#reservation" class="text-link">Parler de ma couleur →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="52" height="52" rx="16" fill="#8B4557" fill-opacity="0.1"/>
+                <path d="M18 30c2-6 6-10 8-14 2 4 6 8 8 14" stroke="#8B4557" stroke-width="2" stroke-linecap="round"/>
+                <path d="M16 32h20" stroke="#8B4557" stroke-width="2" stroke-linecap="round"/>
+                <path d="M20 36h12" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="26" cy="18" r="2.5" fill="#D4A574"/>
+              </svg>
+            </div>
+            <h3>Soins &amp; esthétique capillaire</h3>
+            <p>
+              Protocoles réparateurs, hydratation profonde, botox capillaire
+              et rituels anti-casse pour une fibre souple et éclatante.
+            </p>
+            <ul class="service-list">
+              <li>Soin profond / masque</li>
+              <li>Botox &amp; kératine douce</li>
+              <li>Diagnostic cuir chevelu</li>
+            </ul>
+            <a href="#soins" class="text-link">Voir les soins →</a>
+          </article>
+
+          <article class="service-card service-card--accent">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="52" height="52" rx="16" fill="#D4A574" fill-opacity="0.18"/>
+                <path d="M16 28c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="#8B4557" stroke-width="2" stroke-linecap="round"/>
+                <path d="M18 32h16M22 36h8" stroke="#8B4557" stroke-width="2" stroke-linecap="round"/>
+                <path d="M26 14v4M20 16l2 2M32 16l-2 2" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="badge-soft">À domicile</span>
+            <h3>Coiffure à domicile</h3>
+            <p>
+              Brushing, coupe ou coiffure de mariage chez vous.
+              Idéal pour les personnes à mobilité réduite ou les préparatifs privés.
+            </p>
+            <ul class="service-list">
+              <li>Zone à définir au devis</li>
+              <li>Matériel professionnel</li>
+              <li>Créneaux sur réservation</li>
+            </ul>
+            <a href="#reservation" class="text-link">Demander un devis →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOINS HIGHLIGHT ========== -->
+    <section class="section soins" id="soins" aria-labelledby="soins-title">
+      <div class="container soins-layout">
+        <div class="soins-media">
+          <img
+            src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80"
+            alt="Soin capillaire professionnel appliqué en salon"
+            width="900"
+            height="1100"
+            loading="lazy"
+          />
+        </div>
+        <div class="soins-copy">
+          <p class="eyebrow">Rituels capillaire</p>
+          <h2 id="soins-title">Esthétique capillaire, au-delà de la coupe</h2>
+          <p>
+            Nous traitons le cheveu comme une matière vivante : diagnostic,
+            protocole adapté, produits haut de gamme et gestes experts pour
+            restaurer brillance, densité et souplesse.
+          </p>
+          <ul class="soins-features">
+            <li>
+              <span class="feature-num">01</span>
+              <div>
+                <strong>Diagnostic fibre &amp; cuir chevelu</strong>
+                <p>Analyse de la porosité, de la densité et des besoins réels avant tout soin.</p>
+              </div>
+            </li>
+            <li>
+              <span class="feature-num">02</span>
+              <div>
+                <strong>Protocoles réparateurs</strong>
+                <p>Masques, botox capillaire, lissage doux sans altérer la nature du cheveu.</p>
+              </div>
+            </li>
+            <li>
+              <span class="feature-num">03</span>
+              <div>
+                <strong>Conseil d'entretien</strong>
+                <p>Routine maison personnalisée pour prolonger le résultat du salon.</p>
+              </div>
+            </li>
+          </ul>
+          <a href="#reservation" class="btn btn-primary">Réserver un soin</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== GALERIE ========== -->
+    <section class="section galerie" id="galerie" aria-labelledby="galerie-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Inspirations</p>
+          <h2 id="galerie-title">Coupes, couleurs &amp; ambiances</h2>
+          <p class="section-lead">
+            Une sélection visuelle pour imaginer votre prochaine transformation.
+            Photos Unsplash à titre d'illustration.
+          </p>
+        </header>
+
+        <div class="gallery-grid">
+          <figure class="gallery-card gallery-card--tall">
+            <img
+              src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
+              alt="Coiffeuse réalisant une coupe sur une cliente en salon"
+              width="800"
+              height="1100"
+              loading="lazy"
+            />
+            <figcaption><strong>Coupe sur-mesure</strong><span>En salon</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80"
+              alt="Maquillage et beauté — esthétique douce"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <figcaption><strong>Beauté &amp; finitions</strong><span>Look complet</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80"
+              alt="Intérieur de salon de coiffure moderne et lumineux"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <figcaption><strong>L'ambiance Maison Éclat</strong><span>Espace d'accueil</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=800&q=80"
+              alt="Cheveux longs brillants après soin et brushing"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <figcaption><strong>Brushing &amp; brillance</strong><span>Finition pro</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card gallery-card--wide">
+            <img
+              src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=80"
+              alt="Coloration capillaire professionnelle en cours"
+              width="1200"
+              height="700"
+              loading="lazy"
+            />
+            <figcaption><strong>Coloration experte</strong><span>Balayage · Couleur naturelle</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80"
+              alt="Produits de beauté et soins capillaires disposés avec élégance"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <figcaption><strong>Soins &amp; rituels</strong><span>Produits pro</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TARIFS ========== -->
+    <section class="section tarifs" id="tarifs" aria-labelledby="tarifs-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Transparence</p>
+          <h2 id="tarifs-title">Grille tarifaire indicative</h2>
+          <p class="section-lead">
+            Prix de base — le devis final dépend de la longueur, de la densité
+            et du protocole choisi. Tarif enfant et étudiant sur place.
+          </p>
+        </header>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>Coupe femme</h3>
+            <p class="price">à partir de <strong>38&nbsp;€</strong></p>
+            <ul>
+              <li>Shampoing inclus</li>
+              <li>Brushing basique</li>
+              <li>Conseil coiffure</li>
+            </ul>
+          </article>
+          <article class="price-card price-card--featured">
+            <span class="price-badge">Populaire</span>
+            <h3>Coupe + couleur</h3>
+            <p class="price">à partir de <strong>89&nbsp;€</strong></p>
+            <ul>
+              <li>Diagnostic couleur</li>
+              <li>Coloration ou balayage</li>
+              <li>Soin finition</li>
+            </ul>
+          </article>
+          <article class="price-card">
+            <h3>Soin profond</h3>
+            <p class="price">à partir de <strong>25&nbsp;€</strong></p>
+            <ul>
+              <li>Masque professionnel</li>
+              <li>Massage cuir chevelu</li>
+              <li>Pose 15–20 min</li>
+            </ul>
+          </article>
+          <article class="price-card">
+            <h3>Coupe homme</h3>
+            <p class="price">à partir de <strong>22&nbsp;€</strong></p>
+            <ul>
+              <li>Coupe ciseaux / tondeuse</li>
+              <li>Finition barbe légère</li>
+              <li>Produit coiffant</li>
+            </ul>
+          </article>
+        </div>
+        <p class="pricing-note">Les tarifs sont donnés à titre indicatif (démonstration). Contactez-nous pour un devis précis.</p>
+      </div>
+    </section>
+
+    <!-- ========== RÉSERVATION ========== -->
+    <section class="section reservation" id="reservation" aria-labelledby="reservation-title">
+      <div class="container reservation-layout">
+        <div class="reservation-intro">
+          <p class="eyebrow">Sans engagement</p>
+          <h2 id="reservation-title">Réservez votre moment</h2>
+          <p class="section-lead">
+            Indiquez vos préférences : nous confirmons le créneau par téléphone
+            ou SMS sous 24&nbsp;h ouvrées.
+          </p>
+          <ul class="reservation-benefits">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Confirmation rapide
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Créneaux salon ou domicile
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Annulation jusqu'à 24&nbsp;h avant
+            </li>
+          </ul>
+          <div class="reservation-contact">
+            <p>
+              <strong>Préférez le téléphone&nbsp;?</strong><br />
+              <a href="tel:+33100000000">01 00 00 00 00</a>
+              <span class="muted"> — mar–sam, 9h–19h</span>
+            </p>
+          </div>
+        </div>
+
+        <form class="reservation-form" id="rdv-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="nom">Nom complet <span class="req">*</span></label>
+              <input type="text" id="nom" name="nom" autocomplete="name" required placeholder="Camille Dupont" />
+            </div>
+            <div class="form-field">
+              <label for="telephone">Téléphone <span class="req">*</span></label>
+              <input type="tel" id="telephone" name="telephone" autocomplete="tel" required placeholder="06 12 34 56 78" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="camille@exemple.fr" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="prestation">Prestation <span class="req">*</span></label>
+              <select id="prestation" name="prestation" required>
+                <option value="" disabled selected>Choisir…</option>
+                <option value="coupe-femme">Coupe femme</option>
+                <option value="coupe-homme">Coupe homme</option>
+                <option value="couleur">Coloration / balayage</option>
+                <option value="soin">Soin esthétique capillaire</option>
+                <option value="brushing">Brushing</option>
+                <option value="domicile">Coiffure à domicile</option>
+                <option value="autre">Autre / plusieurs prestations</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="moment">Moment souhaité <span class="req">*</span></label>
+              <select id="moment" name="moment" required>
+                <option value="" disabled selected>Choisir…</option>
+                <option value="matin">Matin (9h–12h)</option>
+                <option value="apres-midi">Après-midi (12h–17h)</option>
+                <option value="soir">Fin de journée (17h–19h)</option>
+                <option value="flexible">Flexible</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="date">Date souhaitée</label>
+            <input type="date" id="date" name="date" />
+          </div>
+
+          <div class="form-field">
+            <label for="message">Précisions (longueur, couleur actuelle…)</label>
+            <textarea id="message" name="message" rows="3" placeholder="Ex. : cheveux mi-longs, souhaite un balayage caramel…"></textarea>
+          </div>
+
+          <div class="form-field form-check">
+            <input type="checkbox" id="consent" name="consent" required />
+            <label for="consent">J'accepte d'être recontacté(e) pour confirmer mon rendez-vous. <span class="req">*</span></label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">
+            Envoyer ma demande de RDV
+          </button>
+          <p class="form-footnote">Formulaire de démonstration · Aucune donnée n'est transmise à un serveur</p>
+
+          <div class="form-success" id="form-success" hidden role="status">
+            <strong>Demande envoyée !</strong>
+            En situation réelle, le salon confirmerait votre créneau sous 24&nbsp;h.
+            Vous pouvez aussi appeler le <a href="tel:+33100000000">01 00 00 00 00</a>.
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo--footer" href="#top">
+          <span class="logo-mark" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="20" fill="#D4A574"/>
+              <circle cx="13.5" cy="26" r="3.2" stroke="#2C2420" stroke-width="1.6" fill="none"/>
+              <circle cx="13.5" cy="14" r="3.2" stroke="#2C2420" stroke-width="1.6" fill="none"/>
+              <path d="M16 15.5L28 26M16 24.5L28 14" stroke="#2C2420" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="logo-text">
+            <strong>Maison Éclat</strong>
+            <span>Coiffure · Esthétique capillaire</span>
+          </span>
+        </a>
+        <p>
+          Un salon où l'écoute, la précision et le soin de la fibre
+          se rencontrent. Votre beauté, en confiance.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#soins">Soins</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#reservation">Réserver</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Horaires</h3>
+        <ul>
+          <li>Mar – Ven : 9h – 19h</li>
+          <li>Samedi : 9h – 18h</li>
+          <li>Dim – Lun : fermé</li>
+          <li>Sur RDV uniquement</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+33100000000">01 00 00 00 00</a></li>
+          <li><a href="mailto:contact@maison-eclat-demo.fr">contact@maison-eclat-demo.fr</a></li>
+          <li>Centre-ville · Démonstration</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-badges">
+      <div class="container footer-badges-inner">
+        <span class="footer-badge">Produits professionnels</span>
+        <span class="footer-badge">Conseils personnalisés</span>
+        <span class="footer-badge">Salon &amp; domicile</span>
+        <span class="footer-badge">Hygiène &amp; confort</span>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Maison Éclat — Salon de Coiffure &amp; Esthétique Capillaire. Tous droits réservés.</p>
+      <p class="footer-credit">Photos&nbsp;: <a href="https://unsplash.com" rel="noopener noreferrer" target="_blank">Unsplash</a> · Site vitrine de démonstration</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

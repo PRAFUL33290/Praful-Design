@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Paysagiste et jardinier-entrepreneur. Création, tonte, taille, élagage. Devis gratuit. Crédit d'impôt 50%." />
+  <title>L'Atelier des Jardins — Paysagiste &amp; Jardinier-entrepreneur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- Navigation -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="L'Atelier des Jardins — Accueil">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 4c-1.5 6-6 10-11 12 5 2 9.5 6 11 12 1.5-6 6-10 11-12-5-2-9.5-6-11-12z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <strong>L'Atelier des Jardins</strong>
+          <span>Paysagiste · Jardinier-entrepreneur</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#realisations">Avant / Après</a></li>
+          <li><a href="#zone">Zone d'intervention</a></li>
+          <li><a href="#devis" class="btn btn-nav">Devis gratuit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1920&q=80"
+          srcset="
+            https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=75 800w,
+            https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1280&q=80 1280w,
+            https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1920&q=80 1920w
+          "
+          sizes="100vw"
+          alt=""
+          width="1920"
+          height="1080"
+          fetchpriority="high"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <p class="eyebrow">Artisan paysagiste · Depuis 15 ans sur le terrain</p>
+        <h1 id="hero-title">Des jardins qui respirent.<br />Un travail de la main, ancré dans la terre.</h1>
+        <p class="hero-lead">
+          Création, entretien et élagage pour particuliers et collectivités.
+          Un interlocuteur unique, un devis clair, un chantier soigné.
+        </p>
+        <div class="hero-actions">
+          <a href="#devis" class="btn btn-primary btn-lg">Demander un devis gratuit</a>
+          <a href="#realisations" class="btn btn-ghost btn-lg">Voir nos réalisations</a>
+        </div>
+        <ul class="hero-trust" aria-label="Garanties">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Devis gratuit sous 48&nbsp;h
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Crédit d'impôt 50&nbsp;%
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Assurance &amp; qualification pro
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="trust-strip" aria-label="Chiffres clés">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <strong>15+</strong>
+          <span>années d'expérience</span>
+        </div>
+        <div class="trust-item">
+          <strong>400+</strong>
+          <span>jardins entretenus</span>
+        </div>
+        <div class="trust-item">
+          <strong>50&nbsp;%</strong>
+          <span>crédit d'impôt possible</span>
+        </div>
+        <div class="trust-item">
+          <strong>48&nbsp;h</strong>
+          <span>pour recevoir votre devis</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Nos savoir-faire</p>
+          <h2 id="services-title">Quatre piliers pour un jardin durable</h2>
+          <p class="section-lead">
+            De la première esquisse à l'entretien saisonnier, nous cultivons la confiance
+            comme on cultive un massif : avec patience, précision et respect du vivant.
+          </p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-card-media">
+              <img
+                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80"
+                alt="Jardin paysager moderne avec massifs fleuris et allées structurées"
+                width="800"
+                height="560"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-card-body">
+              <h3>Création paysagère</h3>
+              <p>
+                Conception et aménagement de jardins sur mesure : massifs, terrasses,
+                allées, clôtures végétales. Un projet pensé pour votre terrain, votre rythme de vie
+                et les saisons.
+              </p>
+              <a href="#devis" class="text-link">Parler de mon projet
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-media">
+              <img
+                src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=800&q=80"
+                alt="Tonte de pelouse soignée dans un jardin résidentiel"
+                width="800"
+                height="560"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-card-body">
+              <h3>Tonte &amp; Taille</h3>
+              <p>
+                Entretien régulier de pelouses, haies et arbustes. Coupes nettes,
+                bords soignés, déchets évacués. Formules à la carte ou contrats saisonniers.
+              </p>
+              <a href="#devis" class="text-link">Demander un devis entretien
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-media">
+              <img
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80"
+                alt="Arbres matures en forêt — élagage et soin des grands sujets"
+                width="800"
+                height="560"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-card-body">
+              <h3>Élagage</h3>
+              <p>
+                Taille raisonnée, sécurisation des branches mortes, éclaircie des couronnes.
+                Intervention soignée pour préserver la santé de vos arbres et la sécurité des lieux.
+              </p>
+              <a href="#devis" class="text-link">Planifier une intervention
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card service-card--accent">
+            <div class="service-card-media">
+              <img
+                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80"
+                alt="Mains plantant des végétaux dans un sol fertile"
+                width="800"
+                height="560"
+                loading="lazy"
+              />
+              <span class="badge badge-tax">Crédit d'impôt 50&nbsp;%</span>
+            </div>
+            <div class="service-card-body">
+              <h3>Crédit d'impôt 50&nbsp;%</h3>
+              <p>
+                Les prestations d'entretien de jardin à domicile ouvrent droit à un crédit d'impôt
+                de 50&nbsp;% (sous conditions). Nous vous accompagnons dans les démarches et
+                vous délivrons les attestations nécessaires.
+              </p>
+              <a href="#devis" class="text-link">En savoir plus sur mon éligibilité
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avant / Après -->
+    <section class="section realisations" id="realisations" aria-labelledby="realisations-title">
+      <div class="container">
+        <header class="section-header section-header--light">
+          <p class="eyebrow">Galerie</p>
+          <h2 id="realisations-title">Avant / Après — la transformation se voit</h2>
+          <p class="section-lead">
+            Des terrains oubliés aux jardins vivants. Chaque chantier raconte une histoire
+            de patience et de respect du sol.
+          </p>
+        </header>
+
+        <div class="ba-grid">
+          <figure class="ba-card">
+            <div class="ba-pair">
+              <div class="ba-shot">
+                <img
+                  src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
+                  alt="Terrain en friche avant aménagement paysager"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+                <figcaption class="ba-label ba-label--before">Avant</figcaption>
+              </div>
+              <div class="ba-shot">
+                <img
+                  src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=900&q=80"
+                  alt="Même espace transformé en jardin paysager fleuri"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+                <figcaption class="ba-label ba-label--after">Après</figcaption>
+              </div>
+            </div>
+            <figcaption class="ba-caption">
+              <strong>Massifs &amp; allées — villa familiale</strong>
+              <span>Création d'un jardin structuré avec points de vue et plantes vivaces.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="ba-card">
+            <div class="ba-pair">
+              <div class="ba-shot">
+                <img
+                  src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=80"
+                  alt="Espace extérieur non aménagé avant travaux"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+                <figcaption class="ba-label ba-label--before">Avant</figcaption>
+              </div>
+              <div class="ba-shot">
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80"
+                  alt="Terrasse et jardin contemporain après aménagement"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+                <figcaption class="ba-label ba-label--after">Après</figcaption>
+              </div>
+            </div>
+            <figcaption class="ba-caption">
+              <strong>Patio &amp; pelouse — maison de ville</strong>
+              <span>Aménagement d'une terrasse bois, gazon et haie d'intimité.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="ba-card">
+            <div class="ba-pair">
+              <div class="ba-shot">
+                <img
+                  src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80"
+                  alt="Arbres denses avant éclaircie et élagage"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+                <figcaption class="ba-label ba-label--before">Avant</figcaption>
+              </div>
+              <div class="ba-shot">
+                <img
+                  src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80"
+                  alt="Jardin lumineux après élagage et mise en valeur"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+                <figcaption class="ba-label ba-label--after">Après</figcaption>
+              </div>
+            </div>
+            <figcaption class="ba-caption">
+              <strong>Élagage &amp; lumière — parc privé</strong>
+              <span>Éclaircie des couronnes et sécurisation des sujets majeurs.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zone d'intervention -->
+    <section class="section zone" id="zone" aria-labelledby="zone-title">
+      <div class="container zone-layout">
+        <div class="zone-copy">
+          <header class="section-header section-header--left">
+            <p class="eyebrow">Proximité</p>
+            <h2 id="zone-title">Zone d'intervention</h2>
+            <p class="section-lead">
+              Nous intervenons principalement dans un rayon de 30&nbsp;km autour de notre atelier.
+              Un artisan local, qui connaît les sols, les vents et les saisons de votre commune.
+            </p>
+          </header>
+
+          <div class="zone-communes">
+            <h3>Communes desservies</h3>
+            <ul class="commune-list">
+              <li>Orléans et agglomération</li>
+              <li>Saint-Jean-de-Braye</li>
+              <li>Fleury-les-Aubrais</li>
+              <li>Olivet</li>
+              <li>Saint-Jean-le-Blanc</li>
+              <li>Saran</li>
+              <li>Ingré · Ormes · Bucy</li>
+              <li>La Chapelle-Saint-Mesmin</li>
+              <li>Saint-Pryvé-Saint-Mesmin</li>
+              <li>Mardié · Chécy · Semoy</li>
+            </ul>
+            <p class="zone-note">
+              Votre commune n'apparaît pas&nbsp;? Contactez-nous : selon le projet,
+              nous élargissons parfois le rayon d'intervention.
+            </p>
+          </div>
+        </div>
+
+        <div class="zone-map-wrap">
+          <div class="zone-map" role="img" aria-label="Carte schématique de la zone d'intervention autour d'Orléans">
+            <!-- Carte stylisée SVG (pas de dépendance externe) -->
+            <svg class="map-svg" viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="mapGlow" cx="50%" cy="48%" r="45%">
+                  <stop offset="0%" stop-color="#95A985" stop-opacity="0.45"/>
+                  <stop offset="70%" stop-color="#2D6A4F" stop-opacity="0.12"/>
+                  <stop offset="100%" stop-color="#1B4332" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="480" height="420" fill="#E8EDE4" rx="16"/>
+              <!-- Cours d'eau stylisé (Loire) -->
+              <path d="M0 250 Q80 230 160 255 T320 240 T480 270" fill="none" stroke="#A8C5D4" stroke-width="18" stroke-linecap="round" opacity="0.7"/>
+              <path d="M0 250 Q80 230 160 255 T320 240 T480 270" fill="none" stroke="#7BA3B8" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+              <!-- Zone rayon -->
+              <circle cx="240" cy="200" r="140" fill="url(#mapGlow)" stroke="#2D6A4F" stroke-width="2" stroke-dasharray="6 4" opacity="0.85"/>
+              <circle cx="240" cy="200" r="70" fill="#2D6A4F" fill-opacity="0.08" stroke="#2D6A4F" stroke-width="1.5" opacity="0.6"/>
+              <!-- Pins communes -->
+              <g class="map-pins">
+                <circle cx="240" cy="200" r="8" fill="#1B4332"/>
+                <circle cx="240" cy="200" r="4" fill="#F7F5F0"/>
+                <circle cx="190" cy="165" r="5" fill="#8B5E3C"/>
+                <circle cx="290" cy="175" r="5" fill="#8B5E3C"/>
+                <circle cx="210" cy="250" r="5" fill="#8B5E3C"/>
+                <circle cx="280" cy="235" r="5" fill="#8B5E3C"/>
+                <circle cx="165" cy="210" r="5" fill="#8B5E3C"/>
+                <circle cx="310" cy="210" r="5" fill="#8B5E3C"/>
+                <circle cx="255" cy="140" r="5" fill="#8B5E3C"/>
+              </g>
+              <text x="240" y="200" dy="-16" text-anchor="middle" fill="#1B4332" font-family="DM Sans, sans-serif" font-size="13" font-weight="600">Orléans</text>
+              <text x="240" y="355" text-anchor="middle" fill="#2D6A4F" font-family="DM Sans, sans-serif" font-size="12">Rayon ~ 30 km</text>
+            </svg>
+          </div>
+          <p class="map-legend">
+            <span class="legend-dot legend-dot--center"></span> Atelier
+            <span class="legend-dot legend-dot--commune"></span> Communes couvertes
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulaire devis -->
+    <section class="section devis" id="devis" aria-labelledby="devis-title">
+      <div class="container devis-layout">
+        <div class="devis-intro">
+          <p class="eyebrow">Sans engagement</p>
+          <h2 id="devis-title">Devis express, réponse humaine</h2>
+          <p class="section-lead">
+            Décrivez-nous votre besoin en quelques lignes. Nous vous rappelons sous 48&nbsp;heures
+            ouvrées pour affiner le projet — pas de robot, un artisan au bout du fil.
+          </p>
+          <ul class="devis-benefits">
+            <li>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Estimation gratuite et personnalisée
+            </li>
+            <li>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Visite sur place si nécessaire
+            </li>
+            <li>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Attestation crédit d'impôt fournie
+            </li>
+          </ul>
+          <div class="devis-contact-soft">
+            <p>
+              <strong>Préférez le téléphone&nbsp;?</strong><br />
+              <a href="tel:+33238000000">02 38 00 00 00</a>
+              <span class="muted"> — lun–ven, 8h–18h</span>
+            </p>
+          </div>
+        </div>
+
+        <form class="devis-form" id="devis-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="nom">Nom complet <span class="req">*</span></label>
+              <input type="text" id="nom" name="nom" autocomplete="name" required placeholder="Marie Dupont" />
+            </div>
+            <div class="form-field">
+              <label for="telephone">Téléphone <span class="req">*</span></label>
+              <input type="tel" id="telephone" name="telephone" autocomplete="tel" required placeholder="06 12 34 56 78" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">E-mail <span class="req">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required placeholder="marie@exemple.fr" />
+            </div>
+            <div class="form-field">
+              <label for="commune">Commune <span class="req">*</span></label>
+              <input type="text" id="commune" name="commune" autocomplete="address-level2" required placeholder="Olivet" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="service">Type de prestation <span class="req">*</span></label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Choisir un service</option>
+              <option value="creation">Création paysagère</option>
+              <option value="tonte">Tonte &amp; taille</option>
+              <option value="elagage">Élagage</option>
+              <option value="entretien">Contrat d'entretien</option>
+              <option value="autre">Autre / plusieurs services</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Décrivez votre projet <span class="req">*</span></label>
+            <textarea id="message" name="message" rows="4" required placeholder="Surface approximative, type de terrain, délai souhaité…"></textarea>
+          </div>
+
+          <div class="form-field form-check">
+            <input type="checkbox" id="consent" name="consent" required />
+            <label for="consent">J'accepte d'être recontacté(e) au sujet de ma demande. <span class="req">*</span></label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">
+            Envoyer ma demande de devis
+          </button>
+          <p class="form-footnote">Réponse sous 48&nbsp;h ouvrées · Données non cédées à des tiers</p>
+
+          <div class="form-success" id="form-success" hidden role="status">
+            <strong>Merci !</strong> Votre demande a bien été enregistrée.
+            Nous vous recontactons très bientôt.
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo--footer" href="#top">
+          <span class="logo-mark" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 4c-1.5 6-6 10-11 12 5 2 9.5 6 11 12 1.5-6 6-10 11-12-5-2-9.5-6-11-12z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="logo-text">
+            <strong>L'Atelier des Jardins</strong>
+            <span>Paysagiste · Jardinier-entrepreneur</span>
+          </span>
+        </a>
+        <p>
+          Artisan local, proche de la nature et de ses clients.
+          Un jardin soigné, c'est d'abord une relation de confiance.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#realisations">Avant / Après</a></li>
+          <li><a href="#zone">Zone d'intervention</a></li>
+          <li><a href="#devis">Devis gratuit</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+33238000000">02 38 00 00 00</a></li>
+          <li><a href="mailto:contact@atelier-des-jardins.fr">contact@atelier-des-jardins.fr</a></li>
+          <li>Atelier · Orléans (45)</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Horaires</h3>
+        <ul>
+          <li>Lun – Ven : 8h – 18h</li>
+          <li>Sam : sur rendez-vous</li>
+          <li>Dim : fermé</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> L'Atelier des Jardins. Tous droits réservés.</p>
+      <p class="footer-credit">Photos : <a href="https://unsplash.com" rel="noopener noreferrer" target="_blank">Unsplash</a> · Démo landing page</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

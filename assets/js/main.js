@@ -6,71 +6,71 @@
   "use strict";
 
   /* ---------------------------------------------------------------
-     Bascule clair / sombre
-     Le site est en clair par défaut. Le choix est mémorisé dans le
-     navigateur et réappliqué avant le rendu par le script inline
-     placé dans le <head> de chaque page.
-     --------------------------------------------------------------- */
-  var racine = document.documentElement;
-  var bascule = document.getElementById("bascule-theme");
-
-  function themeCourant() {
-    return racine.getAttribute("data-theme") === "dark" ? "dark" : "light";
-  }
-
-  function appliquerTheme(theme) {
-    racine.setAttribute("data-theme", theme);
-    if (bascule) {
-      bascule.setAttribute(
-        "aria-label",
-        theme === "dark" ? "Passer en mode clair" : "Passer en mode sombre"
-      );
-    }
-    try {
-      localStorage.setItem("praful-theme", theme);
-    } catch (e) { /* stockage indisponible : le choix vaut pour la page en cours */ }
-  }
-
-  if (bascule) {
-    appliquerTheme(themeCourant());
-    bascule.addEventListener("click", function () {
-      appliquerTheme(themeCourant() === "dark" ? "light" : "dark");
-    });
-  }
-
-  /* ---------------------------------------------------------------
-     En-tête : fond opaque dès qu'on scrolle
-     --------------------------------------------------------------- */
-  var entete = document.querySelector(".entete");
-
-  function majEntete() {
-    if (!entete) return;
-    entete.classList.toggle("est-fixee", window.scrollY > 20);
-  }
-
-  window.addEventListener("scroll", majEntete, { passive: true });
-  majEntete();
-
-  /* ---------------------------------------------------------------
-     Menu mobile
+     Volet mobile
+     Ouverture par le burger, fermeture par la croix, le voile, la touche
+     Échap ou un clic sur un lien. `inert` retire tout le panneau du
+     parcours clavier tant qu'il est fermé.
      --------------------------------------------------------------- */
   var burger = document.querySelector(".burger");
-  var nav = document.querySelector(".nav");
+  var volet = document.getElementById("volet");
+  var voletFond = document.getElementById("volet-fond");
 
-  if (burger && nav) {
+  if (burger && volet && voletFond) {
+    var fermeture = volet.querySelector(".volet__fermer");
+
+    function ouvrirVolet() {
+      voletFond.hidden = false;
+      // Un frame d'écart, sinon la transition d'opacité du voile est ignorée.
+      requestAnimationFrame(function () {
+        voletFond.classList.add("est-ouvert");
+      });
+      volet.classList.add("est-ouvert");
+      volet.removeAttribute("inert");
+      volet.setAttribute("aria-hidden", "false");
+      burger.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+      if (fermeture) fermeture.focus();
+    }
+
+    function fermerVolet(rendreFocus) {
+      voletFond.classList.remove("est-ouvert");
+      volet.classList.remove("est-ouvert");
+      volet.setAttribute("inert", "");
+      volet.setAttribute("aria-hidden", "true");
+      burger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+      if (rendreFocus) burger.focus();
+      // On attend la fin du glissement avant de retirer le voile du DOM.
+      setTimeout(function () {
+        if (!volet.classList.contains("est-ouvert")) voletFond.hidden = true;
+      }, 320);
+    }
+
     burger.addEventListener("click", function () {
-      var ouvert = nav.classList.toggle("est-ouverte");
-      burger.setAttribute("aria-expanded", String(ouvert));
-      document.body.style.overflow = ouvert ? "hidden" : "";
+      if (volet.classList.contains("est-ouvert")) fermerVolet(true);
+      else ouvrirVolet();
     });
 
-    // On referme le menu quand on clique un lien de navigation.
-    nav.querySelectorAll("a").forEach(function (lien) {
-      lien.addEventListener("click", function () {
-        nav.classList.remove("est-ouverte");
-        burger.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
-      });
+    voletFond.addEventListener("click", function () { fermerVolet(false); });
+    if (fermeture) {
+      fermeture.addEventListener("click", function () { fermerVolet(true); });
+    }
+
+    volet.querySelectorAll("a").forEach(function (lien) {
+      lien.addEventListener("click", function () { fermerVolet(false); });
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && volet.classList.contains("est-ouvert")) {
+        fermerVolet(true);
+      }
+    });
+
+    // Retour en desktop alors que le volet est ouvert : on remet tout à plat.
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 1024 && volet.classList.contains("est-ouvert")) {
+        fermerVolet(false);
+      }
     });
   }
 
