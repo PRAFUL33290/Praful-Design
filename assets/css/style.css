@@ -423,18 +423,19 @@ ul { margin: 0; padding: 0; list-style: none; }
   position: relative;
 }
 
-/* Zone de sécurité invisible entre le bouton et le panneau. Elle est aussi
-   large que le sous-menu : un déplacement légèrement diagonal de la souris
-   ne traverse plus un vide qui fermerait le menu par erreur. */
+/* Zone de sécurité invisible entre le bouton et le panneau. Le panneau
+   est maintenant centré sur l'écran plutôt que sous le bouton : la
+   bande couvre donc toute la largeur de la fenêtre à cette hauteur,
+   pour qu'un déplacement diagonal de la souris ne tombe jamais dans
+   un vide qui fermerait le menu avant d'y arriver. */
 .nav__item::after {
   content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
+  position: fixed;
+  top: var(--entete-h);
+  left: 0;
+  right: 0;
   z-index: 1;
-  width: 660px;
   height: 18px;
-  transform: translateX(-50%);
 }
 
 .nav__lien--parent {
@@ -461,16 +462,16 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* Méga-menu : deux volets — la grille des prestations à gauche,
    un panneau vedette (vue d'ensemble + CTA) détaché à droite. */
 .sous-menu {
-  position: absolute;
-  top: calc(100% + 14px);
+  position: fixed;
+  top: calc(var(--entete-h) + 14px);
   left: 50%;
   z-index: 2;
   display: flex;
   gap: 4px;
-  width: 660px;
-  padding: 12px;
+  width: min(var(--largeur), calc(100vw - 2 * var(--gouttiere)));
+  padding: 18px;
   border: 1px solid var(--bordure-forte);
-  border-radius: 22px;
+  border-radius: 26px;
   background: var(--voile-menu);
   box-shadow: var(--ombre);
   backdrop-filter: blur(18px);
@@ -491,17 +492,18 @@ ul { margin: 0; padding: 0; list-style: none; }
 .sous-menu__grille {
   display: grid;
   flex: 1 1 auto;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
   min-width: 0;
 }
 
 .sous-menu__lien {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 13px;
-  padding: 12px 14px;
-  border-radius: 12px;
+  gap: 12px;
+  padding: 18px 16px;
+  border-radius: 14px;
   transition: background var(--transition);
 }
 .sous-menu__lien:hover { background: rgba(79, 70, 229, 0.12); }
@@ -510,23 +512,24 @@ ul { margin: 0; padding: 0; list-style: none; }
   flex: none;
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   border: 1px solid rgba(79, 70, 229, 0.3);
-  border-radius: 10px;
+  border-radius: 11px;
   background: rgba(79, 70, 229, 0.12);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
 }
 .sous-menu__titre {
   display: block;
-  font-size: 0.88rem;
+  margin-bottom: 4px;
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--texte-fort);
 }
 .sous-menu__desc {
   display: block;
-  font-size: 0.76rem;
-  line-height: 1.45;
+  font-size: 0.78rem;
+  line-height: 1.5;
   color: var(--texte-faible);
 }
 
@@ -536,10 +539,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: flex;
   flex: none;
   flex-direction: column;
-  gap: 10px;
-  width: 196px;
-  padding: 16px;
-  border-radius: 16px;
+  gap: 14px;
+  width: 260px;
+  padding: 22px;
+  border-radius: 18px;
   background: linear-gradient(155deg, var(--prune), var(--violet));
 }
 
@@ -547,30 +550,30 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   padding: 2px;
   color: #ffffff;
 }
 .sous-menu__vedette-icone {
   display: grid;
   place-items: center;
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   margin-bottom: 2px;
   border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 9px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.12);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
-.sous-menu__vedette-lien strong { font-size: 0.9rem; }
+.sous-menu__vedette-lien strong { font-size: 1rem; }
 .sous-menu__vedette-lien span:not(.sous-menu__vedette-fleche) {
-  font-size: 0.75rem;
-  line-height: 1.45;
+  font-size: 0.8rem;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.72);
 }
 .sous-menu__vedette-fleche {
   margin-top: auto;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   transition: transform var(--transition);
 }
 .sous-menu__vedette-lien:hover .sous-menu__vedette-fleche { transform: translateX(4px); }
@@ -578,8 +581,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .sous-menu__vedette-cta {
   justify-content: center;
   width: 100%;
-  padding-block: 10px;
-  font-size: 0.78rem;
+  padding-block: 11px;
+  font-size: 0.8rem;
 }
 
 .burger {
