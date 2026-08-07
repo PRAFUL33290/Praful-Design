@@ -6,6 +6,22 @@
   "use strict";
 
   /* ---------------------------------------------------------------
+     En-tête persistant
+     Toujours visible ; une ombre légèrement plus marquée apparaît après
+     le début du défilement pour le détacher du contenu.
+     --------------------------------------------------------------- */
+  var entete = document.querySelector(".entete");
+
+  if (entete) {
+    var actualiserEntete = function () {
+      entete.classList.toggle("est-defile", window.scrollY > 20);
+    };
+
+    actualiserEntete();
+    window.addEventListener("scroll", actualiserEntete, { passive: true });
+  }
+
+  /* ---------------------------------------------------------------
      Volet mobile
      Ouverture par le burger, fermeture par la croix, le voile, la touche
      Échap ou un clic sur un lien. `inert` retire tout le panneau du

@@ -34,6 +34,12 @@ _src/                              SOURCES — ne pas déployer
 build.js                          générateur
 
 notes/                             notes de stratégie / positionnement (hors site)
+demos/                             10 sites de démo (un par métier), à déployer
+├── _retour/retour.css             bouton flottant « Revenir » commun aux démos
+├── paysagiste/                    chaque démo : index / services / contact + assets
+├── plombier-chauffagiste/
+└── …                              liens depuis realisations.html#demos
+
 docs/archive/                      ancienne version du site, conservée pour référence
 ```
 

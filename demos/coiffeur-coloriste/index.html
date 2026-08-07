@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Maison Nuance — Salon de coiffure & coloriste haut de gamme à Paris. Coupes, balayages, colorations et transformations capillaires d'exception."
+    />
+    <title>Maison Nuance — Coiffeur &amp; Coloriste premium à Paris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+      <link rel="stylesheet" href="../_retour/retour.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a href="index.html" class="nav-logo" aria-label="Maison Nuance — Accueil">
+          <span class="nav-logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 3c-2 4-6 6-6 10a6 6 0 0012 0c0-4-4-6-6-10z" />
+              <path d="M9 14c.5 1.5 1.5 2.5 3 3 1.5-.5 2.5-1.5 3-3" />
+            </svg>
+          </span>
+          <span class="nav-logo-text">
+            Maison Nuance
+            <span>Coiffeur · Coloriste</span>
+          </span>
+        </a>
+
+        <nav class="nav-menu" id="nav-menu" aria-label="Navigation principale">
+          <a href="index.html" class="nav-link is-active">Accueil</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="index.html#book" class="nav-link">Book</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="contact.html#rdv" class="btn btn--nav">Prendre rendez-vous</a>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero__media" aria-hidden="true">
+          <img
+            src="assets/img/hero-portrait.jpg"
+            alt=""
+            width="1200"
+            height="1600"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__content">
+          <div class="container">
+            <p class="eyebrow hero__eyebrow">Salon indépendant · Paris 6<sup>e</sup></p>
+            <h1>La couleur, élevée en art de vivre</h1>
+            <p class="hero__text">
+              Coupes précises, balayages lumineux et transformations
+              sur-mesure dans un écrin chic, contemporain et intime.
+            </p>
+            <div class="hero__actions">
+              <a href="contact.html#rdv" class="btn btn--primary">
+                Prendre rendez-vous
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+              <a href="#prestations" class="btn btn--secondary">Découvrir nos soins</a>
+            </div>
+            <div class="hero__meta">
+              <div class="hero__stat">
+                <strong>12+</strong>
+                <span>années d'expertise</span>
+              </div>
+              <div class="hero__stat">
+                <strong>4.9</strong>
+                <span>note clients</span>
+              </div>
+              <div class="hero__stat">
+                <strong>100%</strong>
+                <span>produits premium</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Présentation -->
+      <section class="section" id="salon">
+        <div class="container about-grid">
+          <div class="about-visual reveal">
+            <div class="about-visual__main">
+              <img
+                src="assets/img/salon-interieur.jpg"
+                alt="Intérieur du salon Maison Nuance, fauteuils design noir et ivoire"
+                width="900"
+                height="1125"
+                loading="lazy"
+              />
+            </div>
+            <div class="about-visual__badge">
+              <strong>2014</strong>
+              <span>l'année où la nuance est devenue une signature</span>
+            </div>
+          </div>
+          <div class="about-content reveal reveal-delay-1">
+            <p class="eyebrow">Le salon</p>
+            <h2>Un écrin scandinave pour des cheveux d'exception</h2>
+            <p class="lead">
+              Maison Nuance est un salon indépendant où l'exigence technique
+              rencontre une esthétique éditoriale — noir, ivoire, champagne.
+            </p>
+            <p>
+              Situés rue de Seine, nous accueillons une clientèle exigeante
+              dans un espace lumineux aux lignes épurées. Chaque rendez-vous
+              est un moment dédié : diagnostic, conseil couleur, coupe et
+              finitions pensées pour votre visage et votre style de vie.
+            </p>
+            <div class="about-features">
+              <div class="about-feature">
+                <div class="about-feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 3c-2 4-6 6-6 10a6 6 0 0012 0c0-4-4-6-6-10z" />
+                  </svg>
+                </div>
+                <div>
+                  <strong>Colorimétrie experte</strong>
+                  <span>Balayages, gloss et corrections</span>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="about-feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6" />
+                  </svg>
+                </div>
+                <div>
+                  <strong>Coupes signature</strong>
+                  <span>Femme, homme &amp; sur-mesure</span>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="about-feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <div>
+                  <strong>Soins premium</strong>
+                  <span>Rituels réparateurs &amp; éclat</span>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="about-feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 2" />
+                  </svg>
+                </div>
+                <div>
+                  <strong>RDV sur mesure</strong>
+                  <span>Temps dédié, sans précipitation</span>
+                </div>
+              </div>
+            </div>
+            <a href="services.html" class="btn btn--outline">
+              Voir les prestations
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Prestations vedettes -->
+      <section class="section section--warm" id="prestations">
+        <div class="container">
+          <div class="section-header section-header--center reveal">
+            <p class="eyebrow">Prestations vedettes</p>
+            <h2>Ce pour quoi l'on vient</h2>
+            <p class="lead">
+              Six expertises essentielles — de la coupe signature au balayage
+              soleil, chaque geste est pensé pour un résultat naturel et durable.
+            </p>
+          </div>
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <div class="service-card__media">
+                <img src="assets/img/coupe-femme.jpg" alt="Coupe femme contemporaine" width="600" height="400" loading="lazy" />
+              </div>
+              <div class="service-card__body">
+                <span class="service-card__price">À partir de <strong>72&nbsp;€</strong></span>
+                <h3>Coupe femme</h3>
+                <p>Architecture du volume, dégradés et textures adaptés à votre morphologie et à votre routine.</p>
+                <a href="services.html#coupe-femme" class="service-card__link">
+                  En savoir plus
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </div>
+            </article>
+            <article class="service-card reveal reveal-delay-1">
+              <div class="service-card__media">
+                <img src="assets/img/coupe-homme.jpg" alt="Coupe homme raffinée" width="600" height="400" loading="lazy" />
+              </div>
+              <div class="service-card__body">
+                <span class="service-card__price">À partir de <strong>42&nbsp;€</strong></span>
+                <h3>Coupe homme</h3>
+                <p>Coupes nettes, textures modernes et finitions soignées pour un style précis et élégant.</p>
+                <a href="services.html#coupe-homme" class="service-card__link">
+                  En savoir plus
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </div>
+            </article>
+            <article class="service-card reveal reveal-delay-2">
+              <div class="service-card__media">
+                <img src="assets/img/produits-premium.jpg" alt="Brushing et finitions premium" width="600" height="400" loading="lazy" />
+              </div>
+              <div class="service-card__body">
+                <span class="service-card__price">À partir de <strong>38&nbsp;€</strong></span>
+                <h3>Brushing</h3>
+                <p>Mise en forme durable, brillance et mouvement — pour un rendu magazine, au quotidien.</p>
+                <a href="services.html#brushing" class="service-card__link">
+                  En savoir plus
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </div>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-card__media">
+                <img src="assets/img/book-cuivre.jpg" alt="Coloration capillaire" width="600" height="400" loading="lazy" />
+              </div>
+              <div class="service-card__body">
+                <span class="service-card__price">À partir de <strong>95&nbsp;€</strong></span>
+                <h3>Coloration</h3>
+                <p>Couleurs riches et nuancées, couverture du blanc ou transformation totale avec produits premium.</p>
+                <a href="services.html#coloration" class="service-card__link">
+                  En savoir plus
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </div>
+            </article>
+            <article class="service-card reveal reveal-delay-1">
+              <div class="service-card__media">
+                <img src="assets/img/balayage.jpg" alt="Balayage blond naturel" width="600" height="400" loading="lazy" />
+              </div>
+              <div class="service-card__body">
+                <span class="service-card__price">À partir de <strong>145&nbsp;€</strong></span>
+                <h3>Balayage</h3>
+                <p>Lumière progressive, fondu racine et reflet naturel — notre signature coloriste.</p>
+                <a href="services.html#balayage" class="service-card__link">
+                  En savoir plus
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </div>
+            </article>
+            <article class="service-card reveal reveal-delay-2">
+              <div class="service-card__media">
+                <img src="assets/img/coloriste-travail.jpg" alt="Soin profond en salon" width="600" height="400" loading="lazy" />
+              </div>
+              <div class="service-card__body">
+                <span class="service-card__price">À partir de <strong>48&nbsp;€</strong></span>
+                <h3>Soin profond</h3>
+                <p>Rituels réparateurs, hydratation intense et éclat pour des fibres fortifiées.</p>
+                <a href="services.html#soin" class="service-card__link">
+                  En savoir plus
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="text-center mt-lg reveal">
+            <a href="services.html" class="btn btn--outline">Tous les services &amp; tarifs</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Avant / Après -->
+      <section class="section" id="avant-apres">
+        <div class="container">
+          <div class="section-header section-header--center reveal">
+            <p class="eyebrow">Transformations</p>
+            <h2>Avant / Après</h2>
+            <p class="lead">
+              Du brun terne au blond soleil : glissez pour découvrir le
+              résultat d'un balayage et d'un soin signature.
+            </p>
+          </div>
+          <div class="ba-wrapper reveal">
+            <div
+              class="ba-slider"
+              role="slider"
+              aria-label="Comparaison avant et après transformation couleur"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="50"
+              tabindex="0"
+            >
+              <img
+                class="ba-slider__img ba-slider__before"
+                src="assets/img/ba-avant.jpg"
+                alt="Cheveux avant transformation couleur"
+                width="1200"
+                height="900"
+                loading="lazy"
+              />
+              <img
+                class="ba-slider__img ba-slider__after"
+                src="assets/img/ba-apres.jpg"
+                alt="Cheveux après balayage blond lumineux"
+                width="1200"
+                height="900"
+                loading="lazy"
+              />
+              <div class="ba-slider__handle" style="left: 50%">
+                <div class="ba-slider__knob" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 12H4M20 12h-4M8 12l-3-3M8 12l-3 3M16 12l3-3M16 12l3 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="ba-labels">
+              <span class="ba-label">Avant</span>
+              <span class="ba-label">Après</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Book -->
+      <section class="section section--cream" id="book">
+        <div class="container">
+          <div class="section-header section-header--center reveal">
+            <p class="eyebrow">Lookbook</p>
+            <h2>Book de coupes &amp; couleurs</h2>
+            <p class="lead">
+              Une sélection de nos créations récentes — brunettes profondes,
+              cuivres, platines et balayages naturels.
+            </p>
+          </div>
+          <div class="book-grid">
+            <div class="book-item reveal" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/coupe-femme.jpg" alt="Coupe bob contemporain" width="600" height="800" loading="lazy" />
+              <span class="book-item__label">Bob sculpté</span>
+            </div>
+            <div class="book-item reveal reveal-delay-1" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/balayage.jpg" alt="Balayage blond naturel" width="600" height="800" loading="lazy" />
+              <span class="book-item__label">Balayage soleil</span>
+            </div>
+            <div class="book-item reveal reveal-delay-2" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/book-cuivre.jpg" alt="Coloration cuivrée" width="600" height="800" loading="lazy" />
+              <span class="book-item__label">Cuivre lumineux</span>
+            </div>
+            <div class="book-item reveal reveal-delay-3" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/book-platine.jpg" alt="Blond platine" width="600" height="800" loading="lazy" />
+              <span class="book-item__label">Platine glacé</span>
+            </div>
+            <div class="book-item reveal" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/book-chocolat.jpg" alt="Brun chocolat brillant" width="600" height="800" loading="lazy" />
+              <span class="book-item__label">Chocolat brillant</span>
+            </div>
+            <div class="book-item reveal reveal-delay-1" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/book-brunette.jpg" alt="Longue coupe brunette" width="600" height="800" loading="lazy" />
+              <span class="book-item__label">Longs structurés</span>
+            </div>
+            <div class="book-item reveal reveal-delay-2" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/coupe-homme.jpg" alt="Coupe homme moderne" width="600" height="800" loading="lazy" />
+              <span class="book-item__label">Coupe homme</span>
+            </div>
+            <div class="book-item reveal reveal-delay-3" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/ba-apres.jpg" alt="Transformation blonde" width="600" height="800" loading="lazy" />
+              <span class="book-item__label">Transformation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Expertise balayage -->
+      <section class="section" id="balayage-expertise">
+        <div class="container expertise-grid">
+          <div class="reveal">
+            <p class="eyebrow">Signature coloriste</p>
+            <h2>L'art du balayage naturel</h2>
+            <p class="lead" style="margin-bottom: 0.5rem">
+              Notre technique privilégie la lumière plutôt que le contraste
+              brutal — un blond qui semble avoir mûri au soleil.
+            </p>
+            <div class="expertise-list">
+              <div class="expertise-item">
+                <span class="expertise-item__num">01</span>
+                <div>
+                  <strong>Diagnostic &amp; cartographie</strong>
+                  <p>Analyse de la fibre, des racines et du rendu souhaité pour un plan de couleur sur-mesure.</p>
+                </div>
+              </div>
+              <div class="expertise-item">
+                <span class="expertise-item__num">02</span>
+                <div>
+                  <strong>Pose libre &amp; foils stratégiques</strong>
+                  <p>Mélange de techniques pour un fondu invisible et une croissance élégante.</p>
+                </div>
+              </div>
+              <div class="expertise-item">
+                <span class="expertise-item__num">03</span>
+                <div>
+                  <strong>Gloss &amp; ton sur ton</strong>
+                  <p>Neutralisation des reflets indésirables, chaleur ou froideur selon votre teint.</p>
+                </div>
+              </div>
+              <div class="expertise-item">
+                <span class="expertise-item__num">04</span>
+                <div>
+                  <strong>Soin scellant</strong>
+                  <p>Hydratation et scellage de la cuticule pour un éclat longue durée.</p>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html#rdv" class="btn btn--primary" style="margin-top: 1.75rem">
+              Réserver un balayage
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </div>
+          <div class="expertise-visual reveal reveal-delay-1">
+            <img
+              src="assets/img/coloriste-travail.jpg"
+              alt="Coloriste de Maison Nuance réalisant un balayage"
+              width="900"
+              height="1125"
+              loading="lazy"
+            />
+            <div class="expertise-visual__float">
+              <strong>Balayage signature</strong>
+              <span>À partir de 145&nbsp;€ · 2h30 à 3h30</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Équipe -->
+      <section class="section section--warm" id="equipe">
+        <div class="container">
+          <div class="section-header section-header--center reveal">
+            <p class="eyebrow">L'équipe</p>
+            <h2>Des mains expertes, un regard éditorial</h2>
+            <p class="lead">
+              Coloristes et coiffeurs formés aux techniques contemporaines,
+              unis par le même souci du détail.
+            </p>
+          </div>
+          <div class="team-banner reveal">
+            <img
+              src="assets/img/equipe.jpg"
+              alt="L'équipe Maison Nuance dans le salon"
+              width="1400"
+              height="600"
+              loading="lazy"
+            />
+          </div>
+          <div class="team-grid">
+            <article class="team-card reveal">
+              <div class="team-card__media">
+                <img src="assets/img/coloriste-travail.jpg" alt="Camille Leroy, fondatrice coloriste" width="600" height="750" loading="lazy" />
+              </div>
+              <div class="team-card__body">
+                <span class="team-card__role">Fondatrice · Coloriste</span>
+                <h3>Camille Leroy</h3>
+                <p>Spécialiste balayages et corrections de couleur. 12 ans d'expérience entre Paris et Milan.</p>
+              </div>
+            </article>
+            <article class="team-card reveal reveal-delay-1">
+              <div class="team-card__media">
+                <img src="assets/img/coupe-femme.jpg" alt="Inès Martin, coupe & style" width="600" height="750" loading="lazy" />
+              </div>
+              <div class="team-card__body">
+                <span class="team-card__role">Coupe &amp; Style</span>
+                <h3>Inès Martin</h3>
+                <p>Architecture des coupes femme et brushing signature. Exigeante, précise, intuitive.</p>
+              </div>
+            </article>
+            <article class="team-card reveal reveal-delay-2">
+              <div class="team-card__media">
+                <img src="assets/img/coupe-homme.jpg" alt="Julien Moreau, coupe homme & barbe" width="600" height="750" loading="lazy" />
+              </div>
+              <div class="team-card__body">
+                <span class="team-card__role">Homme &amp; Texture</span>
+                <h3>Julien Moreau</h3>
+                <p>Coupes masculines contemporaines, textures et finitions pour un style net et personnel.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Avis -->
+      <section class="section" id="avis">
+        <div class="container">
+          <div class="section-header section-header--center reveal">
+            <p class="eyebrow">Témoignages</p>
+            <h2>Ils nous font confiance</h2>
+          </div>
+          <div class="testimonials-grid">
+            <blockquote class="testimonial reveal">
+              <div class="testimonial__stars" aria-label="5 étoiles">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <p class="testimonial__quote">
+                « Mon balayage est d'une douceur rare. On dirait que j'ai passé
+                l'été au soleil — sans aucune démarcation. »
+              </p>
+              <footer class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">EL</div>
+                <div>
+                  <strong>Élise L.</strong>
+                  <span>Paris 7<sup>e</sup> · Balayage</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial reveal reveal-delay-1">
+              <div class="testimonial__stars" aria-label="5 étoiles">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <p class="testimonial__quote">
+                « Accueil impeccable, salon magnifique, et une coupe homme
+                d'une précision rare. Je ne vais plus ailleurs. »
+              </p>
+              <footer class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">TD</div>
+                <div>
+                  <strong>Thomas D.</strong>
+                  <span>Paris 6<sup>e</sup> · Coupe homme</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial reveal reveal-delay-2">
+              <div class="testimonial__stars" aria-label="5 étoiles">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <p class="testimonial__quote">
+                « Transformation complète en une séance. Camille a su
+                écouter mon envie sans dénaturer mon visage. »
+              </p>
+              <footer class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">SR</div>
+                <div>
+                  <strong>Sophie R.</strong>
+                  <span>Boulogne · Coloration</span>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- Instagram -->
+      <section class="section section--cream" id="instagram">
+        <div class="container">
+          <div class="insta-header reveal">
+            <div>
+              <p class="eyebrow">Réseaux</p>
+              <h2>Sur Instagram</h2>
+              <a href="#" class="insta-handle" aria-label="Instagram Maison Nuance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
+                @maison.nuance
+              </a>
+            </div>
+            <a href="#" class="btn btn--outline">Suivre le salon</a>
+          </div>
+          <div class="insta-grid">
+            <div class="insta-item reveal" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/balayage.jpg" alt="Publication Instagram balayage" width="400" height="400" loading="lazy" />
+            </div>
+            <div class="insta-item reveal reveal-delay-1" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/salon-interieur.jpg" alt="Publication Instagram salon" width="400" height="400" loading="lazy" />
+            </div>
+            <div class="insta-item reveal reveal-delay-2" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/coupe-femme.jpg" alt="Publication Instagram coupe" width="400" height="400" loading="lazy" />
+            </div>
+            <div class="insta-item reveal" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/book-platine.jpg" alt="Publication Instagram platine" width="400" height="400" loading="lazy" />
+            </div>
+            <div class="insta-item reveal reveal-delay-1" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/produits-premium.jpg" alt="Publication Instagram produits" width="400" height="400" loading="lazy" />
+            </div>
+            <div class="insta-item reveal reveal-delay-2" data-lightbox tabindex="0" role="button">
+              <img src="assets/img/book-cuivre.jpg" alt="Publication Instagram cuivre" width="400" height="400" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-band">
+        <div class="cta-band__bg" aria-hidden="true">
+          <img src="assets/img/hero-salon.jpg" alt="" width="1600" height="900" loading="lazy" />
+        </div>
+        <div class="cta-band__overlay" aria-hidden="true"></div>
+        <div class="container">
+          <h2>Prêt·e pour votre prochaine nuance&nbsp;?</h2>
+          <p>
+            Réservez un créneau en ligne ou contactez-nous — nous vous
+            accompagnons de la consultation au résultat final.
+          </p>
+          <div class="cta-band__actions">
+            <a href="contact.html#rdv" class="btn btn--light">
+              Prendre rendez-vous
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+            <a href="tel:+33142681428" class="btn btn--secondary">01 42 68 14 28</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo" aria-label="Maison Nuance">
+              <span class="nav-logo-text">
+                Maison Nuance
+                <span>Coiffeur · Coloriste</span>
+              </span>
+            </a>
+            <p>
+              Salon indépendant de coiffure et coloration haut de gamme
+              à Paris — coupes, balayages et transformations d'exception.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </a>
+              <a href="#" aria-label="Pinterest">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M10 18l1.5-6M12 10c0-1.5 1-2.5 2.5-2.5S17 9 17 10.5 16 13 14.5 13H12" />
+                </svg>
+              </a>
+              <a href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v7h3v-7h2.5l.5-3H14V9z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="index.html#book">Book</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Prestations</h4>
+            <ul>
+              <li><a href="services.html#coupe-femme">Coupe femme</a></li>
+              <li><a href="services.html#coupe-homme">Coupe homme</a></li>
+              <li><a href="services.html#balayage">Balayage</a></li>
+              <li><a href="services.html#coloration">Coloration</a></li>
+              <li><a href="services.html#soin">Soin profond</a></li>
+            </ul>
+          </div>
+          <div class="footer-col footer-contact">
+            <h4>Salon</h4>
+            <ul>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg>
+                <span>24 rue de Seine<br />75006 Paris</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.6a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.5-1.2a2 2 0 012.1-.4c.8.3 1.7.6 2.6.7a2 2 0 011.7 2z" />
+                </svg>
+                <a href="tel:+33142681428">01 42 68 14 28</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M4 6h16v12H4z" />
+                  <path d="M4 7l8 6 8-6" />
+                </svg>
+                <a href="mailto:contact@maison-nuance.fr">contact@maison-nuance.fr</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <span>© <span data-year></span> Maison Nuance. Tous droits réservés.</span>
+          <span>Site vitrine démo — Praful Design</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  
+    <!-- ============ Retour vers Praful Design ============
+         Bouton flottant ajouté sur chaque démo pour que le visiteur
+         retrouve toujours le chemin du site principal.
+         Balisage partagé, styles dans /demos/_retour/retour.css. -->
+    <a href="../../index.html" class="pd-retour" aria-label="Revenir sur le site Praful Design">
+      <svg class="pd-retour__fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12H5" />
+        <path d="m11 18-6-6 6-6" />
+      </svg>
+      <span class="pd-retour__logo">
+        <img src="../../assets/img/LOGO.png" alt="" width="34" height="34" loading="lazy" decoding="async" />
+      </span>
+      <span class="pd-retour__texte">
+        <span class="pd-retour__titre">Revenir</span>
+        <span class="pd-retour__soustitre">Site Praful Design</span>
+      </span>
+    </a>
+  </body>
+</html>

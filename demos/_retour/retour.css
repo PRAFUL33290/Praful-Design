@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Bouton flottant « Revenir sur Praful Design »
+   Partagé par toutes les démos de /demos/. Volontairement autonome :
+   aucun token des chartes de démo n'est utilisé, tout est en dur ici pour
+   que le bouton reste identique et lisible quel que soit le site hôte.
+   ========================================================================== */
+
+.pd-retour {
+  position: fixed;
+  left: clamp(14px, 3vw, 28px);
+  bottom: clamp(14px, 3vw, 28px);
+  z-index: 99999;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px 8px 8px;
+
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  color: #ffffff;
+
+  background: #1c0030;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(28, 0, 48, 0.32);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pd-retour:hover,
+.pd-retour:focus-visible {
+  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(79, 70, 229, 0.4);
+}
+
+.pd-retour:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Pastille logo + flèche superposée au survol */
+.pd-retour__logo {
+  position: relative;
+  display: block;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.pd-retour__logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* La flèche « revenir », toujours visible, posée sur la pastille */
+.pd-retour__fleche {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  color: currentColor;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pd-retour:hover .pd-retour__fleche,
+.pd-retour:focus-visible .pd-retour__fleche {
+  transform: translateX(-3px);
+}
+
+.pd-retour__texte {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pd-retour__titre {
+  font-size: 0.82rem;
+}
+
+.pd-retour__soustitre {
+  font-size: 0.66rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+/* Sur mobile on garde uniquement la flèche + le logo, pour ne pas masquer
+   le contenu ni les CTA fixes des démos. */
+@media (max-width: 640px) {
+  .pd-retour {
+    padding: 7px 10px 7px 7px;
+  }
+
+  .pd-retour__texte {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pd-retour,
+  .pd-retour__fleche {
+    transition: none;
+  }
+
+  .pd-retour:hover,
+  .pd-retour:focus-visible {
+    transform: none;
+  }
+}
+
+/* Impression : le bouton n'a pas de sens sur papier. */
+@media print {
+  .pd-retour {
+    display: none;
+  }
+}

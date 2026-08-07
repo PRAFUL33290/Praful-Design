@@ -213,22 +213,16 @@
     <div class="conteneur conteneur--pleine hero__pleine">
       <div class="hero__grille">
         <div class="hero__contenu">
-          <span class="surtitre anim">Web &amp; communication · Gironde</span>
+          <span class="surtitre anim">Designer web indépendant · Gironde</span>
 
           <h1 class="anim">
-            Je fais
-            <span class="hero__rotation">
-              <span class="hero__mot">des sites WordPress sur mesure</span>
-              <span class="hero__mot">de la sécurité WordPress</span>
-              <span class="hero__mot">de la maintenance au quotidien</span>
-              <span class="hero__mot">des refontes qui durent</span>
-              <span class="hero__mot">du SEO qui fait venir</span>
-            </span>
+            Un site qui vous ressemble.
+            <span class="hero__accent">Et qui travaille pour vous.</span>
           </h1>
 
           <p class="hero__soustitre anim">
-            Dix ans à animer des groupes, quatre ans au service communication d'une mairie :
-            je conçois des sites et des contenus qui parlent vraiment aux gens à qui ils s'adressent.
+            Je conçois des sites WordPress clairs, rapides et visibles pour les indépendants,
+            les entreprises locales et les collectivités — de l'idée à la mise en ligne.
           </p>
 
           <div class="groupe-btn anim">
@@ -236,35 +230,31 @@
             <a href="#competences" class="btn btn--secondaire">Voir mes compétences</a>
           </div>
 
-          <div class="hero__pastilles anim">
-            <span class="pastille">WordPress</span>
-            <span class="pastille">Design graphique</span>
-            <span class="pastille">Montage vidéo</span>
-            <span class="pastille">No-code &amp; IA</span>
-            <span class="pastille">SEO local</span>
-          </div>
-
-          <p class="maquette__dispo anim"><span aria-hidden="true"></span>Disponible pour vos projets</p>
+          <ul class="hero__preuves anim" aria-label="Mes engagements">
+            <li>Sur mesure</li>
+            <li>Interlocuteur unique</li>
+            <li>Basé en Gironde</li>
+          </ul>
         </div>
 
         <!-- Bandeau, logo et compétences flottants, au-dessus de la photo -->
         <div class="hero__maquette anim">
-          <span class="hero__badge">Spécialiste WordPress</span>
+          <span class="hero__badge">Disponible pour vos projets</span>
           <img src="assets/img/Logo Sans fond Wordpress.webp" alt="WordPress" class="hero__logo-flottant">
 
           <span class="hero__competence hero__competence--1">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="M3 9h18"/><path d="m8.8 12.6-1.8 1.8 1.8 1.8M14.2 12.6l1.8 1.8-1.8 1.8"/></svg>
-            Création de sites WordPress
+            Design sur mesure
           </span>
 
           <span class="hero__competence hero__competence--2">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 19.2 6v5.2c0 4.1-2.9 8-7.2 9.2-4.3-1.2-7.2-5.1-7.2-9.2V6L12 3.2z"/><path d="m9.1 11.9 2.1 2.1 3.9-4"/></svg>
-            Maintenance et sécurité
+            WordPress &amp; SEO
           </span>
 
           <span class="hero__competence hero__competence--3">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 20 1.2-4.2 9.5-9.5a2 2 0 0 1 2.8 0l1.2 1.2a2 2 0 0 1 0 2.8l-9.5 9.5L4 20z"/><path d="m13.4 7.4 3.2 3.2"/></svg>
-            Communication visuelle
+            Suivi de proximité
           </span>
         </div>
       </div>
@@ -492,9 +482,16 @@
         <p class="chapo">Trois exemples de sites repris de zéro ou refondus, avec l'avant et l'après.</p>
       </div>
 
+      <!-- Photos Unsplash, libres d'utilisation : guheihei2333 (artisan),
+           Toa Heftiba (bien-être) et Tem Rysh (commerce). -->
       <div class="grille grille--3">
         <article class="realisation anim">
-          <div class="realisation__visuel">Artisan</div>
+          <figure class="realisation__visuel">
+            <img src="assets/img/realisation-menuisier.webp"
+                 alt="Artisan travaillant une pièce de bois dans son atelier"
+                 width="1200" height="760" loading="lazy" decoding="async">
+            <figcaption>Artisan</figcaption>
+          </figure>
           <div class="realisation__corps">
             <p class="realisation__meta">Refonte + SEO local</p>
             <h3>Menuisier — Bordeaux Nord</h3>
@@ -507,7 +504,12 @@
         </article>
 
         <article class="realisation anim">
-          <div class="realisation__visuel">Santé</div>
+          <figure class="realisation__visuel">
+            <img src="assets/img/realisation-bien-etre.webp"
+                 alt="Praticienne réalisant un massage de bien-être"
+                 width="1200" height="760" loading="lazy" decoding="async">
+            <figcaption>Bien-être</figcaption>
+          </figure>
           <div class="realisation__corps">
             <p class="realisation__meta">Création de site</p>
             <h3>Praticienne bien-être — Parempuyre</h3>
@@ -520,7 +522,12 @@
         </article>
 
         <article class="realisation anim">
-          <div class="realisation__visuel">Commerce</div>
+          <figure class="realisation__visuel">
+            <img src="assets/img/realisation-commerce.webp"
+                 alt="Devanture colorée d'un commerce indépendant"
+                 width="1200" height="760" loading="lazy" decoding="async">
+            <figcaption>Commerce</figcaption>
+          </figure>
           <div class="realisation__corps">
             <p class="realisation__meta">Refonte + maintenance</p>
             <h3>Commerce de proximité — Le Taillan</h3>
@@ -534,6 +541,7 @@
       </div>
 
       <div class="groupe-btn" style="justify-content:center;margin-top:44px">
+        <a href="realisations.html#demos" class="btn btn--primaire">Visiter les 10 sites de démo</a>
         <a href="realisations.html" class="btn btn--secondaire">Voir toutes les réalisations</a>
       </div>
     </div>
