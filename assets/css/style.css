@@ -99,6 +99,28 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/* Thème du haut de page pour l'en-tête transparent : par défaut le fond
+   sous l'en-tête (hero ou bandeau de page) est clair, donc texte et
+   icônes foncés. Une page au hero sombre ajoute data-hero="sombre" sur
+   <body> (voir build.js) pour passer l'en-tête en blanc tant qu'il est
+   transparent — dès qu'il se solidifie au défilement, il redevient
+   toujours foncé, quel que soit le thème, puisque son fond est alors
+   blanc opaque dans tous les cas. */
+body {
+  --tema-fg: var(--texte-fort);
+  --tema-fg-doux: var(--texte-doux);
+  --tema-survol: var(--survol);
+  --tema-liseret: var(--bordure-forte);
+  --tema-puce: var(--champ-fond);
+}
+body[data-hero="sombre"] {
+  --tema-fg: #ffffff;
+  --tema-fg-doux: rgba(255, 255, 255, 0.75);
+  --tema-survol: rgba(255, 255, 255, 0.16);
+  --tema-liseret: rgba(255, 255, 255, 0.32);
+  --tema-puce: rgba(255, 255, 255, 0.14);
+}
+
 body {
   margin: 0;
   font-family: var(--police);
@@ -297,8 +319,27 @@ ul { margin: 0; padding: 0; list-style: none; }
   padding-inline: clamp(14px, 3vw, 44px);
   background: transparent;
   border: 0;
+
+  /* Couleurs de l'en-tête : reprennent le thème du haut de page tant que
+     la capsule est transparente, reviennent toujours au thème clair dès
+     qu'elle se solidifie (fond blanc opaque en dessous). */
+  --entete-fg: var(--tema-fg);
+  --entete-fg-doux: var(--tema-fg-doux);
+  --entete-survol: var(--tema-survol);
+  --entete-liseret: var(--tema-liseret);
+  --entete-puce: var(--tema-puce);
+}
+.entete.est-defile {
+  --entete-fg: var(--texte-fort);
+  --entete-fg-doux: var(--texte-doux);
+  --entete-survol: var(--survol);
+  --entete-liseret: var(--bordure-forte);
+  --entete-puce: var(--champ-fond);
 }
 
+/* La capsule elle-même : invisible en haut de page, elle se solidifie en
+   pilule blanche dès le défilement. Toutes les transitions partagent la
+   même durée pour que l'apparition reste un seul mouvement fluide. */
 .entete__inner {
   position: relative;
   display: flex;
@@ -307,11 +348,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   gap: 24px;
   height: 72px;
   padding-inline: 10px 10px;
-  border: 1px solid var(--bordure);
+  border: 1px solid transparent;
   border-radius: var(--rayon-pill);
-  background: #ffffff;
-  box-shadow: 0 8px 24px rgba(28, 0, 48, 0.08);
-  transition: box-shadow 0.28s ease, border-color 0.28s ease;
+  background: transparent;
+  box-shadow: 0 8px 24px rgba(28, 0, 48, 0);
+  transition: background-color 0.38s ease, box-shadow 0.38s ease, border-color 0.38s ease;
 }
 
 .entete.est-defile .entete__inner {
@@ -321,17 +362,19 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 /* Liseré lumineux en haut de la capsule : c'est lui qui donne
-   l'impression de verre plutôt que de simple aplat translucide. */
+   l'impression de verre plutôt que de simple aplat translucide. Il n'a
+   de sens qu'une fois la capsule solidifiée, donc masqué avant. */
 .entete__inner::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), transparent 55%);
-  opacity: 0.5;
+  opacity: 0;
   pointer-events: none;
-  transition: opacity 0.28s ease;
+  transition: opacity 0.38s ease;
 }
+.entete.est-defile .entete__inner::before { opacity: 0.5; }
 .entete__inner > * { position: relative; z-index: 1; }
 /* La nav doit passer au-dessus du bloc CTA/burger : sinon, comme ce dernier
    arrive après elle dans le DOM à z-index égal, il masque le sous-menu
@@ -356,6 +399,20 @@ ul { margin: 0; padding: 0; list-style: none; }
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--texte-faible);
+}
+
+/* Dans l'en-tête flottant, le nom de marque suit le thème adaptatif
+   (blanc sur hero sombre, foncé sinon) ; la baseline suit sa variante
+   douce. Transition incluse : c'est elle qui rend le passage du blanc
+   au foncé fluide au moment où la capsule se solidifie. */
+.entete .logo {
+  color: var(--entete-fg);
+  transition: color 0.38s ease;
+}
+.entete .logo:hover { color: var(--entete-fg); }
+.entete .logo__baseline {
+  color: var(--entete-fg-doux);
+  transition: color 0.38s ease;
 }
 .logo__glyphe {
   display: grid;
@@ -403,13 +460,13 @@ ul { margin: 0; padding: 0; list-style: none; }
   border-radius: var(--rayon-pill);
   font-size: 0.83rem;
   font-weight: 600;
-  color: var(--texte-doux);
-  transition: color var(--transition), background var(--transition);
+  color: var(--entete-fg-doux);
+  transition: color 0.38s ease, background 0.38s ease;
 }
 .nav__lien:hover,
 .nav__lien.est-actif {
-  color: var(--texte-fort);
-  background: var(--survol);
+  color: var(--entete-fg);
+  background: var(--entete-survol);
 }
 
 .entete__cta {
@@ -593,10 +650,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   width: 44px;
   height: 44px;
   padding: 0;
-  border: 1px solid var(--bordure-forte);
+  border: 1px solid var(--entete-liseret);
   border-radius: 12px;
-  background: var(--champ-fond);
+  background: var(--entete-puce);
   cursor: pointer;
+  transition: border-color 0.38s ease, background-color 0.38s ease;
 }
 .burger span {
   display: block;
@@ -604,8 +662,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   height: 2px;
   margin-inline: auto;
   border-radius: 2px;
-  background: var(--texte-fort);
-  transition: transform var(--transition), opacity var(--transition);
+  background: var(--entete-fg);
+  transition: transform var(--transition), opacity var(--transition), background-color 0.38s ease;
 }
 .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }

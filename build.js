@@ -19,7 +19,10 @@ const path = require("path");
 const racine = __dirname;
 const layout = fs.readFileSync(path.join(racine, "_src/layout.html"), "utf8");
 
-/* Métadonnées de chaque page. La clé correspond au nom de fichier. */
+/* Métadonnées de chaque page. La clé correspond au nom de fichier.
+   `hero: "sombre"` bascule l'en-tête transparent en texte blanc pour une
+   page dont le haut (hero ou bandeau) est sur fond foncé ; omis, l'en-tête
+   reste en texte foncé (thème par défaut, toutes les pages actuelles). */
 const pages = {
   "index": {
     title: "Praful Design — Webdesigner WordPress pour indépendants et TPE | Parempuyre (33)",
@@ -141,6 +144,7 @@ for (const [slug, meta] of Object.entries(pages)) {
     .replace(/\{\{title\}\}/g, meta.title)
     .replace(/\{\{description\}\}/g, meta.description)
     .replace(/\{\{canonical\}\}/g, meta.canonical)
+    .replace("{{hero}}", meta.hero === "sombre" ? ' data-hero="sombre"' : "")
     .replace("{{head}}", meta.head || "")
     .replace("{{content}}", contenu);
 
