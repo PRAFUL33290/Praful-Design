@@ -412,20 +412,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   background: var(--survol);
 }
 
-/* Page courante : un point discret plutôt qu'une pastille pleine,
-   pour ne pas alourdir la barre vitrée. */
-.nav__lien.est-actif::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 2px;
-  width: 4px;
-  height: 4px;
-  margin-left: -2px;
-  border-radius: 50%;
-  background: var(--accent-clair);
-}
-
 .entete__cta {
   padding: 11px 20px;
   font-size: 0.76rem;
@@ -446,7 +432,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   top: 100%;
   left: 50%;
   z-index: 1;
-  width: 340px;
+  width: 660px;
   height: 18px;
   transform: translateX(-50%);
 }
@@ -472,15 +458,19 @@ ul { margin: 0; padding: 0; list-style: none; }
   transform: translateY(2px) rotate(-135deg);
 }
 
+/* Méga-menu : deux volets — la grille des prestations à gauche,
+   un panneau vedette (vue d'ensemble + CTA) détaché à droite. */
 .sous-menu {
   position: absolute;
   top: calc(100% + 14px);
   left: 50%;
   z-index: 2;
-  width: 340px;
-  padding: 10px;
+  display: flex;
+  gap: 4px;
+  width: 660px;
+  padding: 12px;
   border: 1px solid var(--bordure-forte);
-  border-radius: 18px;
+  border-radius: 22px;
   background: var(--voile-menu);
   box-shadow: var(--ombre);
   backdrop-filter: blur(18px);
@@ -496,6 +486,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   transform: translate(-50%, 0);
   opacity: 1;
   visibility: visible;
+}
+
+.sous-menu__grille {
+  display: grid;
+  flex: 1 1 auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  min-width: 0;
 }
 
 .sous-menu__lien {
@@ -530,6 +528,58 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-size: 0.76rem;
   line-height: 1.45;
   color: var(--texte-faible);
+}
+
+/* Panneau vedette, détaché sur fond de marque pour contraster avec
+   la grille des prestations. */
+.sous-menu__vedette {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 10px;
+  width: 196px;
+  padding: 16px;
+  border-radius: 16px;
+  background: linear-gradient(155deg, var(--prune), var(--violet));
+}
+
+.sous-menu__vedette-lien {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  padding: 2px;
+  color: #ffffff;
+}
+.sous-menu__vedette-icone {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 0.85rem;
+}
+.sous-menu__vedette-lien strong { font-size: 0.9rem; }
+.sous-menu__vedette-lien span:not(.sous-menu__vedette-fleche) {
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.72);
+}
+.sous-menu__vedette-fleche {
+  margin-top: auto;
+  font-size: 0.9rem;
+  transition: transform var(--transition);
+}
+.sous-menu__vedette-lien:hover .sous-menu__vedette-fleche { transform: translateX(4px); }
+
+.sous-menu__vedette-cta {
+  justify-content: center;
+  width: 100%;
+  padding-block: 10px;
+  font-size: 0.78rem;
 }
 
 .burger {
@@ -1939,6 +1989,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   padding: clamp(130px, 16vw, 175px) 0 clamp(40px, 6vw, 64px);
   text-align: center;
 }
+.entete-page .groupe-btn { justify-content: center; }
 .entete-page p {
   max-width: 660px;
   margin-inline: auto;
