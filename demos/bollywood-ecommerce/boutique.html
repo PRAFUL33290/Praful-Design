@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Boutique Maison Zari — sarees, kurtas, lehengas, costumes de danse Bollywood et accessoires. Filtres par catégorie et fiches produits détaillées."
+    />
+    <title>Boutique — Maison Zari | Mode indienne &amp; Bollywood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="../_retour/retour.css" />
+  </head>
+  <body>
+    <header class="site-header site-header--solid" id="top">
+      <div class="container nav">
+        <a href="index.html" class="nav-logo" aria-label="Maison Zari — Accueil">
+          <span class="nav-logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+              <circle cx="12" cy="12" r="8" stroke-dasharray="2 3" />
+            </svg>
+          </span>
+          <span class="nav-logo-text">
+            Maison Zari
+            <span>Mode indienne · Bollywood</span>
+          </span>
+        </a>
+
+        <nav class="nav-menu" id="nav-menu" aria-label="Navigation principale">
+          <a href="index.html" class="nav-link">Accueil</a>
+          <a href="boutique.html" class="nav-link is-active">Boutique</a>
+          <a href="index.html#mariage" class="nav-link">Mariages</a>
+          <a href="index.html#danse" class="nav-link">Danse</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="#catalogue" class="btn btn--nav">Catalogue</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="contact.html" class="nav-icon" aria-label="Mon compte">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.5" />
+              <path d="M5 19.5c1.5-3.5 4-5 7-5s5.5 1.5 7 5" />
+            </svg>
+          </a>
+          <button type="button" class="nav-icon nav-cart" aria-label="Panier">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+              <path d="M6 6h15l-1.5 9h-12z" />
+              <path d="M6 6 5 3H2" />
+              <circle cx="9" cy="20" r="1.2" />
+              <circle cx="17" cy="20" r="1.2" />
+            </svg>
+            <span class="nav-badge" data-cart-count hidden>0</span>
+          </button>
+          <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <a href="index.html">Accueil</a>
+            <span aria-hidden="true">/</span>
+            <span>Boutique</span>
+          </nav>
+          <p class="eyebrow eyebrow--light">Catalogue</p>
+          <h1>Boutique</h1>
+          <p>
+            Sarees, kurtas, lehengas, costumes de danse et accessoires —
+            filtrez par catégorie et ouvrez une fiche pour tailles et couleurs.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="catalogue">
+        <div class="container shop-layout">
+          <aside class="shop-filters reveal" aria-label="Filtres">
+            <h2>Catégories</h2>
+            <div class="filter-list">
+              <button type="button" class="filter-btn is-active" data-filter="all">
+                Tout voir <span class="count">9</span>
+              </button>
+              <button type="button" class="filter-btn" data-filter="sarees">
+                Sarees <span class="count">2</span>
+              </button>
+              <button type="button" class="filter-btn" data-filter="kurtas">
+                Kurtas <span class="count">1</span>
+              </button>
+              <button type="button" class="filter-btn" data-filter="lehengas">
+                Lehengas <span class="count">2</span>
+              </button>
+              <button type="button" class="filter-btn" data-filter="danse">
+                Costumes de danse <span class="count">2</span>
+              </button>
+              <button type="button" class="filter-btn" data-filter="accessoires">
+                Accessoires <span class="count">2</span>
+              </button>
+            </div>
+          </aside>
+
+          <div>
+            <div class="shop-toolbar">
+              <p><span data-result-count>9 articles</span> · prix TTC indicatifs</p>
+              <a href="contact.html#formulaire" class="btn btn--outline btn--sm">Commande sur mesure</a>
+            </div>
+
+            <div class="product-grid">
+              <article class="product-card reveal" data-category="sarees" data-product="saree-jaipur" tabindex="0" role="button" aria-label="Voir Saree soie Jaipur">
+                <div class="product-card__media">
+                  <span class="badge badge--best">Best-seller</span>
+                  <img src="assets/img/product-saree.jpg" alt="Saree soie magenta et or" width="600" height="800" loading="lazy" />
+                </div>
+                <div class="product-card__body">
+                  <span class="product-card__cat">Sarees</span>
+                  <h3>Saree soie Jaipur</h3>
+                  <p class="product-card__price">189&nbsp;€</p>
+                </div>
+              </article>
+
+              <article class="product-card reveal" data-category="sarees" data-product="saree-safran" tabindex="0" role="button" aria-label="Voir Saree safran et or">
+                <div class="product-card__media">
+                  <span class="badge badge--new">Nouveau</span>
+                  <img src="assets/img/product-saree-2.jpg" alt="Saree safran porté" width="600" height="800" loading="lazy" />
+                </div>
+                <div class="product-card__body">
+                  <span class="product-card__cat">Sarees</span>
+                  <h3>Saree safran &amp; or</h3>
+                  <p class="product-card__price">219&nbsp;€</p>
+                </div>
+              </article>
+
+              <article class="product-card reveal" data-category="lehengas" data-product="lehenga-rani" tabindex="0" role="button" aria-label="Voir Lehenga Rani fuchsia">
+                <div class="product-card__media">
+                  <span class="badge badge--best">Best-seller</span>
+                  <img src="assets/img/product-lehenga.jpg" alt="Lehenga rouge et or" width="600" height="800" loading="lazy" />
+                </div>
+                <div class="product-card__body">
+                  <span class="product-card__cat">Lehengas</span>
+                  <h3>Lehenga Rani fuchsia</h3>
+                  <p class="product-card__price">349&nbsp;€</p>
+                </div>
+              </article>
+
+              <article class="product-card reveal" data-category="lehengas" data-product="lehenga-bridal" tabindex="0" role="button" aria-label="Voir Lehenga mariée cramoisi">
+                <div class="product-card__media">
+                  <img src="assets/img/product-mariage.jpg" alt="Lehenga de mariée cramoisi" width="600" height="800" loading="lazy" />
+                </div>
+                <div class="product-card__body">
+                  <span class="product-card__cat">Lehengas</span>
+                  <h3>Lehenga mariée cramoisi</h3>
+                  <p class="product-card__price">489&nbsp;€</p>
+                </div>
+              </article>
+
+              <article class="product-card reveal" data-category="kurtas" data-product="kurta-ivoire" tabindex="0" role="button" aria-label="Voir Kurta ivoire brodé">
+                <div class="product-card__media">
+                  <span class="badge badge--new">Nouveau</span>
+                  <img src="assets/img/product-kurta.jpg" alt="Kurta ivoire brodé" width="600" height="800" loading="lazy" />
+                </div>
+                <div class="product-card__body">
+                  <span class="product-card__cat">Kurtas</span>
+                  <h3>Kurta ivoire brodé</h3>
+                  <p class="product-card__price">129&nbsp;€</p>
+                </div>
+              </article>
+
+              <article class="product-card reveal" data-category="danse" data-product="costume-scene" tabindex="0" role="button" aria-label="Voir Costume scène Bollywood">
+                <div class="product-card__media">
+                  <img src="assets/img/product-danse.jpg" alt="Costume de danse sequins" width="600" height="800" loading="lazy" />
+                </div>
+                <div class="product-card__body">
+                  <span class="product-card__cat">Costumes de danse</span>
+                  <h3>Costume scène Bollywood</h3>
+                  <p class="product-card__price">279&nbsp;€</p>
+                </div>
+              </article>
+
+              <article class="product-card reveal" data-category="danse" data-product="costume-duo" tabindex="0" role="button" aria-label="Voir Tenue duo spectacle">
+                <div class="product-card__media">
+                  <span class="badge badge--best">Best-seller</span>
+                  <img src="assets/img/product-danse-2.jpg" alt="Tenue duo danseurs" width="600" height="800" loading="lazy" />
+                </div>
+                <div class="product-card__body">
+                  <span class="product-card__cat">Costumes de danse</span>
+                  <h3>Tenue duo spectacle</h3>
+                  <p class="product-card__price">399&nbsp;€</p>
+                </div>
+              </article>
+
+              <article class="product-card reveal" data-category="accessoires" data-product="parure-kundan" tabindex="0" role="button" aria-label="Voir Parure kundan turquoise">
+                <div class="product-card__media">
+                  <span class="badge badge--new">Nouveau</span>
+                  <img src="assets/img/product-bijoux.jpg" alt="Parure kundan turquoise" width="600" height="800" loading="lazy" />
+                </div>
+                <div class="product-card__body">
+                  <span class="product-card__cat">Accessoires</span>
+                  <h3>Parure kundan turquoise</h3>
+                  <p class="product-card__price">159&nbsp;€</p>
+                </div>
+              </article>
+
+              <article class="product-card reveal" data-category="accessoires" data-product="jhumkas-or" tabindex="0" role="button" aria-label="Voir Jhumkas or tradition">
+                <div class="product-card__media">
+                  <img src="assets/img/ig-bijoux.jpg" alt="Jhumkas et maang tikka" width="600" height="800" loading="lazy" />
+                </div>
+                <div class="product-card__body">
+                  <span class="product-card__cat">Accessoires</span>
+                  <h3>Jhumkas or tradition</h3>
+                  <p class="product-card__price">79&nbsp;€</p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Fiche produit détaillée type -->
+            <div class="product-detail" id="product-detail" aria-live="polite">
+              <div class="product-detail__grid">
+                <div class="product-gallery">
+                  <div class="product-gallery__main">
+                    <img
+                      data-detail-img
+                      src="assets/img/product-saree.jpg"
+                      alt="Produit sélectionné"
+                      width="800"
+                      height="1060"
+                    />
+                  </div>
+                  <div class="product-gallery__thumbs" role="group" aria-label="Vues du produit">
+                    <button type="button" class="is-active" data-src="assets/img/product-saree.jpg" aria-label="Vue principale">
+                      <img src="assets/img/product-saree.jpg" alt="" width="200" height="200" />
+                    </button>
+                    <button type="button" data-src="assets/img/detail-broderie.jpg" aria-label="Détail broderie">
+                      <img src="assets/img/detail-broderie.jpg" alt="" width="200" height="200" />
+                    </button>
+                    <button type="button" data-src="assets/img/product-saree-2.jpg" aria-label="Vue portée">
+                      <img src="assets/img/product-saree-2.jpg" alt="" width="200" height="200" />
+                    </button>
+                  </div>
+                </div>
+
+                <div class="product-info">
+                  <span class="product-card__cat" data-detail-cat>Sarees</span>
+                  <h2 data-detail-name>Saree soie Jaipur</h2>
+                  <p class="product-info__price" data-detail-price>189&nbsp;€</p>
+                  <p class="product-info__desc" data-detail-desc>
+                    Saree en soie pure aux motifs floraux brodés or. Tombé fluide,
+                    parfait pour mariages et soirées. Bordure zari traditionnelle,
+                    blouse assortie en option.
+                  </p>
+
+                  <div class="option-group">
+                    <span class="option-label">Taille</span>
+                    <div class="size-options" role="group" aria-label="Choisir une taille">
+                      <button type="button">S</button>
+                      <button type="button" class="is-active">M</button>
+                      <button type="button">L</button>
+                      <button type="button">XL</button>
+                      <button type="button">XXL</button>
+                    </div>
+                  </div>
+
+                  <div class="option-group">
+                    <span class="option-label">Couleur</span>
+                    <div class="color-options" role="group" aria-label="Choisir une couleur">
+                      <button type="button" class="color-swatch is-active" style="background:#c2185b" aria-label="Fuchsia" title="Fuchsia"></button>
+                      <button type="button" class="color-swatch" style="background:#e8912d" aria-label="Safran" title="Safran"></button>
+                      <button type="button" class="color-swatch" style="background:#8b1a2b" aria-label="Rouge profond" title="Rouge profond"></button>
+                      <button type="button" class="color-swatch" style="background:#0d9488" aria-label="Turquoise" title="Turquoise"></button>
+                      <button type="button" class="color-swatch" style="background:#c9a227" aria-label="Doré" title="Doré"></button>
+                    </div>
+                  </div>
+
+                  <ul class="product-meta-list">
+                    <li>Expédition sous 48&nbsp;h ouvrées (stock France)</li>
+                    <li>Guide des tailles détaillé par e-mail</li>
+                    <li>Retours gratuits sous 14&nbsp;jours</li>
+                  </ul>
+
+                  <button type="button" class="btn btn--primary btn--block" data-detail-add data-add-cart="Saree soie Jaipur">
+                    Ajouter au panier
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M6 6h15l-1.5 9h-12z" />
+                      <path d="M6 6 5 3H2" />
+                    </svg>
+                  </button>
+                  <a href="contact.html#formulaire" class="btn btn--outline btn--block" style="margin-top: 0.75rem">
+                    Demander un essai / sur mesure
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo">
+              <span class="nav-logo-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="3" />
+                  <circle cx="12" cy="12" r="8" stroke-dasharray="2 3" />
+                </svg>
+              </span>
+              <span class="nav-logo-text">
+                Maison Zari
+                <span>Mode indienne · Bollywood</span>
+              </span>
+            </a>
+            <p>L’éclat des textiles indiens, une expérience e-commerce moderne et soignée.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+              </a>
+              <a href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 8h2V5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.2l.8-3H13V9c0-.6.4-1 1-1z"/></svg>
+              </a>
+              <a href="#" aria-label="Pinterest">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="9"/><path d="M10.5 17.5c.5-2.2 1-4.4 1.2-5.2.3-1.1-.2-1.7-.9-1.7-1 0-1.7 1-1.7 2.4 0 .9.3 1.5.3 1.5"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="boutique.html">Boutique</a></li>
+              <li><a href="index.html#mariage">Mariages</a></li>
+              <li><a href="index.html#danse">Danse</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Aide</h4>
+            <ul>
+              <li><a href="contact.html#faq">Livraison &amp; retours</a></li>
+              <li><a href="contact.html#faq">Guide des tailles</a></li>
+              <li><a href="contact.html#formulaire">Sur mesure</a></li>
+              <li><a href="contact.html">Service client</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h4>Newsletter</h4>
+            <p>Nouveautés, coulisses et offres privées — une fois par mois.</p>
+            <form class="newsletter-form" data-demo-form>
+              <input type="email" name="email" placeholder="Votre e-mail" required autocomplete="email" aria-label="E-mail newsletter" />
+              <button type="submit">OK</button>
+              <p class="form-success" role="status">Merci, vous êtes bien inscrit·e.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <span>© <span data-year></span> Maison Zari. Tous droits réservés.</span>
+          <span>Site e-commerce démo — Praful Design</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cart-toast" role="status" aria-live="polite"></div>
+    <script src="assets/js/main.js"></script>
+
+    <a href="../../realisations.html" class="pd-retour" aria-label="Revenir sur le site Praful Design">
+      <svg class="pd-retour__fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12H5" />
+        <path d="m11 18-6-6 6-6" />
+      </svg>
+      <span class="pd-retour__logo">
+        <img src="../../assets/img/LOGO.png" alt="" width="34" height="34" loading="lazy" decoding="async" />
+      </span>
+      <span class="pd-retour__texte">
+        <span class="pd-retour__titre">Revenir</span>
+        <span class="pd-retour__soustitre">Site Praful Design</span>
+      </span>
+    </a>
+  </body>
+</html>

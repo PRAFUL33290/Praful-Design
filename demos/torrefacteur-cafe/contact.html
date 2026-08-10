@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Maison Brûlée — atelier de torréfaction, horaires, FAQ livraison et formulaire." />
+    <title>Contact — Maison Brûlée</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../_retour/retour.css" />
+  </head>
+  <body>
+    <header class="site-header site-header--solid">
+      <div class="container nav">
+        <a class="brand" href="index.html"><span class="brand__mark">MB</span><span>Maison Brûlée<span>Torréfaction artisanale</span></span></a>
+        <nav class="nav-menu" id="nav-menu">
+          <a href="index.html">Accueil</a><a href="boutique.html">Boutique</a><a href="abonnement.html">Abonnement</a><a href="contact.html">Contact</a>
+          <a class="btn btn--small" href="boutique.html">Commander</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="icon-btn" href="boutique.html" aria-label="Recherche">⌕</a>
+          <button class="icon-btn" type="button" data-open-cart aria-label="Ouvrir le panier">🛒<span class="cart-count" data-cart-count hidden>0</span></button>
+          <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero page-hero--image">
+        <div class="page-hero__bg" aria-hidden="true">
+          <img src="assets/img/atelier-degustation.png" alt="" width="1456" height="816" />
+        </div>
+        <div class="container"><p class="eyebrow">Contact</p><h1>Parler café, pro ou atelier.</h1><p>Une question livraison, abonnement, commande CHR ou atelier dégustation ? Le formulaire couvre les particuliers et professionnels.</p></div>
+      </section>
+      <section class="section">
+        <div class="container grid grid--2">
+          <div class="card"><div class="media"><img src="assets/img/atelier-degustation.png" alt="Atelier dégustation café" /></div><div class="card__body"><h2>Atelier de torréfaction</h2><p>12 rue fictive des Grains, 33000 Bordeaux</p><p>Email : bonjour@maison-brulee.demo<br />Téléphone : 05 56 00 00 00</p><p>Ouvert du mardi au samedi, 10 h — 19 h.</p><ul class="taste"><li>Instagram</li><li>TikTok</li><li>LinkedIn</li></ul></div></div>
+          <form class="card card__body">
+            <p class="eyebrow">Formulaire</p><h2>Votre demande</h2>
+            <div class="form-grid">
+              <label>Nom<input required name="nom" /></label>
+              <label>Email<input required type="email" name="email" /></label>
+              <label>Sujet<select class="select" name="sujet"><option>Particulier</option><option>Professionnel CHR</option><option>Atelier dégustation</option><option>Livraison / retour</option></select></label>
+              <label>Téléphone<input name="telephone" /></label>
+              <label class="full">Message<textarea required name="message"></textarea></label>
+            </div>
+            <button class="btn" type="submit">Envoyer</button><p data-form-status></p>
+          </form>
+        </div>
+      </section>
+      <section class="section section--paper">
+        <div class="container grid grid--2">
+          <div><p class="eyebrow">Carte fictive</p><h2>Boutique & retrait atelier.</h2><div class="map" role="img" aria-label="Carte fictive de l'atelier"></div></div>
+          <div><p class="eyebrow">FAQ livraison / retours</p><h3>Livraison en 48 h ?</h3><p>Oui, pour les commandes passées avant torréfaction hebdomadaire.</p><h3>Retour possible ?</h3><p>Accessoires retournables sous 14 jours. Café non repris après ouverture.</p><h3>Professionnels CHR ?</h3><p>Demande d’échantillons, abonnement bureau ou offre espresso sur mesure.</p></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="container footer-grid"><div><h3>Maison Brûlée</h3><p class="footer-slogan">Cafés de spécialité, torréfiés court, expédiés frais, pensés pour les rituels du matin.</p><div class="footer-contact"><span>bonjour@maison-brulee.demo</span><span>05 56 00 00 00</span><span>12 rue fictive des Grains, Bordeaux</span></div></div><div><strong class="footer-title">Menu principal</strong><a href="index.html">Accueil</a><a href="boutique.html">Boutique</a><a href="abonnement.html">Abonnement</a><a href="contact.html">Contact</a></div><div><strong class="footer-title">Suivre l'atelier</strong><p>Torréfactions, recettes filtre et nouvelles origines.</p><div class="socials"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="LinkedIn">IN</a></div></div><div class="footer-gallery" aria-label="Ambiance café"><img src="assets/img/grains-macro.png" alt="Grains de café torréfiés" loading="lazy" /><img src="assets/img/v60-accessoires.png" alt="Préparation V60" loading="lazy" /><img src="assets/img/torrefaction.png" alt="Torréfacteur au travail" loading="lazy" /><img src="assets/img/atelier-degustation.png" alt="Atelier dégustation" loading="lazy" /></div></div></footer>
+    <a class="pd-retour" href="../../realisations.html#demos"><span class="pd-retour__logo"><img src="../../assets/img/LOGO SEUL.png" alt="" /></span><svg class="pd-retour__fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M19 12H5m7-7-7 7 7 7" /></svg><span class="pd-retour__texte"><span class="pd-retour__titre">Praful Design</span><span class="pd-retour__soustitre">Retour aux réalisations</span></span></a>
+    <div class="overlay" data-overlay></div><aside class="cart-panel" data-cart-panel><div class="cart-head"><h3>Votre panier</h3><button class="icon-btn" data-close-cart>×</button></div><div class="cart-items" data-cart-items></div><div class="cart-total"><span>Total</span><span data-cart-total>0 €</span></div><a class="btn" href="boutique.html#panier">Voir le panier</a></aside>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

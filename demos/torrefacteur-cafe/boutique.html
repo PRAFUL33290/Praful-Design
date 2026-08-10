@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Boutique Maison Brûlée — cafés de spécialité, accessoires de brassage, fiche produit et panier fonctionnel." />
+    <title>Boutique — Maison Brûlée</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../_retour/retour.css" />
+  </head>
+  <body>
+    <header class="site-header site-header--solid">
+      <div class="container nav">
+        <a class="brand" href="index.html"><span class="brand__mark">MB</span><span>Maison Brûlée<span>Torréfaction artisanale</span></span></a>
+        <nav class="nav-menu" id="nav-menu">
+          <a href="index.html">Accueil</a><a href="boutique.html">Boutique</a><a href="abonnement.html">Abonnement</a><a href="contact.html">Contact</a>
+          <a class="btn btn--small" href="boutique.html">Commander</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="icon-btn" href="boutique.html" aria-label="Recherche">⌕</a>
+          <button class="icon-btn" type="button" data-open-cart aria-label="Ouvrir le panier">🛒<span class="cart-count" data-cart-count hidden>0</span></button>
+          <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero--image">
+        <div class="page-hero__bg" aria-hidden="true">
+          <img src="assets/img/grains-macro.png" alt="" width="1456" height="816" />
+        </div>
+        <div class="container"><p class="eyebrow">Catalogue</p><h1>Boutique</h1><p>Cafés, accessoires et ateliers. Filtres, tri, fiche produit détaillée et panier fonctionnel en JavaScript.</p></div>
+      </section>
+
+      <section class="section" id="catalogue">
+        <div class="container shop-layout">
+          <aside class="card filters" aria-label="Filtres boutique">
+            <div class="filter-group"><h3>Origine / type</h3><button class="is-active" data-filter="all">Tout voir</button><button data-filter="afrique">Afrique</button><button data-filter="amerique">Amérique latine</button><button data-filter="accessoire">Accessoires</button><button data-filter="atelier">Ateliers</button></div>
+            <div class="filter-group"><h3>Méthode</h3><button data-filter="espresso">Espresso</button><button data-filter="filtre">Filtre</button><button data-filter="piston">Piston</button></div>
+          </aside>
+
+          <div>
+            <div class="shop-toolbar">
+              <p><strong data-result-count>8 produits</strong> · prix TTC indicatifs</p>
+              <select class="select" data-sort aria-label="Tri"><option value="default">Tri recommandé</option><option value="price-asc">Prix croissant</option><option value="price-desc">Prix décroissant</option></select>
+            </div>
+            <div class="grid grid--3" data-product-grid>
+              <article class="card product-card" data-category="afrique" data-method="filtre" data-price="12.9"><div class="media"><img src="assets/img/hero-cafe.png" alt="Éthiopie Moka Sidamo" /></div><div class="card__body"><span class="badge">Best-seller</span><h3>Éthiopie Moka Sidamo</h3><p>Jasmin, pêche, thé noir · 250 g</p><div class="product-meta"><span class="price">12,90 €</span><button class="btn btn--small" data-add="moka">Ajouter</button></div></div></article>
+              <article class="card product-card" data-category="amerique" data-method="espresso" data-price="13.8"><div class="media"><img src="assets/img/grains-macro.png" alt="Colombie Finca El Roble" /></div><div class="card__body"><span class="badge">Nouveau</span><h3>Colombie Finca El Roble</h3><p>Noisette, caramel, orange · 250 g</p><div class="product-meta"><span class="price">13,80 €</span><button class="btn btn--small" data-add="finca">Ajouter</button></div></div></article>
+              <article class="card product-card" data-category="afrique" data-method="piston" data-price="11.9"><div class="media"><img src="assets/img/torrefaction.png" alt="Rwanda Bourbon lavé" /></div><div class="card__body"><span class="badge">Édition limitée</span><h3>Rwanda Bourbon lavé</h3><p>Groseille, cacao, miel · 250 g</p><div class="product-meta"><span class="price">11,90 €</span><button class="btn btn--small" data-add="bourbon">Ajouter</button></div></div></article>
+              <article class="card product-card" data-category="amerique" data-method="espresso" data-price="10.9"><div class="media"><img src="assets/img/grains-macro.png" alt="Décaféiné Mexique" /></div><div class="card__body"><span class="badge">Doux</span><h3>Décaféiné Mexique</h3><p>Amande, chocolat, pain grillé · 250 g</p><div class="product-meta"><span class="price">10,90 €</span><button class="btn btn--small" data-add="deca">Ajouter</button></div></div></article>
+              <article class="card product-card" data-category="accessoire" data-method="filtre" data-price="24"><div class="media"><img src="assets/img/v60-accessoires.png" alt="Dripper V60" /></div><div class="card__body"><span class="badge">Accessoire</span><h3>Dripper V60 céramique</h3><p>Pour extraction filtre nette et aromatique.</p><div class="product-meta"><span class="price">24 €</span><button class="btn btn--small" data-add="v60">Ajouter</button></div></div></article>
+              <article class="card product-card" data-category="accessoire" data-method="filtre" data-price="49"><div class="media"><img src="assets/img/v60-accessoires.png" alt="Chemex 6 tasses" /></div><div class="card__body"><span class="badge">Best-seller</span><h3>Chemex 6 tasses</h3><p>Carafe filtre iconique pour cafés doux.</p><div class="product-meta"><span class="price">49 €</span><button class="btn btn--small" data-add="chemex">Ajouter</button></div></div></article>
+              <article class="card product-card" data-category="accessoire" data-method="espresso" data-price="89"><div class="media"><img src="assets/img/v60-accessoires.png" alt="Moulin manuel" /></div><div class="card__body"><span class="badge">Précision</span><h3>Moulin manuel précision</h3><p>Réglage fin pour espresso et filtre.</p><div class="product-meta"><span class="price">89 €</span><button class="btn btn--small" data-add="moulin">Ajouter</button></div></div></article>
+              <article class="card product-card" data-category="atelier" data-method="all" data-price="39"><div class="media"><img src="assets/img/atelier-degustation.png" alt="Atelier dégustation" /></div><div class="card__body"><span class="badge">Atelier</span><h3>Atelier dégustation</h3><p>2 h pour comprendre origines et extraction.</p><div class="product-meta"><span class="price">39 €</span><button class="btn btn--small" data-add="atelier">Réserver</button></div></div></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--paper">
+        <div class="container card detail">
+          <div class="media"><img src="assets/img/hero-cafe.png" alt="Fiche produit café Éthiopie Moka" /></div>
+          <div>
+            <p class="eyebrow">Fiche produit type</p><h2>Éthiopie Moka Sidamo</h2><p class="lead">Un café floral et lumineux, torréfaction claire, idéal V60, Chemex et AeroPress.</p>
+            <dl><div><dt>Altitude</dt><dd>1 900 m</dd></div><div><dt>Process</dt><dd>Lavé</dd></div><div><dt>Variété</dt><dd>Heirloom</dd></div><div><dt>Profil</dt><dd>Jasmin · pêche · thé noir</dd></div></dl>
+            <div class="choice-row" data-choice-group><button class="is-active">Grains</button><button>Moulu espresso</button><button>Moulu filtre</button></div>
+            <div class="choice-row" data-choice-group><button class="is-active">250 g</button><button>1 kg</button></div>
+            <button class="btn" data-add="moka">Ajouter au panier</button>
+            <p><strong>Onglets :</strong> description · préparation · livraison. Produits associés : V60, moulin, filtres papier.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="panier">
+        <div class="container card detail">
+          <div><p class="eyebrow">Panier</p><h2>Récapitulatif</h2><p>Le mini-panier latéral conserve vos articles en stockage local. Code promo fictif inclus pour la démonstration.</p></div>
+          <div><input type="text" value="PRAFUL10" aria-label="Code promo" /><button class="btn" type="button" data-promo>Appliquer le code promo</button><p data-promo-msg></p><button class="btn btn--dark" type="button">Paiement fictif sécurisé</button></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-grid"><div><h3>Maison Brûlée</h3><p class="footer-slogan">Cafés de spécialité, torréfiés court, expédiés frais, pensés pour les rituels du matin.</p><div class="footer-contact"><span>bonjour@maison-brulee.demo</span><span>05 56 00 00 00</span><span>12 rue fictive des Grains, Bordeaux</span></div></div><div><strong class="footer-title">Menu principal</strong><a href="index.html">Accueil</a><a href="boutique.html">Boutique</a><a href="abonnement.html">Abonnement</a><a href="contact.html">Contact</a></div><div><strong class="footer-title">Suivre l'atelier</strong><p>Torréfactions, recettes filtre et nouvelles origines.</p><div class="socials"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="LinkedIn">IN</a></div></div><div class="footer-gallery" aria-label="Ambiance café"><img src="assets/img/grains-macro.png" alt="Grains de café torréfiés" loading="lazy" /><img src="assets/img/v60-accessoires.png" alt="Préparation V60" loading="lazy" /><img src="assets/img/torrefaction.png" alt="Torréfacteur au travail" loading="lazy" /><img src="assets/img/atelier-degustation.png" alt="Atelier dégustation" loading="lazy" /></div></div></footer>
+    <a class="pd-retour" href="../../realisations.html#demos"><span class="pd-retour__logo"><img src="../../assets/img/LOGO SEUL.png" alt="" /></span><svg class="pd-retour__fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M19 12H5m7-7-7 7 7 7" /></svg><span class="pd-retour__texte"><span class="pd-retour__titre">Praful Design</span><span class="pd-retour__soustitre">Retour aux réalisations</span></span></a>
+    <div class="overlay" data-overlay></div><aside class="cart-panel" data-cart-panel><div class="cart-head"><h3>Votre panier</h3><button class="icon-btn" data-close-cart>×</button></div><div class="cart-items" data-cart-items></div><div class="cart-total"><span>Total</span><span data-cart-total>0 €</span></div><a class="btn" href="#panier">Voir le panier</a></aside>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

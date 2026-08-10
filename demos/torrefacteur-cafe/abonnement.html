@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Abonnements café Maison Brûlée — formules Découverte, Passionné et Bureau." />
+    <title>Abonnement café — Maison Brûlée</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../_retour/retour.css" />
+  </head>
+  <body>
+    <header class="site-header site-header--solid">
+      <div class="container nav">
+        <a class="brand" href="index.html"><span class="brand__mark">MB</span><span>Maison Brûlée<span>Torréfaction artisanale</span></span></a>
+        <nav class="nav-menu" id="nav-menu">
+          <a href="index.html">Accueil</a><a href="boutique.html">Boutique</a><a href="abonnement.html">Abonnement</a><a href="contact.html">Contact</a>
+          <a class="btn btn--small" href="boutique.html">Commander</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="icon-btn" href="boutique.html" aria-label="Recherche">⌕</a>
+          <button class="icon-btn" type="button" data-open-cart aria-label="Ouvrir le panier">🛒<span class="cart-count" data-cart-count hidden>0</span></button>
+          <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero page-hero--image">
+        <div class="page-hero__bg" aria-hidden="true">
+          <img src="assets/img/hero-cafe.png" alt="" width="1536" height="864" />
+        </div>
+        <div class="container">
+          <p class="eyebrow">Abonnement</p>
+          <h1>Votre café frais, sans y penser.</h1>
+          <p>Choisissez la fréquence, la mouture et le niveau de surprise. Les prix sont fictifs mais réalistes pour une démo e-commerce.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container grid grid--3 plans">
+          <article class="card plan"><span class="badge">Découverte</span><h3>2 cafés</h3><p class="price">19 € / mois</p><p>2 × 250 g, origines accessibles, guide de dégustation.</p><div class="choice-row" data-choice-group><button class="is-active">Mensuel</button><button>15 jours</button></div><button class="btn btn--outline" data-add="abonnement">Choisir</button></article>
+          <article class="card plan plan--featured"><span class="badge">Le plus choisi</span><h3>Passionné</h3><p class="price">29 € / mois</p><p>3 × 250 g, éditions limitées, recette selon méthode.</p><div class="choice-row" data-choice-group><button class="is-active">Mensuel</button><button>15 jours</button></div><button class="btn btn--light" data-add="abonnement">Choisir</button></article>
+          <article class="card plan"><span class="badge">Bureau</span><h3>1 kg équipe</h3><p class="price">69 € / mois</p><p>Format 1 kg, livraison régulière, facture pro mensuelle.</p><div class="choice-row" data-choice-group><button class="is-active">Mensuel</button><button>Hebdo</button></div><a class="btn btn--outline" href="contact.html">Demander</a></article>
+        </div>
+      </section>
+      <section class="section section--paper">
+        <div class="container">
+          <div class="section-head"><p class="eyebrow">Comparatif</p><h2>Choisir la bonne formule.</h2></div>
+          <table class="compare"><thead><tr><th>Formule</th><th>Quantité</th><th>Profil</th><th>Fréquence</th></tr></thead><tbody><tr><td>Découverte</td><td>500 g</td><td>Doux et pédagogique</td><td>Mensuelle</td></tr><tr><td>Passionné</td><td>750 g</td><td>Origines variées</td><td>Mensuelle ou 15 jours</td></tr><tr><td>Bureau</td><td>1 kg+</td><td>Consommation équipe</td><td>Hebdo ou mensuelle</td></tr></tbody></table>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container grid grid--3">
+          <article class="card"><div class="card__body"><h3>1. Profil</h3><p>Vous choisissez espresso, filtre ou mixte.</p></div></article>
+          <article class="card"><div class="card__body"><h3>2. Torréfaction</h3><p>Le café est torréfié avant expédition.</p></div></article>
+          <article class="card"><div class="card__body"><h3>3. Ajustement</h3><p>Pause, changement de mouture ou fréquence possible.</p></div></article>
+        </div>
+      </section>
+      <section class="section section--paper"><div class="container grid grid--2"><div><p class="eyebrow">FAQ</p><h2>Questions fréquentes.</h2></div><div><h3>Puis-je changer de mouture ?</h3><p>Oui, à chaque renouvellement. Grains, espresso, filtre ou piston.</p><h3>Est-ce sans engagement ?</h3><p>Oui, l’abonnement est fictivement résiliable à tout moment.</p><h3>Livrez-vous les pros ?</h3><p>Oui, via la formule Bureau ou une offre CHR sur demande.</p></div></div></section>
+    </main>
+    <footer class="site-footer"><div class="container footer-grid"><div><h3>Maison Brûlée</h3><p class="footer-slogan">Cafés de spécialité, torréfiés court, expédiés frais, pensés pour les rituels du matin.</p><div class="footer-contact"><span>bonjour@maison-brulee.demo</span><span>05 56 00 00 00</span><span>12 rue fictive des Grains, Bordeaux</span></div></div><div><strong class="footer-title">Menu principal</strong><a href="index.html">Accueil</a><a href="boutique.html">Boutique</a><a href="abonnement.html">Abonnement</a><a href="contact.html">Contact</a></div><div><strong class="footer-title">Suivre l'atelier</strong><p>Torréfactions, recettes filtre et nouvelles origines.</p><div class="socials"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="LinkedIn">IN</a></div></div><div class="footer-gallery" aria-label="Ambiance café"><img src="assets/img/grains-macro.png" alt="Grains de café torréfiés" loading="lazy" /><img src="assets/img/v60-accessoires.png" alt="Préparation V60" loading="lazy" /><img src="assets/img/torrefaction.png" alt="Torréfacteur au travail" loading="lazy" /><img src="assets/img/atelier-degustation.png" alt="Atelier dégustation" loading="lazy" /></div></div></footer>
+    <a class="pd-retour" href="../../realisations.html#demos"><span class="pd-retour__logo"><img src="../../assets/img/LOGO SEUL.png" alt="" /></span><svg class="pd-retour__fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M19 12H5m7-7-7 7 7 7" /></svg><span class="pd-retour__texte"><span class="pd-retour__titre">Praful Design</span><span class="pd-retour__soustitre">Retour aux réalisations</span></span></a>
+    <div class="overlay" data-overlay></div><aside class="cart-panel" data-cart-panel><div class="cart-head"><h3>Votre panier</h3><button class="icon-btn" data-close-cart>×</button></div><div class="cart-items" data-cart-items></div><div class="cart-total"><span>Total</span><span data-cart-total>0 €</span></div><a class="btn" href="boutique.html#panier">Voir le panier</a></aside>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Maison Orée — Agence immobilière de prestige à Paris. Vente, location et estimation de biens d'exception."
+    />
+    <title>Maison Orée — Immobilier de prestige à Paris</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../_retour/retour.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="shell site-header__inner">
+        <a href="index.html" class="logo" aria-label="Maison Orée — Accueil">
+          <span class="logo__mark">Maison <em>Orée</em></span>
+          <span class="logo__tag">Immobilier de prestige</span>
+        </a>
+
+        <div class="nav-actions" id="nav-actions">
+          <nav class="nav-menu" id="nav-menu" aria-label="Navigation principale">
+            <a href="index.html" class="nav-link is-active">Accueil</a>
+            <a href="biens.html" class="nav-link">Biens</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+          <a href="contact.html#estimation" class="nav-cta">Estimer mon bien</a>
+        </div>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="nav-actions"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero__media" aria-hidden="true">
+          <img
+            src="assets/img/hero-villa.jpg"
+            alt=""
+            width="1920"
+            height="1080"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__content">
+          <div class="shell">
+            <p class="eyebrow" style="color: var(--gold-light)">Paris &amp; Riviera · Off-market</p>
+            <h1 class="hero__title">L’adresse exacte de l’exception</h1>
+            <p class="hero__text">
+              Vente, location et estimation de biens d’exception — appartements
+              d’auteur, villas contemporaines et demeures de caractère,
+              accompagnés avec discrétion.
+            </p>
+
+            <form class="search-bar" id="search-bar" role="search" aria-label="Recherche de biens">
+              <div class="search-bar__field">
+                <label for="search-intent">Projet</label>
+                <select id="search-intent" name="intent">
+                  <option value="achat">Achat</option>
+                  <option value="location">Location</option>
+                </select>
+              </div>
+              <div class="search-bar__field">
+                <label for="search-city">Ville</label>
+                <input
+                  id="search-city"
+                  name="city"
+                  type="text"
+                  placeholder="Paris, Lyon, Cannes…"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="search-bar__field">
+                <label for="search-type">Type de bien</label>
+                <select id="search-type" name="type">
+                  <option value="">Tous les types</option>
+                  <option value="appartement">Appartement</option>
+                  <option value="maison">Maison / Villa</option>
+                  <option value="exception">Bien d’exception</option>
+                </select>
+              </div>
+              <button type="submit" class="search-bar__submit">Rechercher</button>
+            </form>
+
+            <div class="hero__ctas">
+              <a href="contact.html#estimation" class="btn btn--primary">Estimer mon bien</a>
+              <a href="biens.html" class="btn btn--secondary">Voir les annonces</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Présentation -->
+      <section class="section" id="agence">
+        <div class="shell about-grid">
+          <div class="about-visual reveal">
+            <div class="about-visual__frame" aria-hidden="true"></div>
+            <div class="about-visual__main">
+              <img
+                src="assets/img/salon-lumineux.jpg"
+                alt="Salon lumineux d’un bien de prestige"
+                width="800"
+                height="1000"
+                loading="lazy"
+              />
+            </div>
+            <div class="about-visual__accent">
+              <img
+                src="assets/img/detail-architecture.jpg"
+                alt="Détail d’architecture haut de gamme"
+                width="400"
+                height="400"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="about-body reveal reveal-delay-1">
+            <p class="eyebrow">L’agence</p>
+            <h2>Plus qu’un mandat&nbsp;: un regard d’auteur sur le marché</h2>
+            <div class="gold-rule"></div>
+            <p style="margin-top: 1.5rem">
+              Maison Orée sélectionne, valorise et accompagne des biens rares —
+              du pied-à-terre parisien à la propriété de caractère. Notre équipe
+              allie connaissance fine des quartiers, réseau off-market et exigence
+              de présentation digne des plus belles adresses.
+            </p>
+            <p>
+              Discrétion, rigueur et sens du service guident chaque étape&nbsp;:
+              estimation, mise en marché, négociation et suivi jusqu’à la signature.
+            </p>
+            <div class="about-stats">
+              <div>
+                <strong>15+</strong>
+                <span>années d’expertise</span>
+              </div>
+              <div>
+                <strong>850</strong>
+                <span>biens accompagnés</span>
+              </div>
+              <div>
+                <strong>48h</strong>
+                <span>estimation moyenne</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Biens en vedette -->
+      <section class="section section--gray" id="selection">
+        <div class="shell">
+          <div class="section-head section-head--center reveal">
+            <p class="eyebrow">Sélection</p>
+            <h2>Biens en vedette</h2>
+            <p>Une première lecture de notre portefeuille actuel — prix indicatifs, visite sur rendez-vous.</p>
+            <div class="gold-rule"></div>
+          </div>
+
+          <div class="listings-grid">
+            <article class="listing-card reveal">
+              <a href="biens.html#detail" class="listing-card__media">
+                <img
+                  src="assets/img/propriete-exterieur.jpg"
+                  alt="Villa contemporaine avec piscine à débordement"
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                />
+                <span class="badge">Nouveau</span>
+              </a>
+              <div class="listing-card__body">
+                <p class="listing-card__city">Marseille · 8<sup>e</sup></p>
+                <h3>Villa contemporaine vue mer</h3>
+                <div class="listing-card__meta">
+                  <span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg>
+                    280&nbsp;m²
+                  </span>
+                  <span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 10h16v10H4zM8 10V6a4 4 0 018 0v4"/></svg>
+                    6 pièces
+                  </span>
+                </div>
+                <div class="listing-card__footer">
+                  <span class="listing-card__price">2&nbsp;450&nbsp;000&nbsp;€</span>
+                  <a href="biens.html#detail" class="listing-card__link">Découvrir</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="listing-card reveal reveal-delay-1">
+              <a href="biens.html#detail" class="listing-card__media">
+                <img
+                  src="assets/img/appart-haussmann.jpg"
+                  alt="Appartement haussmannien parisien"
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                />
+                <span class="badge badge--gold">Exclusivité</span>
+              </a>
+              <div class="listing-card__body">
+                <p class="listing-card__city">Paris · 16<sup>e</sup></p>
+                <h3>Appartement haussmannien</h3>
+                <div class="listing-card__meta">
+                  <span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg>
+                    155&nbsp;m²
+                  </span>
+                  <span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 10h16v10H4zM8 10V6a4 4 0 018 0v4"/></svg>
+                    5 pièces
+                  </span>
+                </div>
+                <div class="listing-card__footer">
+                  <span class="listing-card__price">1&nbsp;890&nbsp;000&nbsp;€</span>
+                  <a href="biens.html#detail" class="listing-card__link">Découvrir</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="listing-card reveal reveal-delay-2">
+              <a href="biens.html#detail" class="listing-card__media">
+                <img
+                  src="assets/img/salon-lumineux.jpg"
+                  alt="Propriété de charme à Aix-en-Provence"
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                />
+                <span class="badge badge--muted">Sous compromis</span>
+              </a>
+              <div class="listing-card__body">
+                <p class="listing-card__city">Aix-en-Provence</p>
+                <h3>Propriété de charme</h3>
+                <div class="listing-card__meta">
+                  <span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg>
+                    420&nbsp;m²
+                  </span>
+                  <span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 10h16v10H4zM8 10V6a4 4 0 018 0v4"/></svg>
+                    10 pièces
+                  </span>
+                </div>
+                <div class="listing-card__footer">
+                  <span class="listing-card__price">3&nbsp;200&nbsp;000&nbsp;€</span>
+                  <a href="biens.html#detail" class="listing-card__link">Découvrir</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="section-cta reveal">
+            <a href="biens.html" class="btn btn--outline">Voir toutes les annonces</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Estimation -->
+      <section class="section section--marine estimation" id="estimation-home">
+        <div class="shell estimation__grid">
+          <div class="reveal">
+            <p class="eyebrow">Service gratuit</p>
+            <h2>Estimez votre bien avec précision</h2>
+            <p>
+              Analyse de marché locale, visite technique et fourchette de prix
+              argumentée sous 48&nbsp;heures — sans engagement, en toute confidentialité.
+            </p>
+            <a href="contact.html#estimation" class="btn btn--ghost-gold">Demander une estimation</a>
+          </div>
+          <div class="estimation__panel reveal reveal-delay-1">
+            <h3>Ce que vous recevez</h3>
+            <ul class="estimation__list">
+              <li>Comparables récents et tendances de quartier</li>
+              <li>Points forts à valoriser avant la mise en vente</li>
+              <li>Stratégie de prix et de commercialisation</li>
+              <li>Échange avec un conseiller dédié</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Étapes -->
+      <section class="section" id="etapes">
+        <div class="shell">
+          <div class="section-head section-head--center reveal">
+            <p class="eyebrow">Parcours</p>
+            <h2>Les étapes de votre projet</h2>
+            <p>Un fil conducteur clair, qu’il s’agisse d’acheter ou de vendre.</p>
+            <div class="gold-rule"></div>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card reveal">
+              <div class="step-card__num">01</div>
+              <h3>Écoute</h3>
+              <p>
+                Premier échange pour cadrer budget, délais, style de vie et
+                contraintes — critères d’achat ou objectifs de vente.
+              </p>
+            </article>
+            <article class="step-card reveal reveal-delay-1">
+              <div class="step-card__num">02</div>
+              <h3>Sélection</h3>
+              <p>
+                Accès à notre portefeuille et au hors-marché. Pour la vente&nbsp;:
+                estimation, home staging conseil et plan de diffusion.
+              </p>
+            </article>
+            <article class="step-card reveal reveal-delay-2">
+              <div class="step-card__num">03</div>
+              <h3>Négociation</h3>
+              <p>
+                Visites qualifiées, contre-propositions et sécurisation juridique
+                avec nos partenaires notaires et financiers.
+              </p>
+            </article>
+            <article class="step-card reveal reveal-delay-3">
+              <div class="step-card__num">04</div>
+              <h3>Signature</h3>
+              <p>
+                Accompagnement jusqu’à l’acte authentique et remise des clés —
+                avec le même niveau d’exigence du début à la fin.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Avis clients -->
+      <section class="section section--gray" id="avis">
+        <div class="shell">
+          <div class="section-head section-head--center reveal">
+            <p class="eyebrow">Confiance</p>
+            <h2>Avis clients</h2>
+            <p>Ils nous ont confié leur projet — extrait de retours récents.</p>
+            <div class="gold-rule"></div>
+          </div>
+          <div class="testimonials-grid">
+            <blockquote class="testimonial reveal">
+              <p class="testimonial__quote">
+                «&nbsp;Une estimation juste, une mise en scène du bien remarquable
+                et une vente en moins de six semaines. Discrétion absolue.&nbsp;»
+              </p>
+              <footer class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">CL</div>
+                <div>
+                  <div class="testimonial__name">Claire L.</div>
+                  <div class="testimonial__meta">Vente · Paris 7<sup>e</sup></div>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial reveal reveal-delay-1">
+              <p class="testimonial__quote">
+                «&nbsp;Nous cherchions une villa rare près d’Aix. Maison Orée a
+                ouvert des portes hors annonces — un vrai partenaire.&nbsp;»
+              </p>
+              <footer class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">MD</div>
+                <div>
+                  <div class="testimonial__name">Marc &amp; Diane R.</div>
+                  <div class="testimonial__meta">Achat · Aix-en-Provence</div>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial reveal reveal-delay-2">
+              <p class="testimonial__quote">
+                «&nbsp;Professionnalisme et écoute. Location meublée haut de gamme
+                gérée avec une grande réactivité.&nbsp;»
+              </p>
+              <footer class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">SH</div>
+                <div>
+                  <div class="testimonial__name">Sophie H.</div>
+                  <div class="testimonial__meta">Location · Lyon 6<sup>e</sup></div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chiffres clés -->
+      <section class="section section--marine section--tight">
+        <div class="shell">
+          <div class="figures-grid">
+            <div class="figure-item reveal">
+              <div class="figure-item__value" data-count="850">850</div>
+              <div class="figure-item__label">Biens vendus ou loués</div>
+            </div>
+            <div class="figure-item reveal reveal-delay-1">
+              <div class="figure-item__value">15+</div>
+              <div class="figure-item__label">Années d’expérience</div>
+            </div>
+            <div class="figure-item reveal reveal-delay-2">
+              <div class="figure-item__value">98%</div>
+              <div class="figure-item__label">Clients satisfaits</div>
+            </div>
+            <div class="figure-item reveal reveal-delay-3">
+              <div class="figure-item__value">24h</div>
+              <div class="figure-item__label">Réactivité moyenne</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA final -->
+      <section class="section cta-final">
+        <div class="shell reveal">
+          <p class="eyebrow">Prochaine étape</p>
+          <h2>Prêt à concrétiser votre projet&nbsp;?</h2>
+          <p>
+            Un conseiller Maison Orée vous répond sous 24&nbsp;heures pour un
+            premier échange confidentiel.
+          </p>
+          <div class="cta-final__actions">
+            <a href="contact.html" class="btn btn--primary">Nous contacter</a>
+            <a href="biens.html" class="btn btn--outline">Parcourir les annonces</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo__mark">Maison <em>Orée</em></span>
+            <span class="logo__tag">Immobilier de prestige</span>
+          </a>
+          <p>
+            Agence indépendante spécialisée dans la vente, la location et
+            l’estimation de biens d’exception.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="biens.html">Biens</a></li>
+            <li><a href="contact.html#estimation">Estimation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="biens.html">Vente de prestige</a></li>
+            <li><a href="biens.html">Location longue durée</a></li>
+            <li><a href="contact.html">Chasse immobilière</a></li>
+            <li><a href="contact.html#estimation">Estimation gratuite</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li>12 avenue Montaigne<br />75008 Paris</li>
+            <li><a href="tel:+33123456789">01 23 45 67 89</a></li>
+            <li><a href="mailto:contact@maison-oree.fr">contact@maison-oree.fr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="shell site-footer__bottom">
+        <span>© 2026 Maison Orée. Démonstration — tous droits réservés.</span>
+        <span>
+          <a href="#">Mentions légales</a>
+          ·
+          <a href="#">Confidentialité</a>
+        </span>
+      </div>
+    </footer>
+
+    <a href="../../index.html" class="pd-retour" aria-label="Revenir sur le site Praful Design">
+      <svg class="pd-retour__fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12H5" />
+        <path d="m11 18-6-6 6-6" />
+      </svg>
+      <span class="pd-retour__logo">
+        <img src="../../assets/img/LOGO.png" alt="" width="34" height="34" loading="lazy" decoding="async" />
+      </span>
+      <span class="pd-retour__texte">
+        <span class="pd-retour__titre">Revenir</span>
+        <span class="pd-retour__soustitre">Site Praful Design</span>
+      </span>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

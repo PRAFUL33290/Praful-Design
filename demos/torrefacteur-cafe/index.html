@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Maison Brûlée — torréfacteur français de café de spécialité, cafés en grains, abonnements, accessoires et ateliers dégustation." />
+    <title>Maison Brûlée — Café de spécialité</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../_retour/retour.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html"><span class="brand__mark">MB</span><span>Maison Brûlée<span>Torréfaction artisanale</span></span></a>
+        <nav class="nav-menu" id="nav-menu">
+          <a href="index.html">Accueil</a><a href="boutique.html">Boutique</a><a href="abonnement.html">Abonnement</a><a href="contact.html">Contact</a>
+          <a class="btn btn--small" href="boutique.html">Commander</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="icon-btn" href="boutique.html" aria-label="Recherche">⌕</a>
+          <button class="icon-btn" type="button" data-open-cart aria-label="Ouvrir le panier">🛒<span class="cart-count" data-cart-count hidden>0</span></button>
+          <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__bg"><img src="assets/img/hero-cafe.png" alt="" width="1536" height="864" /></div>
+        <div class="container hero__content">
+          <p class="eyebrow">Café de spécialité · Bordeaux</p>
+          <h1>Du grain précis, torréfié à la commande.</h1>
+          <p class="lead">Cafés en grains ou moulus, accessoires de brassage, abonnements mensuels et ateliers dégustation pour boire meilleur, simplement.</p>
+          <div class="hero__actions">
+            <a class="btn" href="boutique.html">Commander mon café</a>
+            <a class="btn btn--light" href="abonnement.html">Découvrir l'abonnement</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="container trust" aria-label="Réassurance">
+        <div><strong>Torréfaction à la commande</strong><span>Chaque mardi et jeudi.</span></div>
+        <div><strong>Livraison 48 h</strong><span>France métropolitaine.</span></div>
+        <div><strong>Paiement sécurisé</strong><span>Panier e-commerce démo fonctionnel.</span></div>
+      </div>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head section-head--center">
+            <p class="eyebrow">Cafés du moment</p>
+            <h2>Origines fraîches, profils nets.</h2>
+            <p>Chaque fiche reprend l’esprit d’une carte de dégustation : origine, notes, intensité et méthode conseillée.</p>
+          </div>
+          <div class="grid grid--4">
+            <article class="card">
+              <div class="media"><img src="assets/img/hero-cafe.png" alt="Sac de café premium" loading="lazy" /></div>
+              <div class="card__body"><span class="badge">Best-seller</span><h3>Éthiopie Moka Sidamo</h3><p>Jasmin, pêche, thé noir · Intensité 3/5</p><p class="price">12,90 €</p><button class="btn btn--small" data-add="moka">Ajouter au panier</button></div>
+            </article>
+            <article class="card">
+              <div class="media"><img src="assets/img/grains-macro.png" alt="Grains torréfiés" loading="lazy" /></div>
+              <div class="card__body"><span class="badge">Nouveau</span><h3>Colombie Finca El Roble</h3><p>Noisette, caramel, orange · Intensité 4/5</p><p class="price">13,80 €</p><button class="btn btn--small" data-add="finca">Ajouter au panier</button></div>
+            </article>
+            <article class="card">
+              <div class="media"><img src="assets/img/torrefaction.png" alt="Atelier de torréfaction" loading="lazy" /></div>
+              <div class="card__body"><span class="badge">Édition limitée</span><h3>Rwanda Bourbon lavé</h3><p>Groseille, cacao, miel · Intensité 3/5</p><p class="price">11,90 €</p><button class="btn btn--small" data-add="bourbon">Ajouter au panier</button></div>
+            </article>
+            <article class="card">
+              <div class="media"><img src="assets/img/v60-accessoires.png" alt="Préparation V60" loading="lazy" /></div>
+              <div class="card__body"><span class="badge">Doux</span><h3>Décaféiné Mexique</h3><p>Amande, chocolat, pain grillé · Intensité 2/5</p><p class="price">10,90 €</p><button class="btn btn--small" data-add="deca">Ajouter au panier</button></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--paper">
+        <div class="container origin-card">
+          <div>
+            <p class="eyebrow">Origines & terroirs</p>
+            <h2>Des cafés sourcés comme des vins.</h2>
+            <p>Altitude, variété, process, date de torréfaction : chaque origine est sélectionnée pour sa traçabilité et son équilibre en tasse.</p>
+            <ul class="taste"><li>Éthiopie · floral</li><li>Colombie · gourmand</li><li>Rwanda · fruité</li><li>Mexique · doux</li></ul>
+          </div>
+          <div class="map" role="img" aria-label="Carte illustrée des origines café"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid grid--3">
+          <article class="card plan"><span class="badge">Découverte</span><h3>2 cafés / mois</h3><p class="price">19 € / mois</p><p>Deux origines tournantes, fiches de dégustation, mouture au choix.</p><a class="btn btn--outline" href="abonnement.html">Voir la formule</a></article>
+          <article class="card plan plan--featured"><span class="badge">Populaire</span><h3>Passionné</h3><p class="price">29 € / mois</p><p>Trois cafés, accès prioritaire aux éditions limitées et guide méthode.</p><button class="btn btn--light" data-add="abonnement">Ajouter</button></article>
+          <article class="card plan"><span class="badge">Bureau</span><h3>Pour l'équipe</h3><p class="price">69 € / mois</p><p>1 kg de café, livraison régulière et facture mensuelle.</p><a class="btn btn--outline" href="contact.html">Demander</a></article>
+        </div>
+      </section>
+
+      <section class="section section--paper">
+        <div class="container grid grid--2">
+          <div><p class="eyebrow">Guide interactif</p><h2>Quel café pour votre méthode ?</h2><p>Espresso : Colombie. Filtre : Éthiopie. Piston : Rwanda. Le site simule un parcours de conseil simple avant achat.</p><div class="actions"><a class="btn" href="boutique.html#catalogue">Explorer la boutique</a></div></div>
+          <div class="card"><div class="media"><img src="assets/img/v60-accessoires.png" alt="Accessoires de brassage café" loading="lazy" /></div><div class="card__body"><h3>Accessoires de brassage</h3><p>V60, Chemex, moulins, filtres et balances pour construire une routine propre.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid grid--3">
+          <article class="card"><div class="card__body"><h3>“Enfin un café clair.”</h3><p>Les notes sont justes, les conseils mouture évitent les erreurs. Livraison rapide.</p><strong>Camille R.</strong></div></article>
+          <article class="card"><div class="card__body"><h3>Ateliers dégustation</h3><p>Apprenez à comparer acidité, corps, sucre et extraction lors d’un atelier de 2 h.</p><button class="btn btn--small" data-add="atelier">Réserver</button></div></article>
+          <article class="card"><div class="media"><img src="assets/img/atelier-degustation.png" alt="Atelier dégustation café" loading="lazy" /></div><div class="card__body"><h3>Newsletter origine</h3><p>Une origine, une recette, une histoire. Deux emails par mois.</p></div></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Maison Brûlée</h3>
+          <p class="footer-slogan">Cafés de spécialité, torréfiés court, expédiés frais, pensés pour les rituels du matin.</p>
+          <div class="footer-contact"><span>bonjour@maison-brulee.demo</span><span>05 56 00 00 00</span><span>12 rue fictive des Grains, Bordeaux</span></div>
+        </div>
+        <div><strong class="footer-title">Menu principal</strong><a href="index.html">Accueil</a><a href="boutique.html">Boutique</a><a href="abonnement.html">Abonnement</a><a href="contact.html">Contact</a></div>
+        <div><strong class="footer-title">Suivre l'atelier</strong><p>Torréfactions, recettes filtre et nouvelles origines.</p><div class="socials"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="LinkedIn">IN</a></div></div>
+        <div class="footer-gallery" aria-label="Ambiance café"><img src="assets/img/grains-macro.png" alt="Grains de café torréfiés" loading="lazy" /><img src="assets/img/v60-accessoires.png" alt="Préparation V60" loading="lazy" /><img src="assets/img/torrefaction.png" alt="Torréfacteur au travail" loading="lazy" /><img src="assets/img/atelier-degustation.png" alt="Atelier dégustation" loading="lazy" /></div>
+      </div>
+    </footer>
+
+    <a class="pd-retour" href="../../realisations.html#demos"><span class="pd-retour__logo"><img src="../../assets/img/LOGO SEUL.png" alt="" /></span><svg class="pd-retour__fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M19 12H5m7-7-7 7 7 7" /></svg><span class="pd-retour__texte"><span class="pd-retour__titre">Praful Design</span><span class="pd-retour__soustitre">Retour aux réalisations</span></span></a>
+    <div class="overlay" data-overlay></div>
+    <aside class="cart-panel" data-cart-panel aria-label="Mini panier"><div class="cart-head"><h3>Votre panier</h3><button class="icon-btn" data-close-cart>×</button></div><div class="cart-items" data-cart-items></div><div class="cart-total"><span>Total</span><span data-cart-total>0 €</span></div><a class="btn" href="boutique.html#panier">Voir le panier</a></aside>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
