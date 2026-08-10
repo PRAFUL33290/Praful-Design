@@ -1382,6 +1382,8 @@ ul { margin: 0; padding: 0; list-style: none; }
    -------------------------------------------------------------------------- */
 .carte {
   position: relative;
+  display: flex;
+  flex-direction: column;
   padding: clamp(24px, 3vw, 32px);
   border: 1px solid var(--bordure);
   border-radius: var(--rayon);
@@ -1418,6 +1420,34 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-size: 1.3rem;
 }
 
+.carte--service .carte__icone {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+}
+.carte--service .carte__icone svg { width: 26px; height: 26px; }
+.carte__icone--violet {
+  color: #6d5ef4;
+  border-color: rgba(109, 94, 244, 0.35);
+  background: rgba(109, 94, 244, 0.14);
+}
+.carte__icone--bleu {
+  color: #3b9ee0;
+  border-color: rgba(59, 158, 224, 0.35);
+  background: rgba(59, 158, 224, 0.14);
+}
+.carte__icone--vert {
+  color: #2fb573;
+  border-color: rgba(47, 181, 115, 0.35);
+  background: rgba(47, 181, 115, 0.14);
+}
+.carte__icone--orange {
+  color: #e0913b;
+  border-color: rgba(224, 145, 59, 0.35);
+  background: rgba(224, 145, 59, 0.14);
+}
+.carte--service:hover .carte__icone { transform: scale(1.08); transition: transform var(--transition); }
+
 .carte__liste {
   display: grid;
   gap: 9px;
@@ -1444,7 +1474,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  margin-top: 22px;
+  margin-top: auto;
+  padding-top: 22px;
   font-size: 0.83rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -1628,6 +1659,8 @@ ul { margin: 0; padding: 0; list-style: none; }
    11. Réalisations
    -------------------------------------------------------------------------- */
 .realisation {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--bordure);
   border-radius: var(--rayon);
@@ -1674,7 +1707,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
-.realisation__corps { padding: 24px; }
+.realisation__corps { display: flex; flex-direction: column; flex: 1; padding: 24px; }
 .realisation__meta {
   margin-bottom: 8px;
   font-size: 0.72rem;
@@ -1693,6 +1726,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin-top: 18px;
   border-top: 1px solid var(--bordure);
 }
+.realisation__corps .btn { margin-top: 18px; align-self: flex-start; }
+.realisation__corps .avant-apres { margin-top: auto; }
 .avant-apres div {
   font-size: 0.84rem;
   color: var(--texte-doux);
