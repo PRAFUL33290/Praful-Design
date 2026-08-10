@@ -1,13 +1,13 @@
-<!-- ====================== HERO ====================== -->
+<!-- ====================== 1. HERO ====================== -->
   <section class="hero">
     <!-- Visuel principal, calé à droite par-dessus le fond BG.png et SOUS les
-         éléments flottants (badge + logo WordPress), qui restent au-dessus. -->
+         badges flottants, qui restent au-dessus. -->
     <img src="assets/img/praful-design-hero.png" alt="" class="hero__photo"
          width="989" height="1400" fetchpriority="high" aria-hidden="true">
     <div class="conteneur conteneur--pleine hero__pleine">
       <div class="hero__grille">
         <div class="hero__contenu">
-          <span class="surtitre anim">Designer web indépendant · Gironde</span>
+          <span class="surtitre anim">Webdesigner indépendant · Parempuyre (33)</span>
 
           <h1 class="anim">
             Un site qui vous ressemble.
@@ -15,14 +15,22 @@
           </h1>
 
           <p class="hero__soustitre anim">
-            Je conçois des sites WordPress clairs, rapides et visibles pour les indépendants,
-            les entreprises locales et les collectivités — de l'idée à la mise en ligne.
+            Je m'appelle Julien. Je conçois des sites WordPress clairs, rapides et visibles
+            pour les indépendants, artisans, associations et collectivités de Gironde —
+            du design à la mise en ligne, jusqu'à votre visibilité sur Google.
           </p>
 
           <div class="groupe-btn anim">
-            <a href="contact.html" class="btn btn--primaire">Demander un devis</a>
-            <a href="#competences" class="btn btn--secondaire">Voir mes compétences</a>
+            <a href="contact.html" class="btn btn--primaire">Démarrer mon projet</a>
+            <a href="#realisations" class="btn btn--secondaire">Voir mes réalisations</a>
           </div>
+
+          <!-- Preuve sociale discrète : reprend les chiffres déjà publiés plus
+               bas dans la page et dans les données structurées de build.js. -->
+          <p class="hero__note anim">
+            <span class="hero__etoiles" aria-hidden="true">★★★★★</span>
+            <span><strong>5 / 5</strong> · 42 avis clients</span>
+          </p>
 
           <ul class="hero__preuves anim" aria-label="Mes engagements">
             <li>Sur mesure</li>
@@ -31,24 +39,22 @@
           </ul>
         </div>
 
-        <!-- Bandeau, logo et compétences flottants, au-dessus de la photo -->
+        <!-- Trois badges flottants au-dessus de la photo : le cœur de l'offre,
+             lisible d'un coup d'œil, sans surcharger le visuel. -->
         <div class="hero__maquette anim">
-          <span class="hero__badge">Disponible pour vos projets</span>
-          <img src="assets/img/Logo Sans fond Wordpress.webp" alt="WordPress" class="hero__logo-flottant">
-
           <span class="hero__competence hero__competence--1">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="M3 9h18"/><path d="m8.8 12.6-1.8 1.8 1.8 1.8M14.2 12.6l1.8 1.8-1.8 1.8"/></svg>
-            Design sur mesure
+            <img src="assets/img/Logo Sans fond Wordpress.webp" alt="" width="18" height="18" aria-hidden="true">
+            WordPress
           </span>
 
           <span class="hero__competence hero__competence--2">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 19.2 6v5.2c0 4.1-2.9 8-7.2 9.2-4.3-1.2-7.2-5.1-7.2-9.2V6L12 3.2z"/><path d="m9.1 11.9 2.1 2.1 3.9-4"/></svg>
-            WordPress &amp; SEO
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="M3 9h18"/><path d="m8.8 12.6-1.8 1.8 1.8 1.8M14.2 12.6l1.8 1.8-1.8 1.8"/></svg>
+            Webdesign
           </span>
 
           <span class="hero__competence hero__competence--3">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 20 1.2-4.2 9.5-9.5a2 2 0 0 1 2.8 0l1.2 1.2a2 2 0 0 1 0 2.8l-9.5 9.5L4 20z"/><path d="m13.4 7.4 3.2 3.2"/></svg>
-            Suivi de proximité
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.6"/><path d="m16 16 4.4 4.4"/></svg>
+            SEO &amp; visibilité
           </span>
         </div>
       </div>
@@ -87,100 +93,94 @@
     </p>
   </section>
 
-  <!-- ====================== COMPÉTENCES ====================== -->
-  <section class="section section--serre" id="competences">
+  <!-- ====================== 2. RÉALISATIONS ====================== -->
+  <section class="section" id="realisations">
     <div class="conteneur">
-      <div class="entete-section anim">
-        <span class="surtitre">Compétences</span>
-        <h2>Ce que je sais faire, concrètement.</h2>
-        <p class="chapo">Cinq blocs de compétences qui se répondent : concevoir, sécuriser, créer, produire, et savoir parler aux gens.</p>
+      <div class="entete-section entete-section--centre">
+        <span class="surtitre">Réalisations</span>
+        <h2>Quelques projets récents</h2>
+        <p class="chapo">Des projets pensés pour être beaux, utiles et efficaces.</p>
       </div>
 
-      <div class="grille grille--3">
-        <div class="carte anim">
-          <span class="carte__eyebrow">01</span>
-          <h3>Développement WordPress</h3>
-          <ul class="carte__liste">
-            <li>WordPress, Elementor, Gutenberg</li>
-            <li>HTML5, CSS3, responsive design</li>
-            <li>Gestion de CMS, sites multiples</li>
-            <li>Bases de données — MySQL, phpMyAdmin</li>
-          </ul>
-        </div>
+      <!-- Les visuels sont les photos des clientes (assets/img/realisation-*.jpg,
+           identiques à IMG CLIENTS/). Pour passer à des captures de site,
+           remplacer simplement le src : le cadrage s'adapte tout seul. -->
+      <div class="projets">
 
-        <div class="carte anim">
-          <span class="carte__eyebrow">02</span>
-          <h3>Hébergement &amp; sécurité</h3>
-          <ul class="carte__liste">
-            <li>Hostinger, o2Switch, cPanel, SSH</li>
-            <li>DNS, noms de domaine, Cloudflare</li>
-            <li>Sécurisation WordPress, SSL, sauvegardes</li>
-            <li>Linux, ligne de commande</li>
-          </ul>
-        </div>
+        <article class="projet anim">
+          <figure class="projet__visuel">
+            <img src="assets/img/realisation-elsa.jpg"
+                 alt="Elsa, fondatrice de Success Locks à Périgueux"
+                 width="1440" height="1440" loading="lazy" decoding="async">
+            <figcaption>Coiffure</figcaption>
+          </figure>
+          <div class="projet__corps">
+            <p class="projet__categorie">Coiffure · Création de site · SEO local</p>
+            <h3>Elsa — Success Locks</h3>
+            <p class="projet__texte">Création du site du salon à Périgueux, avec optimisation du référencement local dès le lancement.</p>
+            <ul class="projet__tags">
+              <li>WordPress</li>
+              <li>Webdesign</li>
+              <li>SEO local</li>
+            </ul>
+            <p class="projet__resultat"><strong>Résultat</strong> 1<sup>re</sup> sur Google pour « Locks Périgueux ».</p>
+            <a href="https://www.successlocks.fr" target="_blank" rel="noopener" class="projet__lien">Voir le projet</a>
+          </div>
+        </article>
 
-        <div class="carte anim">
-          <span class="carte__eyebrow">03</span>
-          <h3>Design &amp; communication visuelle</h3>
-          <ul class="carte__liste">
-            <li>Photoshop, Illustrator, Affinity</li>
-            <li>Canva, Figma — maquettes et UI</li>
-            <li>Logos, affiches, chartes graphiques</li>
-            <li>After Effects, motion design</li>
-          </ul>
-        </div>
+        <article class="projet anim">
+          <figure class="projet__visuel">
+            <img src="assets/img/realisation-laurie.jpg"
+                 alt="Laurie, fondatrice des Huiles du Bonheur à Blanquefort"
+                 width="750" height="750" loading="lazy" decoding="async">
+            <figcaption>Bien-être</figcaption>
+          </figure>
+          <div class="projet__corps">
+            <p class="projet__categorie">Bien-être · Création de site · E-commerce</p>
+            <h3>Laurie — Les Huiles du Bonheur</h3>
+            <p class="projet__texte">Création du site avec module e-commerce pour les cartes cadeaux, et SEO local dès la mise en ligne.</p>
+            <ul class="projet__tags">
+              <li>WordPress</li>
+              <li>E-commerce</li>
+              <li>SEO local</li>
+            </ul>
+            <p class="projet__resultat"><strong>Résultat</strong> 1<sup>re</sup> sur Google pour « Massage Blanquefort ».</p>
+            <a href="https://www.les-huiles-du-bonheur.fr" target="_blank" rel="noopener" class="projet__lien">Voir le projet</a>
+          </div>
+        </article>
 
-        <div class="carte anim">
-          <span class="carte__eyebrow">04</span>
-          <h3>Vidéo, audio &amp; visibilité locale</h3>
-          <ul class="carte__liste">
-            <li>Montage vidéo — Final Cut, Premiere Pro</li>
-            <li>Logic Pro, création de bandes-son</li>
-            <li>SEO local, Google Business Profile</li>
-            <li>Marketing digital, réseaux sociaux</li>
-          </ul>
-        </div>
+        <article class="projet anim">
+          <figure class="projet__visuel">
+            <img src="assets/img/realisation-sandrine.jpg"
+                 alt="Sandrine Paraud-Marot, sophrologue à Parempuyre"
+                 width="1102" height="1102" loading="lazy" decoding="async">
+            <figcaption>Sophrologie</figcaption>
+          </figure>
+          <div class="projet__corps">
+            <p class="projet__categorie">Sophrologie · Création de site · SEO local</p>
+            <h3>Sandrine Paraud-Marot</h3>
+            <p class="projet__texte">Un site clair et apaisant pour son cabinet de Parempuyre, optimisé pour les recherches locales.</p>
+            <ul class="projet__tags">
+              <li>WordPress</li>
+              <li>Webdesign</li>
+              <li>SEO local</li>
+            </ul>
+            <p class="projet__resultat"><strong>Résultat</strong> 1<sup>re</sup> sur Google pour « Sophrologue Parempuyre ».</p>
+            <a href="https://sandrine-paraud-marot.fr" target="_blank" rel="noopener" class="projet__lien">Voir le projet</a>
+          </div>
+        </article>
 
-        <div class="carte anim">
-          <span class="carte__eyebrow">05</span>
-          <h3>Le reste de mon parcours</h3>
-          <ul class="carte__liste">
-            <li>10+ ans d'animation</li>
-            <li>4 ans à la mairie de Bruges</li>
-            <li>Gestion de groupes et d'événements</li>
-            <li>Familles, écoles, ALSH, collectivités</li>
-            <li>Prise de parole et structuration de projet</li>
-          </ul>
-        </div>
+      </div>
+
+      <div class="groupe-btn groupe-btn--centre">
+        <a href="realisations.html" class="btn btn--primaire">Voir toutes les réalisations</a>
+        <a href="realisations.html#demos" class="btn btn--secondaire">Visiter les 10 sites de démo</a>
       </div>
     </div>
   </section>
 
-  <!-- ====================== BÉNÉFICES ====================== -->
-  <section class="section section--serre">
-    <div class="conteneur">
-      <div class="grille grille--3">
-        <div class="benefice anim">
-          <span class="benefice__num">01</span>
-          <h3>Crédible</h3>
-          <p>Un design soigné et cohérent qui met votre entreprise au niveau de ce que vous facturez. Vos prospects vous prennent au sérieux avant même de vous parler.</p>
-        </div>
-        <div class="benefice anim">
-          <span class="benefice__num">02</span>
-          <h3>Rapide</h3>
-          <p>Hébergement propre, images optimisées, extensions maîtrisées. Un site qui charge vite garde ses visiteurs et plaît à Google.</p>
-        </div>
-        <div class="benefice anim">
-          <span class="benefice__num">03</span>
-          <h3>Visible</h3>
-          <p>SEO local, fiche Google Business Profile, données structurées. Vous apparaissez quand quelqu'un cherche votre métier près de chez vous.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================== SERVICES ====================== -->
-  <section class="section section--alt">
+  <!-- ====================== 3. SERVICES ====================== -->
+  <section class="section section--alt" id="services">
     <div class="conteneur">
       <div class="entete-section entete-section--centre">
         <span class="surtitre">Mes services</span>
@@ -203,7 +203,7 @@
             </svg>
           </div>
           <h3>Création de site WordPress</h3>
-          <p>Un site vitrine sur mesure, structuré pour transformer vos visiteurs en demandes de devis.</p>
+          <p>Un site moderne qui présente votre activité et transforme vos visiteurs en contacts.</p>
           <ul class="carte__liste">
             <li>Arborescence et parcours pensés pour la conversion</li>
             <li>Design responsive aux couleurs de votre marque</li>
@@ -220,7 +220,7 @@
             </svg>
           </div>
           <h3>Refonte de site</h3>
-          <p>Votre site existe mais il vieillit mal, il est lent, ou il ne vous ressemble plus. On repart de l'existant.</p>
+          <p>Votre site commence à dater ? Je modernise son design, son expérience mobile et ses performances.</p>
           <ul class="carte__liste">
             <li>Audit de l'existant avant toute décision</li>
             <li>Nouvelle structure et nouveaux textes</li>
@@ -237,7 +237,7 @@
             </svg>
           </div>
           <h3>Maintenance WordPress</h3>
-          <p>Un site laissé sans suivi finit par casser ou se faire pirater. L'abonnement mensuel évite ça.</p>
+          <p>Sauvegardes, mises à jour et sécurité : je m'occupe de la partie technique.</p>
           <ul class="carte__liste">
             <li>Mises à jour du cœur, du thème et des extensions</li>
             <li>Sauvegardes automatiques et restauration</li>
@@ -254,7 +254,7 @@
             </svg>
           </div>
           <h3>SEO local</h3>
-          <p>Être bien référencé sur « votre métier + votre ville », c'est souvent ce qui rapporte le plus vite.</p>
+          <p>Soyez trouvé sur Google par les personnes qui recherchent vos services autour de Bordeaux.</p>
           <ul class="carte__liste">
             <li>Optimisation Google Business Profile</li>
             <li>Pages locales, balises et données structurées</li>
@@ -266,132 +266,346 @@
     </div>
   </section>
 
-  <!-- ====================== CHIFFRES ====================== -->
-  <section class="section section--serre">
-    <div class="conteneur">
-      <div class="chiffres anim">
-        <div class="chiffre">
-          <span class="chiffre__val">42</span>
-          <span class="chiffre__lib">Avis Google</span>
-        </div>
-        <div class="chiffre">
-          <span class="chiffre__val">5 / 5</span>
-          <span class="chiffre__lib">Note moyenne</span>
-        </div>
-        <div class="chiffre">
-          <span class="chiffre__val">24 h</span>
-          <span class="chiffre__lib">Délai de réponse</span>
-        </div>
-        <div class="chiffre">
-          <span class="chiffre__val">33</span>
-          <span class="chiffre__lib">Gironde &amp; à distance</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================== RÉALISATIONS ====================== -->
-  <section class="section">
+  <!-- ====================== 4. POURQUOI PRAFUL DESIGN ====================== -->
+  <section class="section" id="pourquoi">
     <div class="conteneur">
       <div class="entete-section entete-section--centre">
-        <span class="surtitre">Réalisations</span>
-        <h2>Ce que ça change, concrètement</h2>
-        <p class="chapo">Trois exemples de sites repris de zéro ou refondus, avec l'avant et l'après.</p>
+        <span class="surtitre">Pourquoi Praful Design</span>
+        <h2>Un seul interlocuteur, du design à la visibilité</h2>
+        <p class="chapo">
+          Pas d'équipe qui change en cours de route : vous parlez à la personne
+          qui dessine, développe et met en ligne votre site.
+        </p>
       </div>
 
       <div class="grille grille--3">
-        <article class="realisation anim">
-          <figure class="realisation__visuel">
-            <img src="assets/img/realisation-elsa.jpg"
-                 alt="Elsa, fondatrice de Success Locks à Périgueux"
-                 width="1200" height="760" loading="lazy" decoding="async">
-            <figcaption>Coiffure</figcaption>
-          </figure>
-          <div class="realisation__corps">
-            <p class="realisation__meta">Création de site + SEO local</p>
-            <h3>Elsa — Success Locks, Périgueux</h3>
-            <p>Création du site avec optimisation SEO locale dès le lancement.</p>
-            <div class="avant-apres">
-              <div><strong>Avant</strong> Aucun site, aucune visibilité en ligne.</div>
-              <div><strong>Après</strong> 1ère sur Google pour « Locks Périgueux ».</div>
-            </div>
-            <a href="https://www.successlocks.fr" target="_blank" rel="noopener" class="btn btn--secondaire">Voir le site</a>
-          </div>
-        </article>
-
-        <article class="realisation anim">
-          <figure class="realisation__visuel">
-            <img src="assets/img/realisation-laurie.jpg"
-                 alt="Laurie, fondatrice des Huiles du Bonheur à Blanquefort"
-                 width="1200" height="760" loading="lazy" decoding="async">
-            <figcaption>Bien-être</figcaption>
-          </figure>
-          <div class="realisation__corps">
-            <p class="realisation__meta">Création de site + SEO local</p>
-            <h3>Laurie — Les Huiles du Bonheur, Blanquefort</h3>
-            <p>Création du site avec module e-commerce (cartes cadeaux) et optimisation SEO locale dès le lancement.</p>
-            <div class="avant-apres">
-              <div><strong>Avant</strong> Aucun site, aucune visibilité en ligne.</div>
-              <div><strong>Après</strong> 1ère sur Google pour « Massage Blanquefort ».</div>
-            </div>
-            <a href="https://www.les-huiles-du-bonheur.fr" target="_blank" rel="noopener" class="btn btn--secondaire">Voir le site</a>
-          </div>
-        </article>
-
-        <article class="realisation anim">
-          <figure class="realisation__visuel">
-            <img src="assets/img/realisation-sandrine.jpg"
-                 alt="Sandrine, sophrologue à Parempuyre"
-                 width="1200" height="760" loading="lazy" decoding="async">
-            <figcaption>Sophrologie</figcaption>
-          </figure>
-          <div class="realisation__corps">
-            <p class="realisation__meta">Création de site + SEO local</p>
-            <h3>Sandrine — Sophrologue, Parempuyre</h3>
-            <p>Création du site avec optimisation SEO locale dès le lancement.</p>
-            <div class="avant-apres">
-              <div><strong>Avant</strong> Aucun site, aucune visibilité en ligne.</div>
-              <div><strong>Après</strong> 1ère sur Google pour « Sophrologue Parempuyre ».</div>
-            </div>
-            <a href="https://sandrine-paraud-marot.fr" target="_blank" rel="noopener" class="btn btn--secondaire">Voir le site</a>
-          </div>
-        </article>
+        <div class="benefice anim">
+          <span class="benefice__num">01</span>
+          <h3>Crédible</h3>
+          <p>Un design soigné et cohérent qui met votre entreprise au niveau de ce que vous facturez. Vos prospects vous prennent au sérieux avant même de vous parler.</p>
+        </div>
+        <div class="benefice anim">
+          <span class="benefice__num">02</span>
+          <h3>Rapide</h3>
+          <p>Hébergement propre, images optimisées, extensions maîtrisées. Un site qui charge vite garde ses visiteurs et plaît à Google.</p>
+        </div>
+        <div class="benefice anim">
+          <span class="benefice__num">03</span>
+          <h3>Visible</h3>
+          <p>SEO local, fiche Google Business Profile, données structurées. Vous apparaissez quand quelqu'un cherche votre métier près de chez vous.</p>
+        </div>
       </div>
 
-      <div class="groupe-btn" style="justify-content:center;margin-top:44px">
-        <a href="realisations.html#demos" class="btn btn--primaire">Visiter les 10 sites de démo</a>
-        <a href="realisations.html" class="btn btn--secondaire">Voir toutes les réalisations</a>
+      <!-- Compétences regroupées en quatre univers plutôt qu'en longue grille. -->
+      <h3 class="univers__titre">Quatre univers, un seul prestataire</h3>
+      <div class="univers">
+        <div class="univer anim">
+          <span class="univer__icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="M3 9h18"/><path d="m8.8 12.6-1.8 1.8 1.8 1.8M14.2 12.6l1.8 1.8-1.8 1.8"/></svg>
+          </span>
+          <h4>Web</h4>
+          <ul class="univer__liste">
+            <li>WordPress</li>
+            <li>HTML / CSS / JavaScript</li>
+            <li>Responsive</li>
+            <li>Maintenance</li>
+          </ul>
+        </div>
+
+        <div class="univer anim">
+          <span class="univer__icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 5.5h16v11H13l-4 3.5v-3.5H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>
+          </span>
+          <h4>Communication</h4>
+          <ul class="univer__liste">
+            <li>Identité visuelle</li>
+            <li>Print</li>
+            <li>Réseaux sociaux</li>
+            <li>Communication digitale</li>
+          </ul>
+        </div>
+
+        <div class="univer anim">
+          <span class="univer__icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.6"/><path d="m16 16 4.4 4.4"/></svg>
+          </span>
+          <h4>Visibilité</h4>
+          <ul class="univer__liste">
+            <li>SEO local</li>
+            <li>Google</li>
+            <li>Optimisation</li>
+            <li>Analytics</li>
+          </ul>
+        </div>
+
+        <div class="univer anim">
+          <span class="univer__icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="m4 20 1.2-4.2 9.5-9.5a2 2 0 0 1 2.8 0l1.2 1.2a2 2 0 0 1 0 2.8l-9.5 9.5L4 20z"/><path d="m13.4 7.4 3.2 3.2"/></svg>
+          </span>
+          <h4>Création</h4>
+          <ul class="univer__liste">
+            <li>Webdesign</li>
+            <li>Vidéo</li>
+            <li>Motion design</li>
+            <li>GIF / contenus visuels</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ====================== PROCESSUS ====================== -->
-  <section class="section section--alt">
+  <!-- ====================== 5. À PROPOS ====================== -->
+  <section class="section section--alt" id="a-propos">
+    <div class="conteneur">
+      <div class="apropos">
+        <div class="apropos__visuel anim">
+          <!-- Photo actuelle du hero, recadrée en portrait. À remplacer par un
+               portrait dédié si vous en avez un (assets/img/julien-portrait.jpg). -->
+          <img src="assets/img/praful-design-hero.png"
+               alt="Julien, webdesigner et fondateur de Praful Design"
+               width="989" height="1400" loading="lazy" decoding="async">
+          <span class="apropos__signature">Julien · Praful Design</span>
+        </div>
+
+        <div class="apropos__contenu">
+          <span class="surtitre anim">À propos</span>
+          <h2 class="anim">Derrière Praful Design, il y a Julien.</h2>
+          <p class="chapo anim">Webdesigner, webmaster et créatif basé près de Bordeaux.</p>
+          <p class="anim">
+            J'accompagne indépendants, artisans, associations et collectivités dans leur
+            présence numérique, de la création du site jusqu'à sa visibilité.
+          </p>
+
+          <ul class="apropos__expertises anim">
+            <li>
+              <span class="apropos__puce" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="m8.8 9.6-3 2.4 3 2.4M15.2 9.6l3 2.4-3 2.4"/><path d="m13.4 7.2-2.8 9.6"/></svg>
+              </span>
+              <span>
+                <strong>Webdesign &amp; développement</strong>
+                Des sites dessinés puis construits par la même personne, sans perte en route.
+              </span>
+            </li>
+            <li>
+              <span class="apropos__puce" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 5.5h16v11H13l-4 3.5v-3.5H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>
+              </span>
+              <span>
+                <strong>Communication digitale</strong>
+                Identité visuelle, contenus et réseaux sociaux pour que votre site ne vive pas seul.
+              </span>
+            </li>
+            <li>
+              <span class="apropos__puce" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20a7.2 7.2 0 0 1 14.4 0"/></svg>
+              </span>
+              <span>
+                <strong>Accompagnement humain</strong>
+                On se parle simplement, sans jargon, et je reste joignable après la mise en ligne.
+              </span>
+            </li>
+          </ul>
+
+          <div class="groupe-btn anim">
+            <a href="a-propos.html" class="btn btn--secondaire">En savoir plus sur moi</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== 6. CHIFFRES CLÉS ====================== -->
+  <section class="section section--serre" id="chiffres">
+    <div class="conteneur">
+      <div class="chiffres anim">
+        <div class="chiffre">
+          <span class="chiffre__val" data-compteur="42">42</span>
+          <span class="chiffre__lib">Avis clients</span>
+        </div>
+        <div class="chiffre">
+          <span class="chiffre__val" data-compteur="5" data-suffixe=" / 5">5 / 5</span>
+          <span class="chiffre__lib">Note moyenne</span>
+        </div>
+        <div class="chiffre">
+          <span class="chiffre__val" data-compteur="24" data-suffixe=" h">24 h</span>
+          <span class="chiffre__lib">Délai de réponse</span>
+        </div>
+        <div class="chiffre">
+          <span class="chiffre__val" data-compteur="33">33</span>
+          <span class="chiffre__lib">Gironde &amp; Bordeaux</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== 7. MÉTHODE ====================== -->
+  <section class="section" id="methode">
     <div class="conteneur">
       <div class="entete-section entete-section--centre">
         <span class="surtitre">Comment on travaille</span>
         <h2>Trois étapes, aucune zone d'ombre</h2>
       </div>
 
-      <div class="processus">
-        <div class="etape anim">
-          <h3>On fait le point</h3>
-          <p>Un échange de 30 minutes, par téléphone ou chez vous. Je regarde votre site actuel, votre marché, vos concurrents. Vous repartez avec un avis honnête, même si la réponse est « ne changez rien ».</p>
-        </div>
-        <div class="etape anim">
-          <h3>Je vous remets un devis clair</h3>
-          <p>Un forfait, un périmètre, un délai. Pas de ligne floue ni de surprise en fin de projet. Vous savez exactement ce que vous achetez et ce qui n'est pas inclus.</p>
-        </div>
-        <div class="etape anim">
-          <h3>Je livre et je vous forme</h3>
-          <p>Le site est mis en ligne, testé sur mobile et sur ordinateur. Je vous montre comment le faire vivre, ou je m'en charge via l'abonnement maintenance.</p>
-        </div>
-      </div>
+      <ol class="parcours">
+        <li class="parcours__etape anim">
+          <span class="parcours__num" aria-hidden="true">01</span>
+          <h3>Découverte</h3>
+          <p>Un échange de 30 minutes, par téléphone ou chez vous. Je regarde votre site actuel, votre marché, vos concurrents. Vous repartez avec un avis honnête, puis un devis clair : un forfait, un périmètre, un délai.</p>
+        </li>
+        <li class="parcours__etape anim">
+          <span class="parcours__num" aria-hidden="true">02</span>
+          <h3>Création</h3>
+          <p>Je commence par une maquette de la page d'accueil, avec deux séries d'ajustements incluses. On ne passe à la production qu'une fois que la direction vous convient — jamais avant.</p>
+        </li>
+        <li class="parcours__etape anim">
+          <span class="parcours__num" aria-hidden="true">03</span>
+          <h3>Mise en ligne</h3>
+          <p>Le site est publié, testé sur mobile et sur ordinateur. Je vous montre comment le faire vivre, ou je m'en charge via l'abonnement maintenance.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <!-- ====================== TARIFS ====================== -->
-  <section class="section">
+  <!-- ====================== 8. SIMULATEUR DE PROJET ======================
+       Les fourchettes affichées reprennent strictement les tarifs publiés sur
+       tarifs.html. Toute combinaison non couverte affiche « Estimation
+       personnalisée » plutôt qu'un montant inventé. -->
+  <section class="section section--alt" id="simulateur">
+    <div class="conteneur">
+      <div class="entete-section entete-section--centre">
+        <span class="surtitre">Estimation</span>
+        <h2>Combien coûterait votre projet ?</h2>
+        <p class="chapo">Quelques clics suffisent pour obtenir une première estimation.</p>
+      </div>
+
+      <form class="simu anim" id="simu" novalidate>
+        <div class="simu__questions">
+
+          <!-- Étape 1 -->
+          <fieldset class="simu__etape">
+            <legend class="simu__legende"><span class="simu__num">1</span> Type de projet</legend>
+            <div class="simu__choix">
+              <label class="simu__option">
+                <input type="radio" name="type" value="vitrine" checked>
+                <span>Site vitrine</span>
+              </label>
+              <label class="simu__option">
+                <input type="radio" name="type" value="refonte">
+                <span>Refonte</span>
+              </label>
+              <label class="simu__option">
+                <input type="radio" name="type" value="maintenance">
+                <span>Maintenance</span>
+              </label>
+              <label class="simu__option">
+                <input type="radio" name="type" value="seo">
+                <span>SEO</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Étape 2 — trois jeux d'options, un seul actif à la fois.
+               Les jeux masqués sont aussi `disabled` : hors du parcours clavier
+               et hors des données du formulaire. -->
+          <fieldset class="simu__etape" data-groupe="site">
+            <legend class="simu__legende"><span class="simu__num">2</span> Taille du projet</legend>
+            <div class="simu__choix">
+              <label class="simu__option">
+                <input type="radio" name="taille-site" value="1-3" checked>
+                <span>1 à 3 pages</span>
+              </label>
+              <label class="simu__option">
+                <input type="radio" name="taille-site" value="4-6">
+                <span>4 à 6 pages</span>
+              </label>
+              <label class="simu__option">
+                <input type="radio" name="taille-site" value="7+">
+                <span>7 pages et +</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="simu__etape" data-groupe="maintenance" hidden>
+            <legend class="simu__legende"><span class="simu__num">2</span> Niveau de suivi</legend>
+            <div class="simu__choix">
+              <label class="simu__option">
+                <input type="radio" name="taille-maintenance" value="socle" checked disabled>
+                <span>Le socle</span>
+              </label>
+              <label class="simu__option">
+                <input type="radio" name="taille-maintenance" value="standard" disabled>
+                <span>Standard</span>
+              </label>
+              <label class="simu__option">
+                <input type="radio" name="taille-maintenance" value="premium" disabled>
+                <span>Premium</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="simu__etape" data-groupe="seo" hidden>
+            <legend class="simu__legende"><span class="simu__num">2</span> Périmètre visé</legend>
+            <div class="simu__choix">
+              <label class="simu__option">
+                <input type="radio" name="taille-seo" value="gbp" checked disabled>
+                <span>Fiche Google Business</span>
+              </label>
+              <label class="simu__option">
+                <input type="radio" name="taille-seo" value="complet" disabled>
+                <span>SEO local complet</span>
+              </label>
+              <label class="simu__option">
+                <input type="radio" name="taille-seo" value="inconnu" disabled>
+                <span>Je ne sais pas encore</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Étape 3 -->
+          <fieldset class="simu__etape">
+            <legend class="simu__legende"><span class="simu__num">3</span> Éléments déjà disponibles</legend>
+            <div class="simu__choix simu__choix--cases">
+              <label class="simu__option">
+                <input type="checkbox" name="dispo" value="logo">
+                <span>Logo</span>
+              </label>
+              <label class="simu__option">
+                <input type="checkbox" name="dispo" value="textes">
+                <span>Textes</span>
+              </label>
+              <label class="simu__option">
+                <input type="checkbox" name="dispo" value="photos">
+                <span>Photos</span>
+              </label>
+              <label class="simu__option">
+                <input type="checkbox" name="dispo" value="domaine">
+                <span>Nom de domaine</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Étape 4 — résultat -->
+        <div class="simu__resultat">
+          <p class="simu__resultat-eyebrow"><span class="simu__num">4</span> Votre estimation</p>
+          <div aria-live="polite">
+            <p class="simu__prix" id="simu-prix">1 500 – 3 000 € HT</p>
+            <p class="simu__offre" id="simu-offre">Offre « Création de site vitrine »</p>
+            <ul class="simu__notes" id="simu-notes"></ul>
+          </div>
+          <a href="contact.html" class="btn btn--primaire btn--large" id="simu-cta">Recevoir mon estimation</a>
+          <p class="simu__mention">
+            Estimation indicative, hors taxes et sans engagement. Le devis final dépend du
+            contenu à produire et des fonctionnalités.
+            <a href="tarifs.html">Voir le détail des tarifs</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ====================== 9. TARIFS ====================== -->
+  <section class="section" id="tarifs">
     <div class="conteneur">
       <div class="entete-section entete-section--centre">
         <span class="surtitre">Tarifs</span>
@@ -465,15 +679,15 @@
         </article>
       </div>
 
-      <p style="text-align:center;margin-top:32px;font-size:0.85rem;color:var(--texte-faible)">
+      <p class="tarifs__mention">
         Tarifs indicatifs hors taxes. Le devis final dépend du nombre de pages et du contenu à produire.
         <a href="tarifs.html">Voir le détail des forfaits</a>
       </p>
     </div>
   </section>
 
-  <!-- ====================== TÉMOIGNAGES ====================== -->
-  <section class="section section--alt">
+  <!-- ====================== 10. AVIS CLIENTS ====================== -->
+  <section class="section section--alt" id="avis">
     <div class="conteneur">
       <div class="entete-section entete-section--centre">
         <span class="surtitre">Ils m'ont fait confiance</span>
@@ -481,9 +695,12 @@
       </div>
 
       <div class="grille grille--3">
-        <figure class="temoignage anim" style="margin:0">
-          <div class="temoignage__note" aria-hidden="true">★★★★★</div>
-          <blockquote style="margin:0"><p>« Julien a repris mon site de A à Z. Il explique tout simplement, sans jargon, et il tient ses délais. J'ai enfin un site dont je n'ai pas honte. »</p></blockquote>
+        <figure class="temoignage anim">
+          <div class="temoignage__note">
+            <span aria-hidden="true">★★★★★</span>
+            <span class="sr-only">Note : 5 sur 5</span>
+          </div>
+          <blockquote><p>« Julien a repris mon site de A à Z. Il explique tout simplement, sans jargon, et il tient ses délais. J'ai enfin un site dont je n'ai pas honte. »</p></blockquote>
           <figcaption class="temoignage__auteur">
             <span class="temoignage__avatar" aria-hidden="true">SM</span>
             <span>
@@ -493,9 +710,12 @@
           </figcaption>
         </figure>
 
-        <figure class="temoignage anim" style="margin:0">
-          <div class="temoignage__note" aria-hidden="true">★★★★★</div>
-          <blockquote style="margin:0"><p>« Mon ancien site mettait 8 secondes à s'afficher. Après la refonte, tout est instantané et je reçois des demandes de devis toutes les semaines. »</p></blockquote>
+        <figure class="temoignage anim">
+          <div class="temoignage__note">
+            <span aria-hidden="true">★★★★★</span>
+            <span class="sr-only">Note : 5 sur 5</span>
+          </div>
+          <blockquote><p>« Mon ancien site mettait 8 secondes à s'afficher. Après la refonte, tout est instantané et je reçois des demandes de devis toutes les semaines. »</p></blockquote>
           <figcaption class="temoignage__auteur">
             <span class="temoignage__avatar" aria-hidden="true">TD</span>
             <span>
@@ -505,9 +725,12 @@
           </figcaption>
         </figure>
 
-        <figure class="temoignage anim" style="margin:0">
-          <div class="temoignage__note" aria-hidden="true">★★★★★</div>
-          <blockquote style="margin:0"><p>« Je paye la maintenance chaque mois et je ne m'occupe plus de rien. Quand j'ai une question, j'ai une réponse dans la journée. »</p></blockquote>
+        <figure class="temoignage anim">
+          <div class="temoignage__note">
+            <span aria-hidden="true">★★★★★</span>
+            <span class="sr-only">Note : 5 sur 5</span>
+          </div>
+          <blockquote><p>« Je paye la maintenance chaque mois et je ne m'occupe plus de rien. Quand j'ai une question, j'ai une réponse dans la journée. »</p></blockquote>
           <figcaption class="temoignage__auteur">
             <span class="temoignage__avatar" aria-hidden="true">CL</span>
             <span>
@@ -520,8 +743,8 @@
     </div>
   </section>
 
-  <!-- ====================== FAQ ====================== -->
-  <section class="section">
+  <!-- ====================== 11. FAQ ====================== -->
+  <section class="section" id="faq">
     <div class="conteneur">
       <div class="entete-section entete-section--centre">
         <span class="surtitre">Questions fréquentes</span>
@@ -530,57 +753,67 @@
 
       <div class="faq">
         <div class="faq__item">
-          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-1">
-            Combien de temps prend une refonte ?
-            <span class="faq__signe" aria-hidden="true">+</span>
-          </button>
+          <h3 class="faq__titre">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-1">
+              Combien de temps prend une refonte ?
+              <span class="faq__signe" aria-hidden="true"></span>
+            </button>
+          </h3>
           <div class="faq__reponse" id="faq-1"><p>Comptez 3 à 5 semaines pour un site vitrine de 1 à 5 pages, à partir du moment où j'ai vos textes et vos images. Une refonte complète avec copywriting et SEO local prend plutôt 6 à 8 semaines.</p></div>
         </div>
 
         <div class="faq__item">
-          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-2">
-            Est-ce que je pourrai modifier mon site moi-même ?
-            <span class="faq__signe" aria-hidden="true">+</span>
-          </button>
+          <h3 class="faq__titre">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-2">
+              Est-ce que je pourrai modifier mon site moi-même ?
+              <span class="faq__signe" aria-hidden="true"></span>
+            </button>
+          </h3>
           <div class="faq__reponse" id="faq-2"><p>Oui. Je livre un WordPress que vous pouvez gérer sans être technicien, et je vous forme à la prise en main lors de la livraison. Si vous préférez ne pas y toucher, l'abonnement maintenance est là pour ça.</p></div>
         </div>
 
         <div class="faq__item">
-          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-3">
-            Travaillez-vous uniquement en Gironde ?
-            <span class="faq__signe" aria-hidden="true">+</span>
-          </button>
+          <h3 class="faq__titre">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-3">
+              Travaillez-vous uniquement en Gironde ?
+              <span class="faq__signe" aria-hidden="true"></span>
+            </button>
+          </h3>
           <div class="faq__reponse" id="faq-3"><p>Je me déplace volontiers à Parempuyre, Bordeaux et alentours pour les rendez-vous. Mais la majorité des projets se déroule très bien à distance, par visio et par email, partout en France.</p></div>
         </div>
 
         <div class="faq__item">
-          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-4">
-            L'hébergement et le nom de domaine sont-ils inclus ?
-            <span class="faq__signe" aria-hidden="true">+</span>
-          </button>
+          <h3 class="faq__titre">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-4">
+              L'hébergement et le nom de domaine sont-ils inclus ?
+              <span class="faq__signe" aria-hidden="true"></span>
+            </button>
+          </h3>
           <div class="faq__reponse" id="faq-4"><p>Ils restent à votre nom et à votre charge, c'est important : vous devez rester propriétaire de votre site. Je vous conseille un hébergeur adapté à votre budget et je m'occupe de toute la configuration.</p></div>
         </div>
 
         <div class="faq__item">
-          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-5">
-            Que se passe-t-il si je ne suis pas satisfait du design ?
-            <span class="faq__signe" aria-hidden="true">+</span>
-          </button>
+          <h3 class="faq__titre">
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-5">
+              Que se passe-t-il si je ne suis pas satisfait du design ?
+              <span class="faq__signe" aria-hidden="true"></span>
+            </button>
+          </h3>
           <div class="faq__reponse" id="faq-5"><p>Le projet commence par une maquette de la page d'accueil, avec deux séries d'ajustements incluses. On ne passe à la suite qu'une fois que la direction vous convient — jamais avant.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====================== CTA FINAL ====================== -->
+  <!-- ====================== 12. CTA FINAL ====================== -->
   <section class="section section--serre">
     <div class="conteneur">
-      <div class="bandeau-cta anim">
-        <h2>Votre site mérite mieux que d'être « en ligne »</h2>
-        <p>Dites-moi où vous en êtes. Je vous donne un avis franc et un budget réaliste, sans engagement.</p>
+      <div class="bandeau-cta bandeau-cta--final anim">
+        <h2>Votre prochain client est peut-être déjà en train de vous chercher.</h2>
+        <p>Donnons-lui une bonne raison de vous choisir.</p>
         <div class="groupe-btn">
-          <a href="contact.html" class="btn btn--primaire">Demander un devis gratuit</a>
-          <a href="tarifs.html" class="btn btn--secondaire">Consulter les tarifs</a>
+          <a href="contact.html" class="btn btn--primaire">Démarrer mon projet</a>
+          <a href="#realisations" class="btn btn--secondaire">Voir mes réalisations</a>
         </div>
       </div>
     </div>

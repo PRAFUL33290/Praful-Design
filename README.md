@@ -126,6 +126,34 @@ Sur écran étroit (moins de 1024 px), le hero repasse en hauteur automatique
 et l'indicateur « Découvrir » est masqué — le contenu empilé dépasse de toute
 façon la hauteur d'écran.
 
+## Page d'accueil
+
+Les sections s'enchaînent dans cet ordre, chacune avec son `id` (utilisé par
+les ancres et les CTA) : hero, `#realisations`, `#services`, `#pourquoi`,
+`#a-propos`, `#chiffres`, `#methode`, `#simulateur`, `#tarifs`, `#avis`,
+`#faq`, CTA final.
+
+### Simulateur de projet (`#simulateur`)
+
+Le configurateur vit dans `assets/js/main.js` (bloc « Simulateur de projet »).
+**Il n'invente aucun tarif** : chaque fourchette reprend une offre publiée sur
+`tarifs.html`, et toute combinaison non couverte affiche « Estimation
+personnalisée ». Si vous changez un prix sur la page Tarifs, changez-le aussi
+dans la fonction `estimer()` — c'est le seul endroit à mettre à jour.
+
+Les cases « éléments déjà disponibles » ne modifient aucun montant : elles
+ajoutent seulement une note indiquant où l'on se situe dans la fourchette.
+
+Le bouton « Recevoir mon estimation » ouvre `contact.html` avec les
+paramètres `?besoin=…&message=…` ; un court bloc de `main.js` pré-remplit
+alors le formulaire de contact.
+
+### Compteurs des chiffres clés
+
+Les `.chiffre__val` portent `data-compteur` (valeur finale) et éventuellement
+`data-suffixe`. La valeur définitive est déjà écrite dans le HTML : sans JS,
+ou en mouvement réduit, le chiffre s'affiche simplement tel quel.
+
 ## À faire avant la mise en ligne
 
 1. **Mentions légales** — remplacer tous les `[crochets]` de
@@ -148,6 +176,12 @@ façon la hauteur d'écran.
 3. **Visuels** — les vignettes de la page Réalisations sont pour l'instant
    des blocs colorés avec le secteur d'activité. Remplacez-les par de vraies
    captures d'écran dans `assets/img/`.
+
+   Sur l'accueil, les trois cartes de `#realisations` utilisent
+   `assets/img/realisation-elsa|laurie|sandrine.jpg` — ce sont les **photos
+   des clientes** (copies de `IMG CLIENTS/`), pas des captures de site. Pour
+   passer à des captures, il suffit de changer le `src` : le cadre est en 4/3
+   et s'adapte aussi bien à un portrait carré qu'à une capture en paysage.
 
 4. **Logo** — le bloc « PD » est un placeholder typographique. Le logo
    d'origine est disponible ici :

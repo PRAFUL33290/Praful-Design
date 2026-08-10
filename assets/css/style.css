@@ -1020,11 +1020,19 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--accent-clair);
 }
 
-/* Positions échelonnées le long du bord gauche du personnage, en évitant
-   le visage (haut à droite) et le badge « Spécialiste WordPress ». */
-.hero__competence--1 { top: 48%; right: 43%; animation-delay: 0.3s; }
-.hero__competence--2 { top: 66%; right: 28%; animation-delay: 1.1s; animation-duration: 5.4s; }
-.hero__competence--3 { top: 82%; right: 43%; animation-delay: 1.8s; animation-duration: 6.6s; }
+.hero__competence img {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  object-fit: contain;
+}
+
+/* Trois badges seulement, échelonnés le long du bord gauche du personnage
+   en évitant le visage. Volontairement peu nombreux : ils résument l'offre
+   sans transformer le hero en nuage d'étiquettes. */
+.hero__competence--1 { top: 26%; right: 40%; animation-delay: 0.3s; }
+.hero__competence--2 { top: 50%; right: 27%; animation-delay: 1.1s; animation-duration: 5.4s; }
+.hero__competence--3 { top: 73%; right: 41%; animation-delay: 1.8s; animation-duration: 6.6s; }
 
 @keyframes flotter {
   0%, 100% { transform: translateY(0); }
@@ -1084,14 +1092,24 @@ ul { margin: 0; padding: 0; list-style: none; }
   100% { opacity: 0; transform: translateY(0); }
 }
 
+/* Preuve sociale du hero : une pastille vitrée discrète, posée sous les
+   CTA. Le blanc translucide la garde lisible par-dessus le visuel. */
 .hero__note {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 22px;
-  font-size: 0.8rem;
+  margin: clamp(20px, 2.4vw, 26px) 0 0;
+  padding: 8px 16px;
+  border: 1px solid var(--verre-bordure);
+  border-radius: var(--rayon-pill);
+  background: var(--verre-fond);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  font-size: 0.82rem;
   color: var(--texte-doux);
+  box-shadow: 0 6px 20px rgba(28, 0, 48, 0.08);
 }
+.hero__note strong { color: var(--texte-fort); }
 .hero__etoiles { color: #ffc83d; letter-spacing: 2px; }
 
 .hero h1 {
@@ -1195,7 +1213,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: flex;
   flex-wrap: wrap;
   gap: 10px 22px;
-  margin: clamp(28px, 3vw, 38px) 0 0;
+  margin: clamp(18px, 2.2vw, 24px) 0 0;
   color: var(--texte-doux);
   font-size: 0.78rem;
   font-weight: 700;
@@ -1894,26 +1912,56 @@ ul { margin: 0; padding: 0; list-style: none; }
   transition: color var(--transition);
 }
 .faq__question:hover { color: var(--accent-clair); }
+/* Le bouton est enveloppé dans un h3 pour la hiérarchie de titres : on
+   annule la mise en forme de titre, l'apparence reste celle du bouton. */
+.faq__titre {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: normal;
+}
+
+/* Signe « + » qui devient « − » : deux barres croisées, la verticale
+   s'escamote à l'ouverture. Plus lisible qu'une croix pivotée. */
 .faq__signe {
+  position: relative;
   flex: none;
-  display: grid;
-  place-items: center;
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   border: 1px solid var(--bordure-forte);
   border-radius: 50%;
-  font-size: 1rem;
-  transition: transform var(--transition), background var(--transition);
+  transition: background var(--transition), border-color var(--transition);
 }
+.faq__signe::before,
+.faq__signe::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transform: translate(-50%, -50%);
+  transition: transform var(--transition), opacity var(--transition);
+}
+.faq__signe::after { transform: translate(-50%, -50%) rotate(90deg); }
+
 .faq__question[aria-expanded="true"] .faq__signe {
-  transform: rotate(45deg);
-  background: rgba(79, 70, 229, 0.2);
+  background: rgba(79, 70, 229, 0.16);
   border-color: var(--accent);
+  color: var(--accent-clair);
 }
+.faq__question[aria-expanded="true"] .faq__signe::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 0;
+}
+
 .faq__reponse {
   overflow: hidden;
   max-height: 0;
-  transition: max-height var(--transition);
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .faq__reponse p {
   padding-bottom: 22px;
@@ -1957,6 +2005,190 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--sur-couleur);
 }
 .bandeau-cta .groupe-btn { justify-content: center; margin-top: 28px; }
+
+/* --------------------------------------------------------------------------
+   14b. Bandeaux sombres à image fixe (accueil)
+   -------------------------------------------------------------------------- */
+/* Deux sections de la page d'accueil (Pourquoi / Méthode) passent en violet
+   plein écran avec une photo en fond fixe : ça casse la monotonie des
+   bandes blanches et crée un léger effet de parallax au défilement. Tout
+   est scopé sous .section--sombre pour ne rien changer aux mêmes
+   composants (.benefice, .univer, .parcours) utilisés en clair sur les
+   autres pages (tarifs.html notamment). */
+.section--sombre {
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  overflow: clip;
+}
+.section--sombre::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#pourquoi.section--sombre::before {
+  background-image:
+    linear-gradient(160deg, rgba(18, 0, 33, 0.94) 0%, rgba(56, 0, 95, 0.9) 48%, rgba(79, 70, 229, 0.85) 100%),
+    url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=2000&q=60");
+}
+#methode.section--sombre::before {
+  background-image:
+    linear-gradient(160deg, rgba(28, 0, 48, 0.95) 0%, rgba(79, 70, 229, 0.88) 100%),
+    url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=2000&q=60");
+}
+#services.section--sombre::before {
+  background-image:
+    linear-gradient(160deg, rgba(18, 0, 33, 0.94) 0%, rgba(56, 0, 95, 0.9) 50%, rgba(79, 70, 229, 0.85) 100%),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=60");
+}
+#tarifs.section--sombre::before {
+  background-image:
+    linear-gradient(160deg, rgba(18, 0, 33, 0.94) 0%, rgba(56, 0, 95, 0.9) 48%, rgba(79, 70, 229, 0.85) 100%),
+    url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2000&q=60");
+}
+#faq.section--sombre::before {
+  background-image:
+    linear-gradient(160deg, rgba(28, 0, 48, 0.95) 0%, rgba(79, 70, 229, 0.88) 100%),
+    url("https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=2000&q=60");
+}
+/* background-attachment:fixed est peu fiable sur mobile (iOS notamment) :
+   on repasse en fond classique sous 769px et sur les écrans tactiles. */
+@media (max-width: 768px), (hover: none) {
+  .section--sombre::before { background-attachment: scroll; }
+}
+
+.section--sombre .surtitre {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+.section--sombre .surtitre::before { background: #fff; box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); }
+.section--sombre h2,
+.section--sombre h3,
+.section--sombre h4 { color: #fff; }
+.section--sombre p,
+.section--sombre .chapo { color: rgba(255, 255, 255, 0.82); }
+/* Liens inline dans un paragraphe (ex. « leur propre grille » dans le
+   chapo des tarifs) : le bleu/violet par défaut est illisible sur fond
+   sombre. Les liens stylés en boutons ou en carte__lien restent gérés
+   par leurs propres règles. */
+.section--sombre p a,
+.section--sombre .chapo a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+.section--sombre p a:hover,
+.section--sombre .chapo a:hover { color: rgba(255, 255, 255, 0.75); }
+
+.section--sombre .benefice {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+.section--sombre .benefice__num {
+  background: linear-gradient(100deg, #ffffff, #c9b8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.section--sombre .univer {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+.section--sombre .univer:hover { border-color: rgba(255, 255, 255, 0.4); }
+.section--sombre .univer__icone {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+.section--sombre .univer h4 { color: #fff; }
+.section--sombre .univer__liste li { color: rgba(255, 255, 255, 0.78); }
+.section--sombre .univer__liste li::before { background: #fff; }
+
+.section--sombre .parcours__etape:not(:last-child)::after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.12));
+}
+.section--sombre .parcours__num {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.05);
+}
+.section--sombre .parcours__etape:hover .parcours__num {
+  background: #ffffff;
+  color: var(--violet);
+}
+
+.section--sombre .carte {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+.section--sombre .carte:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 20px 50px rgba(12, 0, 24, 0.35);
+}
+.section--sombre .carte__liste li { color: rgba(255, 255, 255, 0.78); }
+.section--sombre .carte__liste li::before { background: #fff; }
+.section--sombre .carte__lien { color: #fff; }
+
+/* Services (accueil) : 4 cartes en 2x2 plutôt qu'en auto-fit — évite la
+   4e carte isolée seule sur sa ligne dans le conteneur (1180px max). */
+#services .grille--2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 860px) {
+  #services .grille--2 { grid-template-columns: 1fr; }
+}
+
+/* Bouton secondaire : sur fond clair il est presque transparent
+   (var(--champ-fond)), donc illisible sur un bandeau sombre. */
+.section--sombre .btn--secondaire {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.section--sombre .btn--secondaire:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* Tarifs (accueil) */
+.section--sombre .offre {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+.section--sombre .offre--phare {
+  border-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 22px 60px rgba(12, 0, 24, 0.4);
+}
+.section--sombre .offre__inclus { border-color: rgba(255, 255, 255, 0.18); }
+.section--sombre .offre__inclus li { color: rgba(255, 255, 255, 0.78); }
+.section--sombre .offre__inclus li::before { color: #fff; }
+
+/* Tarifs (accueil) : 4 offres en 2x2, comme Services. */
+#tarifs .tarifs { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 860px) {
+  #tarifs .tarifs { grid-template-columns: 1fr; }
+}
+
+/* FAQ (accueil) */
+.section--sombre .faq__item { border-color: rgba(255, 255, 255, 0.18); }
+.section--sombre .faq__question { color: #fff; }
+.section--sombre .faq__question:hover { color: rgba(255, 255, 255, 0.72); }
+.section--sombre .faq__signe { border-color: rgba(255, 255, 255, 0.4); }
+.section--sombre .faq__question[aria-expanded="true"] .faq__signe {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #fff;
+  color: #fff;
+}
 
 /* --------------------------------------------------------------------------
    15. Pied de page
@@ -2153,7 +2385,754 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 /* --------------------------------------------------------------------------
-   19. Responsive
+   19. Composants de la page d'accueil
+   Portfolio, univers de compétences, à propos, parcours, simulateur.
+   -------------------------------------------------------------------------- */
+
+/* Réservé aux lecteurs d'écran : visible pour eux, invisible à l'œil. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.groupe-btn--centre {
+  justify-content: center;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+/* --- Portfolio ------------------------------------------------------------
+   Cartes volontairement plus grandes que les anciennes vignettes : le visuel
+   occupe la moitié haute et porte le regard, le texte reste secondaire. */
+/* Deux colonnes fixes plutôt qu'un auto-fit : avec 4 projets, l'auto-fit à
+   300px isolait la dernière carte seule sur sa ligne. En 2 colonnes, les
+   cartes sont aussi plus larges et plus lisibles (photo + texte + tags). */
+.projets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(22px, 3vw, 30px);
+}
+@media (max-width: 860px) {
+  .projets { grid-template-columns: 1fr; }
+}
+
+.projet {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--bordure);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 10px 30px rgba(28, 0, 48, 0.05);
+  transition: transform var(--transition), border-color var(--transition),
+              box-shadow var(--transition);
+}
+.projet:hover,
+.projet:focus-within {
+  transform: translateY(-6px);
+  border-color: rgba(79, 70, 229, 0.4);
+  box-shadow: 0 26px 60px rgba(28, 0, 48, 0.16);
+}
+
+/* Le cadre est en 4/3 : assez haut pour accueillir un portrait carré
+   (les visuels actuels) comme une capture d'écran en paysage. */
+.projet__visuel {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  overflow: hidden;
+  background: var(--degrade);
+}
+/* Recadrage haut : sur un portrait, le visage reste dans le cadre. */
+.projet__visuel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.projet:hover .projet__visuel img,
+.projet:focus-within .projet__visuel img { transform: scale(1.05); }
+
+.projet__visuel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(18, 0, 31, 0.7) 100%);
+  pointer-events: none;
+}
+.projet__visuel figcaption {
+  position: absolute;
+  left: 18px;
+  bottom: 16px;
+  z-index: 1;
+  padding: 7px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: var(--rayon-pill);
+  background: rgba(18, 0, 31, 0.48);
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* Substitut de capture d'écran, en attendant les visuels réels. Il reprend
+   le dégradé de marque pour ne pas trouer la grille. */
+.projet__placeholder {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0 12px, transparent 12px 24px),
+    var(--degrade);
+  color: #ffffff;
+}
+.projet__placeholder-initiales {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.projet__placeholder-note {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.projet__corps {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: clamp(22px, 2.6vw, 28px);
+}
+.projet__categorie {
+  margin-bottom: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-clair);
+}
+.projet__corps h3 { margin-bottom: 10px; font-size: 1.25rem; }
+.projet__texte { font-size: 0.9rem; margin-bottom: 16px; }
+
+.projet__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.projet__tags li {
+  padding: 5px 12px;
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon-pill);
+  background: var(--champ-fond);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--texte-doux);
+}
+
+/* margin-top auto : quelle que soit la longueur du texte ou le nombre de
+   tags, le résultat et le lien s'alignent en bas des trois cartes. */
+.projet__resultat {
+  margin: auto 0 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--bordure);
+  font-size: 0.85rem;
+  color: var(--texte-doux);
+}
+.projet__resultat strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texte-faible);
+}
+
+/* min-height : la cible tactile reste confortable au doigt même si le
+   libellé, lui, tient sur une seule ligne fine. */
+.projet__lien {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+/* Carte sans bloc résultat : c'est alors le lien qui absorbe l'espace libre
+   et reste calé en bas. */
+.projet__corps:not(:has(.projet__resultat)) .projet__lien { margin-top: auto; }
+
+.projet__lien::after {
+  content: "→";
+  transition: transform var(--transition);
+}
+.projet:hover .projet__lien::after,
+.projet__lien:focus-visible::after { transform: translateX(5px); }
+
+/* --- Univers de compétences ----------------------------------------------
+   Quatre blocs plutôt qu'une longue grille de petites cartes. */
+.univers__titre {
+  margin: clamp(48px, 6vw, 72px) 0 22px;
+  text-align: center;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.univers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: clamp(16px, 2vw, 22px);
+}
+
+.univer {
+  padding: clamp(22px, 2.6vw, 28px);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  background: linear-gradient(165deg, var(--surface-2), var(--surface));
+  transition: transform var(--transition), border-color var(--transition);
+}
+.univer:hover { transform: translateY(-4px); border-color: rgba(79, 70, 229, 0.4); }
+
+.univer__icone {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(79, 70, 229, 0.32);
+  border-radius: 13px;
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--accent-clair);
+}
+.univer__icone svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.univer h4 {
+  margin-bottom: 12px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--texte-fort);
+}
+
+.univer__liste {
+  display: grid;
+  gap: 7px;
+}
+.univer__liste li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.86rem;
+  color: var(--texte-doux);
+}
+.univer__liste li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* --- Vitrine tableau de bord ------------------------------------------------
+   Texte à gauche, mockup (fond transparent, ombres déjà intégrées à l'image)
+   à droite. Contrairement à .apropos__visuel, pas de cadre ni d'ombre
+   ajoutés : le visuel porte déjà sa propre mise en scène. */
+.vitrine {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.5fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+.vitrine__points {
+  display: grid;
+  gap: 16px;
+  margin: 26px 0 32px;
+}
+.vitrine__points li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--texte);
+}
+.vitrine__icone {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(79, 70, 229, 0.3);
+  border-radius: 12px;
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--accent-clair);
+}
+.vitrine__icone svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.vitrine__visuel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 860px) {
+  .vitrine { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* --- À propos -------------------------------------------------------------
+   Bloc humain : portrait à gauche, propos et expertises à droite. */
+.apropos {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+.apropos__visuel {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(165deg, rgba(79, 70, 229, 0.14), rgba(107, 31, 168, 0.1));
+  box-shadow: var(--ombre);
+}
+.apropos__visuel img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+}
+.apropos__signature {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 9px 16px;
+  border: 1px solid var(--verre-bordure);
+  border-radius: var(--rayon-pill);
+  background: var(--verre-fond-fort);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--texte-fort);
+  box-shadow: var(--verre-ombre);
+}
+
+.apropos__contenu h2 { margin-bottom: 14px; }
+.apropos__contenu .chapo { margin-bottom: 12px; font-weight: 600; color: var(--texte); }
+
+.apropos__expertises {
+  display: grid;
+  gap: 16px;
+  margin: clamp(26px, 3vw, 34px) 0;
+}
+.apropos__expertises li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.apropos__expertises strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.95rem;
+  color: var(--texte-fort);
+}
+.apropos__expertises li > span:last-child {
+  font-size: 0.88rem;
+  color: var(--texte-doux);
+}
+
+.apropos__puce {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(79, 70, 229, 0.3);
+  border-radius: 12px;
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--accent-clair);
+}
+.apropos__puce svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* --- Parcours en trois étapes --------------------------------------------
+   Sur desktop, une ligne horizontale relie les trois pastilles ; sur mobile,
+   la ligne devient verticale et les étapes s'empilent. */
+.parcours {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 3.5vw, 44px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: parcours;
+}
+
+.parcours__etape { position: relative; }
+
+/* Le trait part de la pastille et rejoint l'étape suivante : pas de bout
+   de ligne qui dépasse après la dernière étape. */
+.parcours__etape:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 66px;
+  right: calc(-1 * clamp(24px, 3.5vw, 44px));
+  height: 2px;
+  background: linear-gradient(90deg,
+    rgba(79, 70, 229, 0.45),
+    rgba(79, 70, 229, 0.12));
+}
+
+.parcours__num {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(79, 70, 229, 0.35);
+  border-radius: 50%;
+  background: var(--fond);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--accent-clair);
+  box-shadow: 0 0 0 6px var(--fond);
+  transition: transform var(--transition), background var(--transition),
+              color var(--transition), border-color var(--transition);
+}
+.parcours__etape:hover .parcours__num {
+  transform: translateY(-3px);
+  border-color: transparent;
+  background: var(--degrade);
+  color: var(--sur-couleur);
+}
+
+.parcours__etape h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.parcours__etape p { font-size: 0.9rem; margin-bottom: 0; }
+
+/* --- Simulateur de projet -------------------------------------------------
+   Questions à gauche, résultat à droite (collant sur grand écran). Les
+   options sont de vrais champs de formulaire : le clavier fonctionne
+   nativement, l'apparence seule est personnalisée. */
+.simu {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: clamp(22px, 3vw, 34px);
+  align-items: start;
+}
+
+.simu__questions {
+  display: grid;
+  gap: clamp(18px, 2.2vw, 24px);
+  padding: clamp(24px, 3vw, 34px);
+  border: 1px solid var(--bordure);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 12px 34px rgba(28, 0, 48, 0.06);
+}
+
+.simu__etape {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.simu__etape[hidden] { display: none; }
+
+.simu__legende {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding: 0;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--texte-fort);
+}
+.simu__num {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--degrade);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--sur-couleur);
+}
+
+.simu__choix {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.simu__option {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 18px;
+  border: 1px solid var(--bordure-forte);
+  border-radius: var(--rayon-pill);
+  background: var(--champ-fond);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--texte);
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition),
+              color var(--transition), transform var(--transition);
+}
+.simu__option:hover {
+  border-color: var(--accent);
+  background: rgba(79, 70, 229, 0.08);
+}
+
+/* Le champ reste dans le flux (donc focalisable et lisible par les
+   technologies d'assistance), mais invisible : c'est la pastille qui
+   traduit son état. */
+.simu__option input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.simu__option::before {
+  content: "";
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--bordure-forte);
+  border-radius: 50%;
+  transition: border-color var(--transition), background var(--transition),
+              box-shadow var(--transition);
+}
+.simu__choix--cases .simu__option::before { border-radius: 5px; }
+
+.simu__option:has(input:checked) {
+  border-color: var(--accent);
+  background: rgba(79, 70, 229, 0.12);
+  color: var(--texte-fort);
+}
+.simu__option:has(input:checked)::before {
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: inset 0 0 0 3px var(--surface);
+}
+.simu__choix--cases .simu__option:has(input:checked)::before {
+  box-shadow: inset 0 0 0 2px var(--surface);
+}
+.simu__option:has(input:focus-visible) {
+  outline: 2px solid var(--accent-clair);
+  outline-offset: 3px;
+}
+
+/* Repli pour les navigateurs sans :has() — l'état coché reste signalé par
+   la pastille, à défaut du fond de l'étiquette. */
+.simu__option input:checked ~ span { color: var(--texte-fort); font-weight: 700; }
+
+.simu__resultat {
+  position: sticky;
+  top: calc(var(--entete-h) + 20px);
+  padding: clamp(24px, 3vw, 32px);
+  border: 1px solid rgba(79, 70, 229, 0.28);
+  border-radius: 20px;
+  background: linear-gradient(160deg, rgba(79, 70, 229, 0.09), rgba(107, 31, 168, 0.06));
+  box-shadow: 0 18px 44px rgba(28, 0, 48, 0.08);
+}
+.simu__resultat-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texte-fort);
+}
+.simu__prix {
+  margin-bottom: 4px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--texte-fort);
+}
+.simu__offre {
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-clair);
+}
+.simu__notes {
+  display: grid;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+.simu__notes li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.83rem;
+  line-height: 1.55;
+  color: var(--texte-doux);
+}
+.simu__notes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.simu__mention {
+  margin: 16px 0 0;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--texte-faible);
+}
+
+/* --- Divers page d'accueil ----------------------------------------------- */
+.tarifs__mention {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--texte-faible);
+}
+
+/* Le CTA final porte un halo violet un peu plus large que les autres
+   bandeaux : c'est le dernier point d'appui de la page. */
+.bandeau-cta--final {
+  background-image:
+    linear-gradient(130deg, rgba(45, 0, 77, 0.93) 0%, rgba(106, 10, 117, 0.85) 55%, rgba(79, 70, 229, 0.85) 100%),
+    url("https://images.unsplash.com/photo-1620121692029-d088224ddc74?auto=format&fit=crop&w=2000&q=60");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  box-shadow: 0 30px 80px rgba(79, 70, 229, 0.32);
+}
+@media (max-width: 768px), (hover: none) {
+  .bandeau-cta--final { background-attachment: scroll; }
+}
+.bandeau-cta--final::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 60%;
+  height: 160%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16), transparent 65%);
+  pointer-events: none;
+}
+.bandeau-cta--final > * { position: relative; z-index: 1; }
+
+.temoignage { margin: 0; }
+.temoignage blockquote { margin: 0; }
+.temoignage__note { display: flex; align-items: center; gap: 8px; }
+
+/* --------------------------------------------------------------------------
+   20. Responsive
+   -------------------------------------------------------------------------- */
+/* Simulateur : le résultat passe sous les questions avant que la colonne
+   ne devienne trop étroite. */
+@media (max-width: 900px) {
+  .simu { grid-template-columns: 1fr; }
+  .simu__resultat { position: static; }
+}
+
+/* Parcours : la ligne horizontale n'a plus de sens en colonne unique. */
+@media (max-width: 860px) {
+  .parcours { grid-template-columns: 1fr; gap: 28px; }
+  .parcours__etape { padding-left: 72px; }
+  .parcours__num { position: absolute; top: 0; left: 0; margin-bottom: 0; }
+
+  /* Le trait bascule à la verticale, le long de la colonne de pastilles. */
+  .parcours__etape:not(:last-child)::after {
+    top: 58px;
+    bottom: -34px;
+    left: 25px;
+    right: auto;
+    width: 2px;
+    height: auto;
+    background: linear-gradient(180deg,
+      rgba(79, 70, 229, 0.45),
+      rgba(79, 70, 229, 0.12));
+  }
+}
+
+/* À propos : le portrait passe au-dessus du texte et se limite en hauteur
+   pour ne pas occuper tout l'écran. */
+@media (max-width: 860px) {
+  /* On garde le cadrage portrait : un recadrage paysage couperait la photo
+     en pleine hauteur de buste. Seule la largeur est bridée. */
+  .apropos { grid-template-columns: 1fr; gap: 32px; }
+  .apropos__visuel { max-width: 340px; margin-inline: auto; }
+}
+
+@media (max-width: 560px) {
+  .simu__option { width: 100%; }
+  .projet__corps h3 { font-size: 1.15rem; }
+  .univers__titre { text-align: left; }
+}
+
+/* --------------------------------------------------------------------------
+   21. Responsive (base historique)
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .hero__grille { grid-template-columns: 1fr; }
