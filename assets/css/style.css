@@ -3222,6 +3222,13 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 @media (max-width: 560px) {
+  /* Les grilles utilisent des minima confortables sur tablette (280/300px),
+     mais ceux-ci dépassent la largeur utile d'un écran de 320px une fois les
+     gouttières retirées. On autorise donc les cartes à réellement rétrécir. */
+  .grille--2,
+  .grille--3,
+  .grille--4 { grid-template-columns: minmax(0, 1fr); }
+
   .entete { padding-inline: 12px; }
   .logo__image { width: 38px; height: 38px; }
   .hero__reseau { width: 36px; height: 36px; }
@@ -3239,4 +3246,30 @@ ul { margin: 0; padding: 0; list-style: none; }
   .duo { grid-template-columns: 1fr; }
   .groupe-btn .btn { width: 100%; }
   .entete .logo__baseline { display: none; }
+
+  /* Le volet à 70 % est trop étroit sur les petits téléphones (224px à
+     320px). Cette largeur conserve un bord du site visible sans comprimer
+     les libellés de navigation ni leurs zones tactiles. */
+  .volet { width: min(88%, 360px); }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --gouttiere: 16px;
+    --entete-h: 82px;
+  }
+
+  .entete { padding-top: 10px; padding-inline: 8px; }
+  .entete__inner { height: 64px; }
+  .entete .logo { padding-left: 4px; }
+  .logo__marque { font-size: 0.92rem; }
+
+  .hero {
+    padding-top: calc(var(--entete-h) + 28px);
+    padding-bottom: 40px;
+  }
+  .hero h1 { font-size: 2.15rem; }
+  .hero__soustitre { line-height: 1.6; }
+  .hero__note { align-items: flex-start; border-radius: var(--rayon); }
+  .hero__preuves { gap: 8px 18px; }
 }
