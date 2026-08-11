@@ -1043,10 +1043,20 @@ ul { margin: 0; padding: 0; list-style: none; }
   .hero__badge, .hero__logo-flottant, .hero__competence { animation: none; }
 }
 
-/* Dès que le hero passe en colonne unique, la colonne d'ancrage des
-   éléments flottants n'existe plus : on les masque. */
+/* Dès que le hero passe en colonne unique, la zone flottante devient une
+   rangée dédiée sous le texte pour rester lisible sur tablette et mobile. */
 @media (max-width: 1024px) {
-  .hero__badge, .hero__logo-flottant, .hero__competence { display: none; }
+  .hero__grille { gap: clamp(20px, 4vw, 44px); }
+  .hero__maquette {
+    width: min(100%, 560px);
+    min-height: clamp(240px, 46vw, 380px);
+    margin-inline: auto;
+    margin-top: clamp(12px, 3vw, 28px);
+  }
+
+  .hero__badge, .hero__logo-flottant, .hero__competence {
+    display: inline-flex;
+  }
 }
 
 /* Indicateur de défilement, discret, propre au hero plein écran. */
@@ -3228,6 +3238,16 @@ ul { margin: 0; padding: 0; list-style: none; }
     width: min(72vw, 460px);
     max-height: 78%;
   }
+
+  .hero__competence {
+    padding: 9px 16px 9px 13px;
+    font-size: 0.74rem;
+    animation-duration: 5.4s;
+  }
+
+  .hero__competence--1 { top: 12%; left: 4%; right: auto; animation-delay: 0.2s; }
+  .hero__competence--2 { top: 44%; right: 8%; animation-delay: 0.9s; }
+  .hero__competence--3 { top: 74%; left: 14%; right: auto; animation-delay: 1.5s; }
 }
 
 @media (max-width: 560px) {
@@ -3240,6 +3260,23 @@ ul { margin: 0; padding: 0; list-style: none; }
 
   .entete { padding-inline: 12px; }
   .logo__image { width: 38px; height: 38px; }
+  .hero__maquette {
+    min-height: clamp(210px, 62vw, 300px);
+    margin-top: 18px;
+  }
+  .hero__competence {
+    padding: 8px 13px 8px 11px;
+    font-size: 0.7rem;
+    gap: 8px;
+  }
+  .hero__competence--1 { top: 10%; left: 3%; right: auto; }
+  .hero__competence--2 { top: 42%; right: 3%; }
+  .hero__competence--3 { top: 74%; left: 10%; right: auto; }
+  .hero__photo {
+    width: min(56vw, 260px);
+    max-height: 62%;
+    opacity: 0.75;
+  }
   .hero__reseau { width: 36px; height: 36px; }
   .hero__reseau svg { width: 15px; height: 15px; }
 }
