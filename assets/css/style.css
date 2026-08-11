@@ -3197,8 +3197,14 @@ ul { margin: 0; padding: 0; list-style: none; }
    21. Responsive (base historique)
    -------------------------------------------------------------------------- */
 @media (max-width: 560px) {
-  .hero__grille { grid-template-columns: 1fr; }
-  .hero__contenu { max-width: 100%; }
+  .hero__grille {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .hero__contenu {
+    max-width: 100%;
+    text-align: center;
+  }
   .hero__modele3d { min-height: 320px; }
   .carte-form { max-width: 540px; }
 
@@ -3211,15 +3217,23 @@ ul { margin: 0; padding: 0; list-style: none; }
      Les réseaux restent accessibles depuis le volet et le pied de page. */
   .hero__reseaux { display: none; }
 
+  /* Sur mobile, on supprime les pastilles flottantes et on recentre le visuel
+     principal pour garder une lecture propre et symétrique. */
+  .hero__maquette { display: none; }
+
   /* En colonne unique le texte occupe toute la largeur : le visuel repasse
-     derrière lui (z-index 0) et se réduit, pour rester présent sans gêner
-     la lecture. */
+     derrière lui (z-index 0), grossit et se centre pour rester présent sans
+     gêner la lecture. */
   .hero__photo {
     z-index: 0;
-    width: min(62vw, 340px);
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: min(84vw, 420px);
     height: auto;
-    max-height: 70%;
-    opacity: 0.9;
+    max-height: 78%;
+    object-position: center bottom;
+    opacity: 0.95;
   }
 
   /* En colonne unique, le texte passe devant la photo : le voile doit
@@ -3260,22 +3274,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 
   .entete { padding-inline: 12px; }
   .logo__image { width: 38px; height: 38px; }
-  .hero__maquette {
-    min-height: clamp(210px, 62vw, 300px);
-    margin-top: 18px;
-  }
-  .hero__competence {
-    padding: 8px 13px 8px 11px;
-    font-size: 0.7rem;
-    gap: 8px;
-  }
-  .hero__competence--1 { top: 10%; left: 3%; right: auto; }
-  .hero__competence--2 { top: 42%; right: 3%; }
-  .hero__competence--3 { top: 74%; left: 10%; right: auto; }
   .hero__photo {
-    width: min(56vw, 260px);
-    max-height: 62%;
-    opacity: 0.75;
+    width: min(84vw, 380px);
+    max-height: 72%;
   }
   .hero__reseau { width: 36px; height: 36px; }
   .hero__reseau svg { width: 15px; height: 15px; }
@@ -3316,6 +3317,13 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
   .hero h1 { font-size: 2.15rem; }
   .hero__soustitre { line-height: 1.6; }
-  .hero__note { align-items: flex-start; border-radius: var(--rayon); }
-  .hero__preuves { gap: 8px 18px; }
+  .hero__note {
+    align-items: center;
+    border-radius: var(--rayon);
+    margin-inline: auto;
+  }
+  .hero__preuves {
+    gap: 8px 18px;
+    justify-content: center;
+  }
 }
