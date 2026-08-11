@@ -3196,7 +3196,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* --------------------------------------------------------------------------
    21. Responsive (base historique)
    -------------------------------------------------------------------------- */
-@media (max-width: 1024px) {
+@media (max-width: 560px) {
   .hero__grille { grid-template-columns: 1fr; }
   .hero__contenu { max-width: 100%; }
   .hero__modele3d { min-height: 320px; }
@@ -3231,8 +3231,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
 }
 
-/* Sur tablette, la photo peut reprendre davantage de présence derrière le
-   contenu empilé sans réduire la largeur de lecture du texte. */
+/* Sur tablette, on garde la mise en deux colonnes pour laisser les éléments
+   flottants respirer à droite du texte. */
 @media (min-width: 561px) and (max-width: 1024px) {
   .hero__photo {
     width: min(72vw, 460px);
