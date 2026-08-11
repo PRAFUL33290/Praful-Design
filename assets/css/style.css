@@ -3221,6 +3221,15 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
 }
 
+/* Sur tablette, la photo peut reprendre davantage de présence derrière le
+   contenu empilé sans réduire la largeur de lecture du texte. */
+@media (min-width: 561px) and (max-width: 1024px) {
+  .hero__photo {
+    width: min(72vw, 460px);
+    max-height: 78%;
+  }
+}
+
 @media (max-width: 560px) {
   /* Les grilles utilisent des minima confortables sur tablette (280/300px),
      mais ceux-ci dépassent la largeur utile d'un écran de 320px une fois les
